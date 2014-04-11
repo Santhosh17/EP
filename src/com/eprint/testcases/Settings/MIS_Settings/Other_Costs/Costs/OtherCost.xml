@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+    <class name="com.eprint.testcases.EPrintLogin"/>
+    
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAdd_FormulaBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAddVerify_FormulaBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdate_FormulaBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdateVerify_FormulaBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsDelete_FormulaBased"/>
+    
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAdd_FormulaBasedMatrix"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAddVerify_FormulaBasedMatrix"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdate_FormulaBasedMatrix"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdateVerify_FormulaBasedMatrix"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsDelete_FormulaBasedMatrix"/>
+          
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAdd_TimeBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAddVerify_TimeBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdate_TimeBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdateVerify_TimeBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsDelete_TimeBased"/>
+      
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAdd_QuantityBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsAddVerify_QuantityBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdate_QuantityBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsUpdateVerify_QuantityBased"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.OCCostsDelete_QuantityBased"/>
+    
+    <class name="com.eprint.testcases.EPrintlogout"/>
+    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

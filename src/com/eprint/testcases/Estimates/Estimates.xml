@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+    	<class name="com.eprint.testcases.EPrintLogin"/>
+    	<!----------------------------------------------------------------------------------------------------------->
+    	<class name="com.eprint.testcases.Estimates.Estimate_Create_QuickQuote"/>
+    	<class name="com.eprint.testcases.Estimates.Estimate_Update_QuickQuote"/>
+    	<!----------------------------------------------------------------------------------------------------------->
+    	<class name="com.eprint.testcases.Estimates.Estimate_Create_Outwork_SimpleCosting"/>
+    	<class name="com.eprint.testcases.Estimates.Estimate_Update_Outwork_SimpleCosting"/>
+    	
+    	<class name="com.eprint.testcases.Estimates.Estimate_Create_Outwork_UnitBasedCosting"/>
+    	<class name="com.eprint.testcases.Estimates.Estimate_Update_Outwork_UnitBasedCosting"/>
+    	<!----------------------------------------------------------------------------------------------------------->
+    	<class name="com.eprint.testcases.Estimates.Estimate_Create_SheetFedDigital_SingleItem_PriceForWholePack"/>
+    	<class name="com.eprint.testcases.Estimates.Estimate_Update_SheetFedDigital_SingleItem_PriceForWholePack"/>
+    	
+    	<class name="com.eprint.testcases.Estimates.Estimate_Create_SheetFedDigital_SingleItem_PaperStockSupplied"/>
+    	<class name="com.eprint.testcases.Estimates.Estimate_Update_SheetFedDigital_SingleItem_PaperStockSupplied"/>
+    	<!----------------------------------------------------------------------------------------------------------->
+      	<class name="com.eprint.testcases.Estimates.Estimate_Create_SheetFedDigital_Booklet"/>
+      	
+      	
+      	<!----------------------------------------------------------------------------------------------------------->
+      	<class name="com.eprint.testcases.EPrintlogout"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

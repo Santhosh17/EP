@@ -1,0 +1,30 @@
+Handling Excel Sheet in Java
+http://howtodoinjava.com/2013/06/19/readingwriting-excel-files-in-java-poi-tutorial/
+http://www.ontestautomation.com/data-driven-testing-in-selenium-webdriver-using-excel/
+http://functionaltestautomation.blogspot.in/2009/10/dataprovider-data-driven-testing-with.html
+http://code.google.com/p/selenium/source/browse/java/CHANGELOG - to check selenium webdriver version history
+
+http://www.tutorialspoint.com/testng/testng_parameterized_test.htm
+Drivers Download link
+http://chromedriver.storage.googleapis.com/index.html
+https://code.google.com/p/selenium/downloads/list
+
+http://www.wikihow.com/Start-a-Software-Company
+http://theautomationtester.wordpress.com/2014/02/19/getting-started-with-selenium-grid/
+
+http://www.sqaforums.com/showflat.php?Number=171275
+http://forum.softwaretestinghelp.com/index.php/topic,4301.msg4112.html#msg4112
+
+color code reference 
+http://euro-bags.eu/pantone?limit=60&p=1
+
+Sap 
+http://www.siliconindia.com/online-courses/tutorials/SAP-Testing-id-42.html
+
+https://addons.mozilla.org/en-US/firefox/addon/toggle-proxy-51740/?src=search
+
+{Search :chrome developer tools
+Links:
+http://discover-devtools.codeschool.com/}
+{Search :home wiring for 2000w iron box
+http://www.larsentoubro.com/lntcorporate/uploads/product/Wire_cables1.pdf}

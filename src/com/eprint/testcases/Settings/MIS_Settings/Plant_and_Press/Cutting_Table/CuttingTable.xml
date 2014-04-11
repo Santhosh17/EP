@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.eprint.testcases.EPrintLogin"/>
+    
+      <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Cutting_Table.CuttingTableAdd"/>
+      <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Cutting_Table.CuttingTableAddVerify"/>
+      <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Cutting_Table.CuttingTableUpdate"/>
+      <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Cutting_Table.CuttingTableUpdateVerify"/>
+      <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Cutting_Table.CuttingTableDelete"/>
+      
+      <class name="com.eprint.testcases.EPrintlogout"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+       <class name="com.eprint.testcases.EPrintLogin"/>
+    
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressAdd_ClickChargeLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressAddVerify_ClickChargeLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressUpdate_ClickChargeLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressUpdateVerify_ClickChargeLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressDelete_ClickChargeLookup"/>
+       
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressAdd_SpeedWeightLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressAddVerify_SpeedWeightLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressUpdate_SpeedWeightLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressUpdateVerify_SpeedWeightLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressDelete_SpeedWeightLookup"/>
+      
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressAdd_ClickChargeZonesLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressAddVerify_ClickChargeZonesLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressUpdate_ClickChargeZonesLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressUpdateVerify_ClickChargeZonesLookup"/>
+       <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press.DigitalPressDelete_ClickChargeZonesLookup"/>
+      
+       <class name="com.eprint.testcases.EPrintlogout"/>
+       
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

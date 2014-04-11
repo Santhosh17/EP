@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test" preserver-order="false">
+    <classes>
+    
+        <class name="com.eprint.testcases.After_Release.Custom_Features.CoralCoast.CoralCoastCustomFeatures">
+      		<methods>
+      		  <include name="CoralCoast_TestSiteLogin" />
+       		  <include name="CoralCoast_EstimateJobInvoice_RenamedSections" />
+        	  <include name="CoralCoast_CustomerOrder_NumberValidationMessage" />
+       		  <include name="CoralCoast_RoyalityFee_FieldCheck" />
+       		  <include name="Coralcoastlogout" />
+    	    </methods>
+        </class>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

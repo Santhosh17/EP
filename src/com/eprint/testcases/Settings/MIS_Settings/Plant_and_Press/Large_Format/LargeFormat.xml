@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+    <class name="com.eprint.testcases.EPrintLogin"/>
+    
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Large_Format.LargeFormatAdd"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Large_Format.LargeFormatAddVerify"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Large_Format.LargeFormatUpdate"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Large_Format.LargeFormatUpdateVerify"/>
+    <class name="com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Large_Format.LargeFormatDelete"/>
+    
+    <class name="com.eprint.testcases.EPrintlogout"/>
+    
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

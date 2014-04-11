@@ -1,0 +1,17 @@
+git
+https://github.com/Santhosh17/eprint3.7.git
+https://github.com/Santhosh17/Eprint.git
+
+file structure
+D:\Selenium Framework (Dont Delete )\Eprint Automation
+src
+jre system library
+testng
+referenced libraries
+excel files (folder)
+Exe files (folder)
+Jar(folder)
+Other Files (folder)
+Other Packages(folder)
+Side Scripts (folder)
+Test-output(folder)

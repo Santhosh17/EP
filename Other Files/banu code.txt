@@ -1,0 +1,29 @@
+//banu code// try to modify this to generic
+
+
+FileInputStream fis=new FileInputStream(xlPath);
+Workbook wb = WorkbookFactory.create(fis);
+Sheet s = wb.getSheet(sheetName);
+int type=s.getRow(i).getCell(j).getCellType();
+if (type==0)
+{
+double v = s.getRow(i).getCell(j).getNumericCellValue();
+System.out.println(v);
+}
+
+
+public static String getExcelValue(String Xlpath, String SheetName,int rowNum, int CellNum)
+{
+	String cvalue;
+	try
+	{
+		FileInputStream fis = new FileInputStream(Xlpath);
+		Workbook wb = WorkbookFactory.create(fis);
+		cvalue=wb.getSheet(SheetName).getRow(rowNum).getCell(CellNum).getStringCellValue();
+	}
+	catch (Exception e)
+	{
+		cvalue="";
+	}
+	return cvalue;
+ }
