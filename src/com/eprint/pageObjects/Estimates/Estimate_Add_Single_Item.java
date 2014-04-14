@@ -7,7 +7,7 @@ import com.eprint.libraries.SuperTestNG;
 
 public class Estimate_Add_Single_Item extends SuperTestNG
 {
-	public static WebElement txtbx_ItemTitle()
+	public static WebElement txtbx_ItemTitle() 
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCSingleItem_txtItemTitle"));
 		return element;
