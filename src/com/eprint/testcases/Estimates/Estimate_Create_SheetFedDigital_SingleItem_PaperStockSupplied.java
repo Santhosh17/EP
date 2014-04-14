@@ -29,8 +29,8 @@ public class Estimate_Create_SheetFedDigital_SingleItem_PaperStockSupplied exten
 			Reporter.log("Already Logged in Continuing with Test Process",true);
 		}
 		
-		String xlpath = "./Excel Files/Estimates/Estimates.xls";
-		String sheetName = "Sheet Fed Digital -Single Item";
+		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-SingleItem.xlsx";
+		String sheetName = "Paper Stock Supplied";
 		
 		try
 		{
