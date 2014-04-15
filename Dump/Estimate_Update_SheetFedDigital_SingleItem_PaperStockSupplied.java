@@ -1,6 +1,6 @@
 // Script for Estimate Update -> Estimate Type : Sheet Fed Digital -> Product type : Single Item -> Paper Stock : Paper/Stock Supplied
 
-package com.eprint.testcases.Estimates;
+package com.eprint.testcases.Estimates.SheetFedDigital.SingleItem;
 
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;

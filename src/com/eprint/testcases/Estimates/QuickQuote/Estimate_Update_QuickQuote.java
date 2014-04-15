@@ -1,6 +1,6 @@
 /* Script for Estimate Update -> Estimate Type : Quick Quote */
 
-package com.eprint.testcases.Estimates;
+package com.eprint.testcases.Estimates.QuickQuote;
 
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;

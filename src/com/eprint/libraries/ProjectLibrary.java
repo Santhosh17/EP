@@ -25,7 +25,13 @@ public class ProjectLibrary extends SuperTestNG
 		ElementLocation.sendKeys(""+SheetData);
 		Reporter.log(LocationName+" : '"+SheetData+"' - Entered",true);
 	}
-	
+	public static void StringDDTextBox(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement TxtBxWebElement)
+	{
+		String SheetData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
+		TxtBxWebElement.clear();
+		TxtBxWebElement.sendKeys(""+SheetData);
+		Reporter.log(LocationName+" : '"+SheetData+"' - Entered",true);
+	}
 	public static void StringDDTextBoxName(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,String webelementNAME)
 	{
 		String SheetData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
@@ -187,6 +193,37 @@ public class ProjectLibrary extends SuperTestNG
 			}
 		}
 	}
+	public static void CheckBoxSelection(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement ChkBxWebelement)
+	{
+		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
+		if (ExcelData.equals("YES"))
+		{
+
+			if (ChkBxWebelement.isSelected())
+			{
+				Reporter.log("Checkbox '"+LocationName+"' has been defaultly Selected",true);
+			}
+			else
+			{
+				ChkBxWebelement.click();
+				Reporter.log("Selecting "+LocationName+" Checkbox",true);
+			}
+		}
+		else if (ExcelData.equals("NO"))
+		{
+
+			if (ChkBxWebelement.isSelected())
+			{	
+				Reporter.log(LocationName+" Checkbox has been Defaultly Selected ",true);
+				ChkBxWebelement.click();
+				Reporter.log("Un-Selecting the '"+LocationName+"' Checkbox",true);
+			}
+			else
+			{
+				Reporter.log("Checkbox "+LocationName+" has been defaultly Un-Selected ",true);
+			}
+		}
+	}
 	//-------------------------------------------------------------------------------------------------------------------------------------------------------------//		
 		public static void ChkBoxSelectionbyXpath(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,String webelementXpath)
 		{
@@ -220,6 +257,13 @@ public class ProjectLibrary extends SuperTestNG
 			}
 		}
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------//	
+	public static void  SingleSelectDropDownbyVisibleText(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement DrpDn_WebElement)
+	{
+		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
+		Select singleselect = new Select(DrpDn_WebElement);
+		singleselect.selectByVisibleText(ExcelData);
+		Reporter.log("Selecting an option '"+ExcelData+"' in '"+LocationName+"' Drop Down Menu",true);
+	}
 	public static void  SingleSelectDropDownbyVisibleTextbyID(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,String webElementID)
 	{
 		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
@@ -251,6 +295,16 @@ public class ProjectLibrary extends SuperTestNG
 	{
 	WebElement Button = driver.findElement(By.id(webelementID));
 	Button.click();
+	Reporter.log("Clicked on '"+LocationName+"' Button",true);
+	}
+	public static void ClickOnButton_ByID(String LocationName,WebElement ButtonWebElement)
+	{
+	ButtonWebElement.click();
+	Reporter.log("Clicked on '"+LocationName+"' Button",true);
+	}
+	public static void ClickOnButton(String LocationName,WebElement ButtonWebElement)
+	{
+	ButtonWebElement.click();
 	Reporter.log("Clicked on '"+LocationName+"' Button",true);
 	}
 	public static void ClickOnButtonByXpath(String LocationName,String webelementXpath)
@@ -341,6 +395,21 @@ public class ProjectLibrary extends SuperTestNG
 		Reporter.log("Message in Popup : '"+alert+"'",true );
 		alert.accept();	
 		Reporter.log("Clicked On OK (Accept) in Allert Popup",true);
+	}
+	//----------------------------------------------------------------------------------------------------------------------------------------------//
+	public static void CompareStringText(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement TxtWebElement)
+	{
+		String Content = TxtWebElement.getText();
+		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
+		Assert.assertEquals(Content,ExcelData);
+		Reporter.log(LocationName+" Data Verification -- PASS",true);
+	}
+	public static void CompareStringTextBox(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement TxtBoxWebElement)
+	{
+		String Content = TxtBoxWebElement.getAttribute("value");
+		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
+		Assert.assertEquals(Content,ExcelData);
+		Reporter.log(LocationName+" Data Verification -- PASS",true);
 	}
 	public static void CompareStringTextBoxByID(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,String WebelementID)
 	{
@@ -545,6 +614,14 @@ public class ProjectLibrary extends SuperTestNG
 		actions.moveToElement(Dropdown).perform();
 		Reporter.log("Hovering Mouse on - "+DropdownMenuName,true);
 		driver.findElement(By.linkText(LinkTextOfSubMenu)).click();
+		Reporter.log("Clicking on Sub Menu Option - "+SubMenuName,true);
+	}
+	public static void HoverDropdownControl_ByXpath(String DropdownMenuName,WebElement DropdownWebElement,String SubMenuName,WebElement DropdownOptionWebelement)
+	{
+		Actions actions = new Actions(driver);
+		actions.moveToElement(DropdownWebElement).perform();
+		Reporter.log("Hovering Mouse on - "+DropdownMenuName,true);
+		DropdownOptionWebelement.click();
 		Reporter.log("Clicking on Sub Menu Option - "+SubMenuName,true);
 	}
 	public static void PageTitleVerification(String ExpectedPageTitle)

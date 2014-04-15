@@ -1,6 +1,6 @@
 // Script for Estimate Create -> Estimate Type : Sheet Fed Digital -> Product type : Single Item
 
-package com.eprint.testcases.Estimates;
+package com.eprint.testcases.Estimates.SheetFedDigital.Booklet;
 
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;

@@ -1,6 +1,6 @@
 // Script for Estimate Update -> Estimate Type : Sheet Fed Digital -> Product type : Booklet -> Paper Stock : Price For Whole Pack -> Booklet Type :Saddle Stiched
 
-package com.eprint.testcases.Estimates;
+package com.eprint.testcases.Estimates.SheetFedDigital.Booklet;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;

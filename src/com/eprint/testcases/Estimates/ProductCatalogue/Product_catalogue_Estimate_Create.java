@@ -1,4 +1,4 @@
-package com.eprint.testcases.Estimates;
+package com.eprint.testcases.Estimates.ProductCatalogue;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

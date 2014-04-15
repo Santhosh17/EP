@@ -106,7 +106,44 @@ public class EprintSpecificLinks extends SuperTestNG
 		driver.switchTo().defaultContent();
 		Reporter.log("Taking Control back to main window",true);
 	}
+	public static void Radwindow(String LocationName,WebElement LinkWebelementToOpenRadWindow,String FrameXPath,String InsideElementPath)
+	{
+		LinkWebelementToOpenRadWindow.click();
+		Reporter.log("Clicking on "+LocationName,true);
+		try
+		{
+		WebElement FramePath = driver.findElement(By.xpath(FrameXPath));
+		Reporter.log("Finding frame in "+LocationName+" Radwindow",true);
+		driver.switchTo().frame(FramePath);
+		}
+		catch (NoSuchElementException e)
+		{
+			e.printStackTrace();
+		}
+		Reporter.log("Switching to Frame Inside Radwindow",true);
+		WebElement InsideElement = driver.findElement(By.xpath(InsideElementPath));
+		Reporter.log("Finding an element inside the Frame",true);
+		InsideElement.click();
+		Reporter.log("Clicking on Inside Element",true);
+		driver.switchTo().defaultContent();
+		Reporter.log("Taking Control back to main window",true);
+	}
 	public static void RadwindowXpathXpathXpath(String LocationName,String LinkXpathtoOpenRadwin,String FrameXPath,String InsideElementPath)
+	{
+		driver.findElement(By.xpath(LinkXpathtoOpenRadwin)).click();
+		Reporter.log("Clicking on "+LocationName,true);
+		WebElement FramePath = driver.findElement(By.xpath(FrameXPath));
+		Reporter.log("Finding frame in "+LocationName+" Radwindow",true);
+		driver.switchTo().frame(FramePath);
+		Reporter.log("Switching to Frame",true);
+		WebElement InsideElement = driver.findElement(By.xpath(InsideElementPath));
+		Reporter.log("finding an element inside the frame",true);
+		InsideElement.click();
+		Reporter.log("Clicking on inside element",true);
+		driver.switchTo().defaultContent();
+		Reporter.log("Taking control back to main window",true);
+	}
+	public static void RadwindowBy_Xpath_Xpath_Xpath(String LocationName,String LinkXpathtoOpenRadwin,String FrameXPath,String InsideElementPath)
 	{
 		driver.findElement(By.xpath(LinkXpathtoOpenRadwin)).click();
 		Reporter.log("Clicking on "+LocationName,true);
