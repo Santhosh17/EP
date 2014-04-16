@@ -39,7 +39,7 @@ http://192.168.1.6/eprint_prod_3.8/registration.aspx
 
 D:\Selenium Framework (Dont Delete )\Eprint Automation\src
 192.168.1.254:3128
-
+https://github.com/Santhosh17/EP.git
 Mail Signature
 Thanks & Regards,
 

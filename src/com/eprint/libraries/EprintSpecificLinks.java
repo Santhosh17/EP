@@ -83,6 +83,13 @@ public class EprintSpecificLinks extends SuperTestNG
 //		successmsg.equals(ExpectedMsg);
 		Reporter.log(successmsg+"- MESSAGE VERIFIED ",true);
 	}
+	public static void SuccessMsgVerify(String ExpectedMsg, WebElement MsgWebElement)
+	{
+		String successmsg = MsgWebElement.getText();
+		Assert.assertEquals(successmsg, ExpectedMsg);
+//		successmsg.equals(ExpectedMsg);
+		Reporter.log(successmsg+"- MESSAGE VERIFIED ",true);
+	}
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
 	public static void RadwindowIDXpathXpath(String LocationName,String LinkIDtoOpenRadwin,String FrameXPath,String InsideElementPath)
 	{
