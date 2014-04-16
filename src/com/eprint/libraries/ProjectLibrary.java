@@ -532,6 +532,21 @@ public class ProjectLibrary extends SuperTestNG
 		Assert.fail(LocationName+"Data Verification -- Failed");
 		}
 	}
+	public static void CompareStringDropDownText(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement DropDownWebElement)
+	{
+		Select select = new Select(DropDownWebElement);
+		WebElement option = select.getFirstSelectedOption();
+		String Content=option.getText();
+		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
+		if (Content.equals(ExcelData))
+		{
+		Reporter.log(LocationName+" Data Verification -- PASS",true);
+		}
+		else
+		{
+		Assert.fail(LocationName+"Data Verification -- Failed");
+		}
+	}
 	
 	public static void CompareNumTextByID(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,String WebelementID)
 	{

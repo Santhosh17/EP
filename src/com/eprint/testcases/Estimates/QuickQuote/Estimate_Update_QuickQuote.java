@@ -3,22 +3,33 @@
 package com.eprint.testcases.Estimates.QuickQuote;
 
 import org.testng.annotations.Test;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.Reporter;
+
 import com.eprint.libraries.EprintSpecificLinks;
 import com.eprint.libraries.Generic;
 import com.eprint.libraries.ProjectLibrary;
 import com.eprint.libraries.SuperTestNG;
+import com.eprint.pageObjects.Estimates.QuickQuote.Estimate_Add_QuickQuote;
 
 public class Estimate_Update_QuickQuote extends SuperTestNG
 {
 	@Test
 	public static void testEstimate_Update_QuickQuote()
 	{
-		EprintSpecificLinks.login();
+		try
+		{
+			EprintSpecificLinks.login();
+		}
+		catch (NoSuchElementException e)
+		{
+			Reporter.log("Already Logged in Continuing with Test Process",true);
+		}
+		
 		
 		try
 		{
@@ -31,7 +42,7 @@ public class Estimate_Update_QuickQuote extends SuperTestNG
 			ProjectLibrary.HoverDropdownControlByXpath("Quotes", "//b/span[text()='Quotes']", "View All","View All");
 		}
 		
-		String xlpath = "./Excel Files/Estimates/Estimates.xls";
+		String xlpath = "./src/com/eprint/testData/Estimates/QuickQuote.xlsx";
 		String sheetName = "Estimate Add - Quick Quote";
 		
 		String EstimateTitle = Generic.getXlCellValue(xlpath, sheetName, 15, 1);
@@ -40,122 +51,112 @@ public class Estimate_Update_QuickQuote extends SuperTestNG
 		driver.findElement(By.xpath("//div/div/a/input[@value='Action']")).click();
 		driver.findElement(By.xpath("/html/body/div/form/div/ul/li/a/span[text()='Re-Run Item']")).click();
 		
-//		driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCStage1_txtName")).click();
-//		Generic.BlindWait(2);
-//		WebElement Autocomplete = driver.findElement(By.id("ctl00_uc_ctl00_ClientName"));
-//		Actions actions = new Actions(driver);
-//		actions.moveToElement(Autocomplete).perform();
-//		actions.click().perform();
-//		
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 13, 6, "Estimate Type", "ctl00_ContentPlaceHolder1_UCStage1_ddlEstimateType");
-//		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 15, 6, "Estimate title", "ctl00_ContentPlaceHolder1_UCStage1_txtEstimateTitle");
-//		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 16, 6, " Customer Order Number", "ctl00_ContentPlaceHolder1_UCStage1_txtOrderNumber");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 17, 6, "Status", "ctl00_ContentPlaceHolder1_UCStage1_ddlStatus");
-//		
-//		ProjectLibrary.ClickOnButtonByID("Next", "ctl00_ContentPlaceHolder1_UCStage1_btnNext");
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 		
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 27, 6, "Item Title", "ctl00_ContentPlaceHolder1_Ucquickquote_txtitemtitle");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 28, 6, "Item Desctiption", "ctl00_ContentPlaceHolder1_Ucquickquote_txtdescription");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 27, 6, "Item Title", Estimate_Add_QuickQuote.txtbx_ItemTitle());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 28, 6, "Item Desctiption", Estimate_Add_QuickQuote.txtbx_ItemDescription());
 		
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 30, 7, "Quantity 1", "ctl00_ContentPlaceHolder1_Ucquickquote_txtQuantity");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 30, 8, "Quantity 2", "ctl00_ContentPlaceHolder1_Ucquickquote_txtQuantity_2");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 30, 9, "Quantity 3", "ctl00_ContentPlaceHolder1_Ucquickquote_txtQuantity_3");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 30, 10, "Quantity 4", "ctl00_ContentPlaceHolder1_Ucquickquote_txtQuantity_4");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 7, "Quantity 1", Estimate_Add_QuickQuote.txtbx_Qty1());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 8, "Quantity 2", Estimate_Add_QuickQuote.txtbx_Qty2());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 9, "Quantity 3", Estimate_Add_QuickQuote.txtbx_Qty3());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 10, "Quantity 4", Estimate_Add_QuickQuote.txtbx_Qty4());
 		
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 31, 7, "Cost 1", "ctl00_ContentPlaceHolder1_Ucquickquote_txtcost");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 31, 8, "Cost 2", "ctl00_ContentPlaceHolder1_Ucquickquote_txtcost1");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 31, 9, "Cost 3", "ctl00_ContentPlaceHolder1_Ucquickquote_txtcost2");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 31, 10, "Cost 4", "ctl00_ContentPlaceHolder1_Ucquickquote_txtcost3");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 7, "Cost 1", Estimate_Add_QuickQuote.txtbx_Cost1());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 8, "Cost 2", Estimate_Add_QuickQuote.txtbx_Cost2());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 9, "Cost 3", Estimate_Add_QuickQuote.txtbx_Cost3());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 10, "Cost 4", Estimate_Add_QuickQuote.txtbx_Cost4());
+				
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 32, 6, "Profit Margin", Estimate_Add_QuickQuote.drpdn_ProfitMarginPercentage());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 32, 6, "Profit Margin", "ctl00_ContentPlaceHolder1_Ucquickquote_ddlprofitmargin");
+		Estimate_Add_QuickQuote.txtbx_ProfitMargin1().click();
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 32, 7, "Profit Margin 1",Estimate_Add_QuickQuote.txtbx_ProfitMargin1());
+		Estimate_Add_QuickQuote.txtbx_ProfitMargin2().click();
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 32, 8, "Profit Margin 2", Estimate_Add_QuickQuote.txtbx_ProfitMargin2());
+		Estimate_Add_QuickQuote.txtbx_ProfitMargin3().click();
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 32, 9, "Profit Margin 3", Estimate_Add_QuickQuote.txtbx_ProfitMargin3());
+		Estimate_Add_QuickQuote.txtbx_ProfitMargin4().click();
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 32, 10, "Profit Margin 4", Estimate_Add_QuickQuote.txtbx_ProfitMargin4());
 		
-		driver.findElement(By.id("ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge")).click();
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 32, 7, "Profit Margin 1", "ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge");
-		driver.findElement(By.id("ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge1")).click();
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 32, 8, "Profit Margin 2", "ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge1");
-		driver.findElement(By.id("ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge2")).click();
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 32, 9, "Profit Margin 3", "ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge2");
-		driver.findElement(By.id("ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge3")).click();
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 32, 10, "Profit Margin 4", "ctl00_ContentPlaceHolder1_Ucquickquote_txtproftimarge3");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 33, 7, "Sub Total 1", Estimate_Add_QuickQuote.txtbx_SubTotal1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 33, 8, "Sub Total 2", Estimate_Add_QuickQuote.txtbx_SubTotal2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 33, 9, "Sub Total 3", Estimate_Add_QuickQuote.txtbx_SubTotal3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 33, 10, "Sub Total 4", Estimate_Add_QuickQuote.txtbx_SubTotal4());
 		
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 33, 7, "Sub Total 1", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsubtotal");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 33, 8, "Sub Total 2", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsubtotal1");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 33, 9, "Sub Total 3", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsubtotal2");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 33, 10, "Sub Total 4", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsubtotal3");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 34, 6, "Tax", Estimate_Add_QuickQuote.drpdn_Tax());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 34, 6, "Tax", "ctl00_ContentPlaceHolder1_Ucquickquote_ddltax");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 34, 7, "Tax 1", Estimate_Add_QuickQuote.txtbx_Tax1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 34, 8, "Tax 2", Estimate_Add_QuickQuote.txtbx_Tax2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 34, 9, "Tax 3", Estimate_Add_QuickQuote.txtbx_Tax3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 34, 10, "Tax 4", Estimate_Add_QuickQuote.txtbx_Tax4());
 		
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 34, 7, "Tax 1", "ctl00_ContentPlaceHolder1_Ucquickquote_lbltax");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 34, 8, "Tax 2", "ctl00_ContentPlaceHolder1_Ucquickquote_lbltax1");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 34, 9, "Tax 3", "ctl00_ContentPlaceHolder1_Ucquickquote_lbltax2");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 34, 10, "Tax 4", "ctl00_ContentPlaceHolder1_Ucquickquote_lbltax3");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 35, 7, "Selling Price 1", Estimate_Add_QuickQuote.txtbx_SellingPrice1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 35, 8, "Selling Price 2", Estimate_Add_QuickQuote.txtbx_SellingPrice2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 35, 9, "Selling Price 3", Estimate_Add_QuickQuote.txtbx_SellingPrice3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 35, 10, "Selling Price 4", Estimate_Add_QuickQuote.txtbx_SellingPrice4());
 		
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 35, 7, "Selling Price 1", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsellingprice");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 35, 8, "Selling Price 2", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsellingprice1");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 35, 9, "Selling Price 3", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsellingprice2");
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 35, 10, "Selling Price 4", "ctl00_ContentPlaceHolder1_Ucquickquote_txtsellingprice3");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 37, 6, "Update Item Description", Estimate_Add_QuickQuote.chkbx_UpdateItemDescription());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 37, 6, "Update Item Description", "ctl00_ContentPlaceHolder1_Ucquickquote_Chk_ItemDescn");
-		
-		ProjectLibrary.ClickOnButtonByID("Finish/Save", "ctl00_ContentPlaceHolder1_Ucquickquote_btnsave");
+		ProjectLibrary.ClickOnButton("Finish/Save", Estimate_Add_QuickQuote.btn_Finish());
+		Reporter.log("----------------------------------------------------------------------------------",true);
 		//------------------------------------------------------------------------------------------------------------------------------------------------------------//
-				String EstimateNumber = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCItemSummaryMain_lblEstJobInvNo")).getText();
-				Reporter.log("Estimate Number = "+EstimateNumber,true);
-				
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 6, "Item Title Name", "//tbody/tr/td[2]/div/label");
-				
-				ProjectLibrary.CompareStringTextByID(xlpath, sheetName, 30, 7, "Quantity 1", "spnQuantity1");
-				ProjectLibrary.CompareStringTextByID(xlpath, sheetName, 30, 8, "Quantity 2", "spnQuantity2");
-				ProjectLibrary.CompareStringTextByID(xlpath, sheetName, 30, 9, "Quantity 3", "spnQuantity3");
-				ProjectLibrary.CompareStringTextByID(xlpath, sheetName, 30, 10, "Quantity 4", "spnQuantity4");
-				
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 7, "Cost Price (ex. Markup) - 1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[2]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 8, "Cost Price (ex. Markup) - 2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[3]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 9, "Cost Price (ex. Markup) - 3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[4]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 10, "Cost Price (ex. Markup) - 4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[5]/span");
+		String EstimateNumber = Estimate_Add_QuickQuote.Estimate_Summary.txt_EstimateNumber().getText();
+		Reporter.log("Estimate Number = "+EstimateNumber,true);
+		Reporter.log("----------------------------------------------------------------------------------",true);
 
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 46, 7, "Markup - 1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[2]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 46, 8, "Markup - 2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[3]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 46, 9, "Markup - 3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[4]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 46, 10, "Markup - 4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[5]/span");
-				
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 7, "Cost Price (inc. Markup) - 1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[2]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 8, "Cost Price (inc. Markup) - 2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[3]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 9, "Cost Price (inc. Markup) - 3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[4]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 41, 10, "Cost Price (inc. Markup) - 4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[5]/span");
-				
-				ProjectLibrary.CompareSubStringRangeTextBoxByXpath(xlpath, sheetName, 42, 6, "Profit Margin (%) -1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[2]/input[1]", 0, 2, 0, 2);
-				ProjectLibrary.CompareSubStringRangeTextBoxByXpath(xlpath, sheetName, 42, 6, "Profit Margin (%) -2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[3]/input[1]", 0, 2, 0, 2);
-				ProjectLibrary.CompareSubStringRangeTextBoxByXpath(xlpath, sheetName, 42, 6, "Profit Margin (%) -3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[4]/input[1]", 0, 2, 0, 2);
-				ProjectLibrary.CompareSubStringRangeTextBoxByXpath(xlpath, sheetName, 42, 6, "Profit Margin (%) -4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[5]/input[1]", 0, 2, 0, 2);
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 6, "Item Title Name", Estimate_Add_QuickQuote.Estimate_Summary.txt_ItemTitle());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 30, 7, "Quantity 1", Estimate_Add_QuickQuote.Estimate_Summary.txt_FinishedQty1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 30, 8, "Quantity 2", Estimate_Add_QuickQuote.Estimate_Summary.txt_FinishedQty2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 30, 9, "Quantity 3", Estimate_Add_QuickQuote.Estimate_Summary.txt_FinishedQty3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 30, 10, "Quantity 4", Estimate_Add_QuickQuote.Estimate_Summary.txt_FinishedQty4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 41, 7, "Cost Price (ex. Markup) - 1", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceExMarkup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 41, 8, "Cost Price (ex. Markup) - 2", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceExMarkup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 41, 9, "Cost Price (ex. Markup) - 3", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceExMarkup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 41, 10, "Cost Price (ex. Markup) - 4", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceExMarkup4());
 
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 42, 7, "Profit Margin ($) -1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[2]/input[1]");
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 42, 8, "Profit Margin ($) -2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[3]/input[1]");
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 42, 9, "Profit Margin ($) -3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[4]/input[1]");
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 42, 10, "Profit Margin ($) -4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[5]/input[1]");
-				
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 43, 7, "Sub Total -1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[2]/input[1]");
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 43, 8, "Sub Total -2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[3]/input[1]");
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 43, 9, "Sub Total -3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[4]/input[1]");
-				ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 43, 10, "Sub Total -4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[5]/input[1]");
-				
-				ProjectLibrary.CompareStringDropDownTextByXpath(xlpath, sheetName, 44, 6, "Tax Drop Down Option", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[1]/div[1]/div[1]/select");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 44, 7, "Tax - 1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[2]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 44, 8, "Tax - 2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[3]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 44, 9, "Tax - 3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[4]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 44, 10, "Tax - 4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[5]/span");
-				
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 45, 7, "Selling Price (inc. Tax) - 1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[2]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 45, 8, "Selling Price (inc. Tax) - 2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[3]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 45, 9, "Selling Price (inc. Tax) - 3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[4]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 45, 10, "Selling Price (inc. Tax) - 4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 42, 7, "Markup - 1", Estimate_Add_QuickQuote.Estimate_Summary.txt_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 42, 8, "Markup - 2", Estimate_Add_QuickQuote.Estimate_Summary.txt_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 42, 9, "Markup - 3", Estimate_Add_QuickQuote.Estimate_Summary.txt_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 42, 10, "Markup - 4", Estimate_Add_QuickQuote.Estimate_Summary.txt_Markup4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 43, 7, "Cost Price (inc. Markup) - 1", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceIncMarkup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 43, 8, "Cost Price (inc. Markup) - 2", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceIncMarkup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 43, 9, "Cost Price (inc. Markup) - 3", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceIncMarkup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 43, 10, "Cost Price (inc. Markup) - 4", Estimate_Add_QuickQuote.Estimate_Summary.txt_CostPriceIncMarkup4());
+		
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 44, 7, "Profit Margin (%) -1", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPercentage1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 44, 8, "Profit Margin (%) -2", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPercentage2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 44, 9, "Profit Margin (%) -3", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPercentage3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 44, 10, "Profit Margin (%) -4", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPercentage4());
 
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 47, 7, "Gross Profit - 1", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[2]/div[1]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 47, 8, "Gross Profit - 2", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[3]/div[1]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 47, 9, "Gross Profit - 3", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[4]/div[1]/span");
-				ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 47, 10, "Gross Profit - 4", "//table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[5]/div[1]/span");
-				
-				ProjectLibrary.ClickOnButtonByXpath("Save", "//td/table/tbody/tr[2]/td/div/div[1]/div[1]/input");
-			}
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 45, 7, "Profit Margin ($) -1", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPrice1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 45, 8, "Profit Margin ($) -2", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPrice2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 45, 9, "Profit Margin ($) -3", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPrice3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 45, 10, "Profit Margin ($) -4", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_ProfitMarginPrice4());
+		
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 46, 7, "Sub Total -1", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_SubTotal1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 46, 8, "Sub Total -2", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_SubTotal2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 46, 9, "Sub Total -3", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_SubTotal3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 46, 10, "Sub Total -4", Estimate_Add_QuickQuote.Estimate_Summary.txtbx_SubTotal4());
+		
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 47, 6, "Tax Drop Down Option", Estimate_Add_QuickQuote.Estimate_Summary.drpdn_Tax());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 47, 7, "Tax - 1", Estimate_Add_QuickQuote.Estimate_Summary.txt_TaxValue1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 47, 8, "Tax - 2", Estimate_Add_QuickQuote.Estimate_Summary.txt_TaxValue2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 47, 9, "Tax - 3", Estimate_Add_QuickQuote.Estimate_Summary.txt_TaxValue3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 47, 10, "Tax - 4", Estimate_Add_QuickQuote.Estimate_Summary.txt_TaxValue4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 48, 7, "Selling Price (inc. Tax) - 1", Estimate_Add_QuickQuote.Estimate_Summary.txt_SellingPriceIncTax1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 48, 8, "Selling Price (inc. Tax) - 2", Estimate_Add_QuickQuote.Estimate_Summary.txt_SellingPriceIncTax2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 48, 9, "Selling Price (inc. Tax) - 3", Estimate_Add_QuickQuote.Estimate_Summary.txt_SellingPriceIncTax3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 48, 10, "Selling Price (inc. Tax) - 4", Estimate_Add_QuickQuote.Estimate_Summary.txt_SellingPriceIncTax4());
+
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 49, 7, "Gross Profit ($) - 1", Estimate_Add_QuickQuote.Estimate_Summary.txt_GrossProfitPrice1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 49, 8, "Gross Profit ($) - 2", Estimate_Add_QuickQuote.Estimate_Summary.txt_GrossProfitPrice2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 49, 9, "Gross Profit ($) - 3", Estimate_Add_QuickQuote.Estimate_Summary.txt_GrossProfitPrice3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 49, 10, "Gross Profit ($) - 4", Estimate_Add_QuickQuote.Estimate_Summary.txt_GrossProfitPrice4());
+		
+//		ProjectLibrary.ClickOnButton("Save", Estimate_Add_QuickQuote.Estimate_Summary.btn_Save());
+		}
 }
