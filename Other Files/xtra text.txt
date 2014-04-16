@@ -1,6 +1,4 @@
-git
-https://github.com/Santhosh17/eprint3.7.git
-https://github.com/Santhosh17/Eprint.git
+
 
 file structure
 D:\Selenium Framework (Dont Delete )\Eprint Automation
