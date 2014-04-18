@@ -143,6 +143,7 @@ public class Inventory_Add extends SuperTestNG
 			return element;
 		}
 		
+		
 		public static class Inks
 		{
 			public static WebElement drpdn_InkCostingType()
@@ -291,6 +292,26 @@ public class Inventory_Add extends SuperTestNG
 			}
 			public static class Sheet
 			{
+				public static WebElement txtbx_Cost()
+				{
+					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtCost"));
+					return element;
+				}
+				public static WebElement txtbx_Per()
+				{
+					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPer"));
+					return element;
+				}
+				public static WebElement txtbx_PackedIn()
+				{
+					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPackedIn"));
+					return element;
+				}
+				public static WebElement txtbx_PackPrice()
+				{
+					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPackedPrice"));
+					return element;
+				}
 				public static WebElement drpdn_SizeOrdered()
 				{
 					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_ddlPaperSize"));
