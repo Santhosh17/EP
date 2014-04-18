@@ -320,6 +320,11 @@ public class ProjectLibrary extends SuperTestNG
 		Reporter.log("Clicked on '"+LocationName+"' Button",true);
 	}
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------//	
+	public static void ClickOnLink(String LocationName,WebElement LinkWebElement)
+	{
+		LinkWebElement.click();
+		Reporter.log("Clicked on '"+LocationName+"'Link",true);
+	}
 	public static void ClickOnLinkByID(String LocationName,String webelementID)
 	{
 		WebElement link = driver.findElement(By.id(webelementID));

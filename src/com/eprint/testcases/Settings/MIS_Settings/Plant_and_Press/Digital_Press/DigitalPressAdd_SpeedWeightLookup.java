@@ -27,7 +27,7 @@ public class DigitalPressAdd_SpeedWeightLookup extends SuperTestNG
 	  	EprintSpecificLinks.selectPlantsandPresses();
 	  	EprintSpecificLinks.selectDigitalPress();
 	  	
-	  	ProjectLibrary.ClickOnLinkByLinkText("Add New Record", "Add New Record");
+ 		ProjectLibrary.ClickOnLink("Add New Record", DigitalPress_View.lnk_AddNewRecord());
 	  	
 		String xlpath="./src/com/eprint/testData/Settings/EprintMIS/PlantsAndPresses/DigitalPress/SpeedWeight Lookup.xlsx";
 		String sheetName = "SpeedWeight Lookup";
