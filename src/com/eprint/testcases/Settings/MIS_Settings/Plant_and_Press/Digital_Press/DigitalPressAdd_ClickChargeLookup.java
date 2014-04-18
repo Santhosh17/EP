@@ -1,6 +1,5 @@
 package com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Digital_Press;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
@@ -15,7 +14,14 @@ public class DigitalPressAdd_ClickChargeLookup extends SuperTestNG
   @Test 
   public void testDigitalPressAdd_ClickChargeLookup() 
   {
-	  EprintSpecificLinks.login();
+	  	try
+	  	{
+		  EprintSpecificLinks.login();
+	  	}
+	  	catch (NoSuchElementException e)
+	  	{
+	  		Reporter.log("Already Logged In Continuing with Testing Process",true);
+	  	}
 	  	EprintSpecificLinks.clicksettings();
 	  	EprintSpecificLinks.selectEprintMIS();
 	  	EprintSpecificLinks.selectPlantsandPresses();
@@ -52,10 +58,8 @@ public class DigitalPressAdd_ClickChargeLookup extends SuperTestNG
 		String CalculationMethoddata = Generic.getXlCellValue(xlpath, sheetName, 23, 2);
 		if (CalculationMethoddata.equals("ClickCharge Lookup"))
 		{
-			WebElement CalculationMethod = DigitalPress_Add.drpdn_CalculationMethod();
-			Select singleselectCalculationMethod = new Select(CalculationMethod);
-			singleselectCalculationMethod.selectByVisibleText(CalculationMethoddata);
-			Reporter.log("Selecting an option in  Calculation Method Dropdown: "+CalculationMethoddata,true);
+			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 23, 2, "Calculation Method", DigitalPress_Add.drpdn_CalculationMethod());
+			
 			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 24, 2, "Rate for Black & White Chargeable Sheets",DigitalPress_Add.ClickChargeLookup.txtbx_RateForBWChargeableSheetsPrice());
 			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 25, 2, "Rate for Colour Chargeable Sheets", DigitalPress_Add.ClickChargeLookup.txtbx_RateForColourChargeableSheetsPrice());
 			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 26, 2, "Mark Up (%)", DigitalPress_Add.ClickChargeLookup.txtbx_MarkupPercentage());
