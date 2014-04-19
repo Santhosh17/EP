@@ -8,6 +8,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import com.eprint.pageObjects.LogIn_Page;
 public class EprintSpecificLinks extends SuperTestNG
 {
 	public static void Version()
@@ -30,7 +32,7 @@ public class EprintSpecificLinks extends SuperTestNG
 	// Login method for eprint
 	public static void login ()
 	{
-		EprintSpecificLinks.Version();
+		
 		String xlpath="./Excel Files/Config.xls";
 		String sheetName = "Sheet1";
 		ProjectLibrary.GoToURL_DD(xlpath, sheetName, 1, 1);
@@ -46,13 +48,13 @@ public class EprintSpecificLinks extends SuperTestNG
 		{
 			Reporter.log("No Such Element (POPUP) Present .... Continuing with Login Process",true); 
 		}
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 2, 1, "Login Email", "email");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 3, 1, "Password", "password");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 2, 1, "Login Email",LogIn_Page.txtbx_LoginMail());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 3, 1, "Password", LogIn_Page.txtbx_LoginPwd());
 		// Searches for checkbox of Stay Logged In
 		String StayLoggedIn = Generic.getXlCellValue(xlpath, sheetName,4, 1);
 		if (StayLoggedIn.equals("YES"))
 		{
-		driver.findElement(By.xpath("//table/tbody/tr/td[2]/div/label")).click();
+		LogIn_Page.chkbx_StayLoggedIn().click();
 		Reporter.log("Selecting Stay Logged In Checkbox",true);
 		}
 		else 
@@ -60,7 +62,7 @@ public class EprintSpecificLinks extends SuperTestNG
 			Reporter.log("Not Selecting Stay Logged In Checkbox",true);
 		}
 		// Searches for login button and clicks it 
-		ProjectLibrary.ClickOnButtonByID("Login", "btnlogin");
+		ProjectLibrary.ClickOnButton("Login", LogIn_Page.btn_Login());
 	}
 	// End of Login Method
 //-----------------------------------------------------------------------------------------------------//
