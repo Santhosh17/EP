@@ -34,7 +34,7 @@ public class Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMLessThanGSM1_SingleSide
 		}
 		
 		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-SingleItem.xlsx";
-		String sheetName = "Price4WholePackInv>PackedIn";
+		String sheetName = "SFD - SWL - InvGSM<GSM1 - SSBW";
 		
 		try
 		{

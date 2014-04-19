@@ -1,6 +1,7 @@
 package com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs;
 
 import org.openqa.selenium.NoSuchElementException;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.eprint.libraries.EprintSpecificLinks;
@@ -12,6 +13,14 @@ public class OCCostsUpdateVerify_FormulaBasedMatrix extends SuperTestNG
 	@Test 
 	public void testOCCostsUpdateVerify_FormulaBasedMatrix()
 	{
+		try
+		{
+			EprintSpecificLinks.login();
+		}
+		catch (NoSuchElementException e)
+		{
+			Reporter.log("Already Logged in so Continuing with Test Process",true);
+		}
 		String xlpath="./Excel Files/Settings/EprintMIS/Other Costs.xls";
 		String sheetName = "Costs";
 		EprintSpecificLinks.clicksettings();

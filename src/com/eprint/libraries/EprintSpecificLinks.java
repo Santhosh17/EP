@@ -46,7 +46,7 @@ public class EprintSpecificLinks extends SuperTestNG
 		}
 		catch (NoSuchElementException e) 
 		{
-			Reporter.log("No Such Element (POPUP) Present .... Continuing with Login Process",true); 
+			Reporter.log("");
 		}
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 2, 1, "Login Email",LogIn_Page.txtbx_LoginMail());
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 3, 1, "Password", LogIn_Page.txtbx_LoginPwd());
