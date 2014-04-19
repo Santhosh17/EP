@@ -1,4 +1,4 @@
-package com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs;
+package com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.FormulaBased;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;

@@ -1,4 +1,4 @@
-package com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs;
+package com.eprint.testcases.Settings.MIS_Settings.Other_Costs.Costs.TimeBased;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
