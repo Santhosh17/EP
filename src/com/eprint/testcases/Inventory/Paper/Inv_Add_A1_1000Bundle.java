@@ -11,10 +11,10 @@ import com.eprint.libraries.SuperTestNG;
 import com.eprint.pageObjects.Inventory.Inventory_Add;
 import com.eprint.pageObjects.Inventory.Inventory_View;
 
-public class Inv_Add_350GSM_A3 extends SuperTestNG
+public class Inv_Add_A1_1000Bundle extends SuperTestNG
 {
 	@Test
-	public void testInv_Add_350GSM_A3()
+	public void testInv_Add_A1_1000Bundle()
 	{
 		try
 		{
@@ -25,7 +25,7 @@ public class Inv_Add_350GSM_A3 extends SuperTestNG
 			Reporter.log("Already Logged in Continuing with Test Process",true);
 		}
 		String xlpath = "./src/com/eprint/testData/Inventory/Paper/Inventory Paper.xls";
-		String sheetName = "A3 500 - 350 GSM pack";
+		String sheetName = "CCL - A1 1000 Bundle";
 		
 		ProjectLibrary.HoverDropdownControlByXpath("Inventory", "//b/span[text()='Inventory']", "Add New", "Add New");
 		
@@ -57,6 +57,5 @@ public class Inv_Add_350GSM_A3 extends SuperTestNG
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 20, 1, "Color", Inventory_Add.GeneralTab.Paper.Sheet.txtbx_Color());
 		ProjectLibrary.ClickOnButton("Save", Inventory_Add.GeneralTab.btn_Save());
 		EprintSpecificLinks.SuccessMsgVerify("Inventory Item saved successfully", Inventory_View.txt_SuccessMsg());
-
 	}
 }

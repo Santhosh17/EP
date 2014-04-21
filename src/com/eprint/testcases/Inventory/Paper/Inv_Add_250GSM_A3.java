@@ -24,7 +24,7 @@ public class Inv_Add_250GSM_A3 extends SuperTestNG
 		{
 			Reporter.log("Already Logged in Continuing with Test Process",true);
 		}
-		String xlpath = "./src/com/eprint/testData/Inventory/Paper/Inventory Paper.xlsx";
+		String xlpath = "./src/com/eprint/testData/Inventory/Paper/Inventory Paper.xls";
 		String sheetName = "A3 500 - 250 GSM pack";
 		
 		ProjectLibrary.HoverDropdownControlByXpath("Inventory", "//b/span[text()='Inventory']", "Add New", "Add New");

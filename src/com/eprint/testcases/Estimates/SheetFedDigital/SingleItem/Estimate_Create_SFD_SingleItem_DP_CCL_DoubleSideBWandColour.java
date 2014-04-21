@@ -34,7 +34,7 @@ public class Estimate_Create_SFD_SingleItem_DP_CCL_DoubleSideBWandColour extends
 			Reporter.log("Already Logged in Continuing with Test Process",true);
 		}
 		
-		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-SingleItem.xlsx";
+		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-SingleItem.xls";
 		String sheetName = "Double Side B-W colour";
 		
 		try

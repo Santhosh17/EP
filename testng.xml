@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMGreaterThanGSM3_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMEqualsGSM2_DoubleSideCol_BW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMEqualsGSM3_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMGreaterGSM3_SingleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMLessThanGSM1_DoubleSideBW_Colour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMEqualsGSM1_SingleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_DoubleSideColourandBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMGreaterThanGSM1_LessThanGSM2_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMGreaterThanGSM2LessThanGSM3_SingleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMLessThanGSM1_SingleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMEqualsGSM3_SingleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_PaperStockSuppliedPriceForWholePack_InvSheetsGreaterThanPackedIn"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMLessThanGSM1_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_DoubleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_DoubleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMGreaterThanGSM1LessThanGSM2_SingleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMEqualsGSM1_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_PriceForWholePack_InvSheetsLessThanPackedIn"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_DoubleSideBWandColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMGreaterThanGSM2_LessThanGSM3_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_PaperStockSupplied"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMEqualsGSM2_SingleSideColour"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMEqualsGSM2_SingleSideBW"/>
+      <class name="com.eprint.testcases.Estimates.SheetFedDigital.SingleItem.Estimate_Create_SFD_SingleItem_DP_CCL_SingleSideBW"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

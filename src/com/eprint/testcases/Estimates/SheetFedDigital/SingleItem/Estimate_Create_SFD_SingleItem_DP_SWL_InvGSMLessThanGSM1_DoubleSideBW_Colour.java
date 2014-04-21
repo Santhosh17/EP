@@ -33,7 +33,7 @@ public class Estimate_Create_SFD_SingleItem_DP_SWL_InvGSMLessThanGSM1_DoubleSide
 			Reporter.log("Already Logged in so Continuing with Test Process",true);
 		}
 		
-		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-SingleItem.xlsx";
+		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-SingleItem.xls";
 		String sheetName = "SFD - SWL - InvGSM<GSM1 - DSBWC";
 		
 		try
