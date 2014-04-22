@@ -32,3 +32,5 @@ http://www.larsentoubro.com/lntcorporate/uploads/product/Wire_cables1.pdf}
 http://agilemethodology.org/
 http://www.softwaretestinghelp.com/atlassian-jira-tutorial-1/
 http://bonrouge.com/br.php?page=togglit
+
+http://selenium.polteq.com/en/category/page-object-model/

@@ -8,8 +8,10 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
-public class Generic 
+public class Generic extends SuperTestNG
 {
 // Method to count the rows present in excel sheet 
 	public static int getexcelRowcount(String Xlpath,String SheetName)
@@ -100,5 +102,12 @@ public class Generic
 		s.createRow(RowNum).createCell(CellNum).setCellValue(DatatoWrite);
 		FileOutputStream fos = new FileOutputStream(xlpath);
 		wb.write(fos);
+	}
+	public static void highlightElement(WebElement element) 
+	{ 
+		for (int i = 0; i < 2; i++) { JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "color: red; border: 8px solid red;"); 
+		js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, ""); 
+	}
 	}
 }

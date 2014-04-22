@@ -1,4 +1,4 @@
-package com.eprint.testcases.CRM;
+package com.eprint.testcases.CRM.Prospects;
 
 import org.testng.annotations.Test;
 
@@ -7,15 +7,15 @@ import com.eprint.libraries.Generic;
 import com.eprint.libraries.ProjectLibrary;
 import com.eprint.libraries.SuperTestNG;
 
-public class CRM_CustomerAdd extends SuperTestNG
+public class CRM_ProspectAdd extends SuperTestNG
 {
 	@Test
-	public static void testCRM_CustomerAdd()
+	public static void testCRM_SupplierAdd()
 	{
 		EprintSpecificLinks.login();
 		String xlpath = "./Excel Files/CRM/CRM.xls";
-		String sheetName = "Customer Add";
-		ProjectLibrary.HoverDropdownControlByXpath("CRM", "//span[text()='CRM']", "Add New Customer", "Add New Customer");
+		String sheetName = "Supplier Add";
+		ProjectLibrary.HoverDropdownControlByXpath("CRM", "//span[text()='CRM']", "Add New Supplier", "Add New Supplier");
 		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 1, 1, "Company Name", "ctl00_ContentPlaceHolder1_ClientAddID_txt_companyname");
 //		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, rownum, cellnum, "Type", "ctl00_ContentPlaceHolder1_ClientAddID_ddl_type_Input");
 //		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, rownum, cellnum, "Account Status", "ctl00_ContentPlaceHolder1_ClientAddID_ddl_status");

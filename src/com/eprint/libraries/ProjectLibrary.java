@@ -28,6 +28,7 @@ public class ProjectLibrary extends SuperTestNG
 	public static void StringDDTextBox(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement TxtBxWebElement)
 	{
 		String SheetData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
+		Generic.highlightElement(TxtBxWebElement);
 		TxtBxWebElement.clear();
 		TxtBxWebElement.sendKeys(""+SheetData);
 		Reporter.log(LocationName+" : '"+SheetData+"' - Entered",true);
@@ -294,6 +295,7 @@ public class ProjectLibrary extends SuperTestNG
 	public static void ClickOnButtonByID(String LocationName,String webelementID)
 	{
 	WebElement Button = driver.findElement(By.id(webelementID));
+	Generic.highlightElement(Button);
 	Button.click();
 	Reporter.log("Clicked on '"+LocationName+"' Button",true);
 	}

@@ -8,6 +8,6 @@
 	<classpathentry kind="lib" path="D:/Selenium Framework (Dont Delete )/ePrint Automation/Jar/poi-ooxml-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium Framework (Dont Delete )/ePrint Automation/Jar/poi-ooxml-schemas-3.10-FINAL-20140208.jar"/>
 	<classpathentry kind="lib" path="D:/Selenium Framework (Dont Delete )/ePrint Automation/Jar/xmlbeans-2.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Selenium Framework (Dont Delete )/ePrint Automation/Jar/selenium-server-standalone-2.39.0.jar" sourcepath="Jar/selenium-server-standalone-2.39.0.jar"/>
+	<classpathentry kind="lib" path="Jar/selenium-server-standalone-2.40.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

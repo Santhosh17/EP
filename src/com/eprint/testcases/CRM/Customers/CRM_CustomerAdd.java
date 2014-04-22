@@ -1,4 +1,4 @@
-package com.eprint.testcases.CRM;
+package com.eprint.testcases.CRM.Customers;
 
 import org.testng.annotations.Test;
 
@@ -7,18 +7,17 @@ import com.eprint.libraries.Generic;
 import com.eprint.libraries.ProjectLibrary;
 import com.eprint.libraries.SuperTestNG;
 
-public class CRM_SupplierAdd extends SuperTestNG
+public class CRM_CustomerAdd extends SuperTestNG
 {
 	@Test
-	public static void testCRM_SupplierAdd()
+	public static void testCRM_CustomerAdd()
 	{
 		EprintSpecificLinks.login();
 		String xlpath = "./Excel Files/CRM/CRM.xls";
-		String sheetName = "Supplier Add";
-		ProjectLibrary.HoverDropdownControlByXpath("CRM", "//span[text()='CRM']", "Add New Supplier", "Add New Supplier");
+		String sheetName = "Customer Add";
+		ProjectLibrary.HoverDropdownControlByXpath("CRM", "//span[text()='CRM']", "Add New Customer", "Add New Customer");
 		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 1, 1, "Company Name", "ctl00_ContentPlaceHolder1_ClientAddID_txt_companyname");
 //		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, rownum, cellnum, "Type", "ctl00_ContentPlaceHolder1_ClientAddID_ddl_type_Input");
-//		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, rownum, cellnum, "Carrier", "ctl00_ContentPlaceHolder1_ClientAddID_chkcarrier");
 //		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, rownum, cellnum, "Account Status", "ctl00_ContentPlaceHolder1_ClientAddID_ddl_status");
 //		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, rownum, cellnum, "Account Number", "ctl00_ContentPlaceHolder1_ClientAddID_txt_accountno");
 //		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, rownum, cellnum, "Business Email", "ctl00_ContentPlaceHolder1_ClientAddID_txt_email");
@@ -44,8 +43,6 @@ public class CRM_SupplierAdd extends SuperTestNG
 //		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, rownum, cellnum, "Account Name", "ctl00_ContentPlaceHolder1_ClientAddID_txt_accountname");
 //		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, rownum, cellnum, "Sales Person", "ctl00_ContentPlaceHolder1_ClientAddID_ddl_salesperson");
 //		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, rownum, cellnum, "Referred By ", "ctl00_ContentPlaceHolder1_ClientAddID_ddl_Referencedby");
-//		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, rownum, cellnum, "Tax Number", "ctl00_ContentPlaceHolder1_ClientAddID_txt_taxnumber");
-//		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, rownum, cellnum, "Balance", "ctl00_ContentPlaceHolder1_ClientAddID_txt_balance");
 //		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, rownum, cellnum, "Create Identical Contact", "ctl00_ContentPlaceHolder1_ClientAddID_Chkcreate_identical_contact");
 //		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, rownum, cellnum, "Description", "ctl00_ContentPlaceHolder1_ClientAddID_txt_description");
 //		ProjectLibrary.ClickOnButtonByID("Save", "ctl00_ContentPlaceHolder1_ClientAddID_btnsave");
