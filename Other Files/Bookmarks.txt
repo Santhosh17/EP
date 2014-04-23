@@ -34,3 +34,5 @@ http://www.softwaretestinghelp.com/atlassian-jira-tutorial-1/
 http://bonrouge.com/br.php?page=togglit
 
 http://selenium.polteq.com/en/category/page-object-model/
+http://wenzhixin.net.cn/p/multiple-select/
+http://eclipsesource.com/blogs/tutorials/egit-tutorial/

@@ -162,7 +162,7 @@ public class Estimate_Add_SFD_Single extends SuperTestNG
 			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCSingleItem_txtlandscape"));
 			return element;
 		}
-		public static WebElement Icn_GuillotineAdd()
+		public static WebElement btn_GuillotineAdd()
 		{
 			WebElement element = driver.findElement(By.xpath(".//*[@id='div_only_digitals_right']/div[13]/div[1]/div[2]/a/img"));
 			return element;

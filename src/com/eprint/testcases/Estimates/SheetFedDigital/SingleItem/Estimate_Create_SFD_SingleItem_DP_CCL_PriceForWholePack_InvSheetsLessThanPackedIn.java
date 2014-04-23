@@ -183,9 +183,10 @@ public class Estimate_Create_SFD_SingleItem_DP_CCL_PriceForWholePack_InvSheetsLe
 			Estimate_Add_SFD_Single.chkbx_PrintLayoutLandscape().click();
 			Reporter.log("Clicking on Landscape Checkbox",true);
 		}
-		
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 43, 2, "Guillotine : First Trim", Estimate_Add_SFD_Single.chkbx_GuillotineFirstTrim());
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 43, 4, "Guillotine : Second Trim",Estimate_Add_SFD_Single.chkbx_GuillotineSecondTrim());
+		String GuillotineName = Generic.getXlCellValue(xlpath, sheetName, 44, 1);
+		EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFD_Single.btn_GuillotineAdd(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr[4]/td/div/a[contains(text(),'"+GuillotineName+"')]");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 45, 2, "Guillotine : First Trim", Estimate_Add_SFD_Single.chkbx_GuillotineFirstTrim());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 45, 4, "Guillotine : Second Trim",Estimate_Add_SFD_Single.chkbx_GuillotineSecondTrim());
 		
 		ProjectLibrary.ClickOnButton("Finish", Estimate_Add_SFD_Single.btn_Finish());
 		Reporter.log("----------------------------------------------------------------------------------",true);
