@@ -102,4 +102,9 @@ public class RegionalSettingsPage extends SuperTestNG
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnSave"));
 		return element;
 	}
+	public static WebElement txt_Success()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_ctl01_lblMessage"));
+		return element;
+	}
 }
