@@ -2,6 +2,7 @@ package com.eprint.libraries;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
@@ -93,6 +94,10 @@ public class Generic extends SuperTestNG
 		{
 			e.printStackTrace();
 		}
+	}
+	public static void ImplicitWait(int timeInSec)
+	{
+		driver.manage().timeouts().implicitlyWait(timeInSec, TimeUnit.SECONDS);
 	}
 	public static void WriteDataToAExcelCell(String xlpath,String Sheetname,int RowNum,int CellNum,String DatatoWrite) throws InvalidFormatException, IOException
 	{

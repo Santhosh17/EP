@@ -28,7 +28,6 @@ public class ProjectLibrary extends SuperTestNG
 	public static void StringDDTextBox(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,WebElement TxtBxWebElement)
 	{
 		String SheetData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
-		Generic.highlightElement(TxtBxWebElement);
 		TxtBxWebElement.clear();
 		TxtBxWebElement.sendKeys(""+SheetData);
 		Reporter.log(LocationName+" : '"+SheetData+"' - Entered",true);
@@ -305,6 +304,11 @@ public class ProjectLibrary extends SuperTestNG
 	Reporter.log("Clicked on '"+LocationName+"' Button",true);
 	}
 	public static void ClickOnButton(String LocationName,WebElement ButtonWebElement)
+	{
+	ButtonWebElement.click();
+	Reporter.log("Clicked on '"+LocationName+"' Button",true);
+	}
+	public static void ClickOnDropDown(String LocationName,WebElement ButtonWebElement)
 	{
 	ButtonWebElement.click();
 	Reporter.log("Clicked on '"+LocationName+"' Button",true);

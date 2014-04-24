@@ -9,7 +9,7 @@ public class TaxRatesPages extends SuperTestNG
 {
 	public static WebElement lnk_AddNewRecord()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl02_ctl00_btnAdd"));
+		WebElement element = driver.findElement(By.linkText("Add New Record"));
 		return element;
 	}
 	public static WebElement drpdn_DropDown_Delete()
@@ -45,6 +45,11 @@ public class TaxRatesPages extends SuperTestNG
 	public static WebElement btn_Save()
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_RadGrid1_ctl00_ctl02_ctl03_RadButton1"));
+		return element;
+	}
+	public static WebElement txt_SuccessMsg()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_ctl01_lblMessage"));
 		return element;
 	}
 }
