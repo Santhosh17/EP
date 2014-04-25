@@ -36,3 +36,6 @@ http://bonrouge.com/br.php?page=togglit
 http://selenium.polteq.com/en/category/page-object-model/
 http://wenzhixin.net.cn/p/multiple-select/
 http://eclipsesource.com/blogs/tutorials/egit-tutorial/
+http://en.wikipedia.org/wiki/File:Test_Automation_Interface.png
+http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml
+http://www.methodsandtools.com/archive/archive.php?id=33

@@ -2,7 +2,6 @@ package com.eprint.pageObjects.Estimates.QuickQuote;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import com.eprint.libraries.SuperTestNG;
 
 public class Estimate_Add_QuickQuote extends SuperTestNG
