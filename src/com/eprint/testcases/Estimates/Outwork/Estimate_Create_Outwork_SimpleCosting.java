@@ -1,6 +1,5 @@
 // Script for Estimate Create -> Estimate Type : Outwork -> Costing type : Simple Costing
-		//techgithub
-
+		
 package com.eprint.testcases.Estimates.Outwork;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;

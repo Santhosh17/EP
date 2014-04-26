@@ -39,3 +39,6 @@ http://eclipsesource.com/blogs/tutorials/egit-tutorial/
 http://en.wikipedia.org/wiki/File:Test_Automation_Interface.png
 http://www.dhtmlx.com/docs/products/dhtmlxTree/index.shtml
 http://www.methodsandtools.com/archive/archive.php?id=33
+http://elementalselenium.com/tips/23-dynamic-pages
+http://www.studyselenium.com/2013/11/database-connection-using-java-and.html
+http://seleniumforum.forumotion.net/
