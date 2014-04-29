@@ -33,8 +33,8 @@ public class EprintSpecificLinks extends SuperTestNG
 	public static void login ()
 	{
 		
-		String xlpath="./Excel Files/Config.xls";
-		String sheetName = "Sheet1";
+		String xlpath="./src/com/eprint/testData/Config.xls";
+		String sheetName = "Login Credentials";
 		ProjectLibrary.GoToURL_DD(xlpath, sheetName, 1, 1);
 		try
 		{

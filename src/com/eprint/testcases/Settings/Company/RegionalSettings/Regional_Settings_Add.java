@@ -26,8 +26,8 @@ public class Regional_Settings_Add extends SuperTestNG
 		EprintSpecificLinks.selectEprintMIS();
 		Settings_ViewPage.drpdn_Company().click();
 		Settings_ViewPage.Company.lnk_RegionalSettings().click();
-		String xlpath ="./src/com/eprint/testData/Settings/Company/Profile/Company Profile.xls";
-		String sheetName = "Company Profile";
+//		String xlpath ="./src/com/eprint/testData/Settings/Company/Profile/Company Profile.xls";
+//		String sheetName = "Company Profile";
 //		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, rownum, cellnum, "Language", RegionalSettingsPage.drpdn_Language());
 //		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, rownum, cellnum, "Date Format", RegionalSettingsPage.drpdn_DateFormat());
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "Colour", RegionalSettingsPage.txtbx_Colour());

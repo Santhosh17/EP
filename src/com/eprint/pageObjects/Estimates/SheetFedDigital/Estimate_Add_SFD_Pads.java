@@ -316,12 +316,12 @@ public class Estimate_Add_SFD_Pads extends SuperTestNG
 		}
 		public static WebElement txt_PaperStock3()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice3"));
+			WebElement element = driver.findElement(By.id("spnPaperPrice13"));
 			return element;
 		}
 		public static WebElement txt_PaperStock4()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice4"));
+			WebElement element = driver.findElement(By.id("spnPaperPrice14"));
 			return element;
 		}
 		public static WebElement txt_Press1()

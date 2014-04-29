@@ -30,8 +30,8 @@ public class Estimate_Create_SFD_Pads extends SuperTestNG
 			Reporter.log("Already Logged in Continuing with Test Process",true);
 		}
 		
-		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-SingleItem.xls";
-		String sheetName = "Double Side Black & White";
+		String xlpath = "./src/com/eprint/testData/Estimates/SheetFedDigital-Pads.xls";
+		String sheetName = "Pads Main Data";
 		
 		try
 		{
@@ -125,51 +125,52 @@ public class Estimate_Create_SFD_Pads extends SuperTestNG
 		
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 34, 1, "Set up Spoilage", Estimate_Add_SFD_Pads.txtbx_SetUpSpoilage());
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 35, 1, "Running Spoilage", Estimate_Add_SFD_Pads.txtbx_RunningSpoilage());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 36, 1, "No. Of Leaves per Pad", Estimate_Add_SFD_Pads.txtbx_NoOfLeavesPerPad());
 		
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 36, 3, "Double Sided",Estimate_Add_SFD_Pads.chkbx_DoubleSided());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 37, 3, "Double Sided",Estimate_Add_SFD_Pads.chkbx_DoubleSided());
 
 		if (Estimate_Add_SFD_Pads.chkbx_DoubleSided().isSelected())
 		{
-			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 36, 1, "Color (Side-1)", Estimate_Add_SFD_Pads.drpdn_ColorSide1());
-			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 37, 1, "Color (Side-2)", Estimate_Add_SFD_Pads.drpdn_ColorSide2());
+			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 37, 1, "Color (Side-1)", Estimate_Add_SFD_Pads.drpdn_ColorSide1());
+			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 38, 1, "Color (Side-2)", Estimate_Add_SFD_Pads.drpdn_ColorSide2());
 		}
 		else
 		{
-			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 36, 1, "Color (Side-1)", Estimate_Add_SFD_Pads.drpdn_ColorSide1());
+			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 37, 1, "Color (Side-1)", Estimate_Add_SFD_Pads.drpdn_ColorSide1());
 		}
 		
-		String CustomPrintSheetSize = Generic.getXlCellValue(xlpath, sheetName, 38, 3);
+		String CustomPrintSheetSize = Generic.getXlCellValue(xlpath, sheetName, 39, 3);
 		if (CustomPrintSheetSize.equals("YES"))
 		{
-			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 38, 4, "Custom Print Sheet Height", Estimate_Add_SFD_Pads.txtbx_PrintSheetSizeCustomHeight());
-			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 38, 5, "Custom Print Sheet Width", Estimate_Add_SFD_Pads.txtbx_PrintSheetSizeCustomWidth());
+			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 39, 4, "Custom Print Sheet Height", Estimate_Add_SFD_Pads.txtbx_PrintSheetSizeCustomHeight());
+			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 39, 5, "Custom Print Sheet Width", Estimate_Add_SFD_Pads.txtbx_PrintSheetSizeCustomWidth());
 		}
 		else if (CustomPrintSheetSize.equals("NO"))
 		{
-			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 38, 1, "Print Sheet Size", Estimate_Add_SFD_Pads.drpdn_PrintSheetSize());
+			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 39, 1, "Print Sheet Size", Estimate_Add_SFD_Pads.drpdn_PrintSheetSize());
 		}
 		
-		String CustomFinishedJobSize = Generic.getXlCellValue(xlpath, sheetName, 39, 3);
+		String CustomFinishedJobSize = Generic.getXlCellValue(xlpath, sheetName, 40, 3);
 		if (CustomFinishedJobSize.equals("YES"))
 		{
-			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 39, 4, "Custom Finished Job Height",Estimate_Add_SFD_Pads.txtbx_FinishedJobSizeCustomHeight());
-			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 39, 5, "Custom Finished Job Width", Estimate_Add_SFD_Pads.txtbx_FinishedJobSizeCustomWidth());
+			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 40, 4, "Custom Finished Job Height",Estimate_Add_SFD_Pads.txtbx_FinishedJobSizeCustomHeight());
+			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 40, 5, "Custom Finished Job Width", Estimate_Add_SFD_Pads.txtbx_FinishedJobSizeCustomWidth());
 		}
 		else if (CustomFinishedJobSize.equals("NO"))
 		{
-			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 39, 1, "Finished Job Size", Estimate_Add_SFD_Pads.drpdn_FinishedJobSize());
+			ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 40, 1, "Finished Job Size", Estimate_Add_SFD_Pads.drpdn_FinishedJobSize());
 		}
 		
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 40, 1, "Include Gutters", Estimate_Add_SFD_Pads.chkbx_IncludeGutters());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 41, 1, "Include Gutters", Estimate_Add_SFD_Pads.chkbx_IncludeGutters());
 		WebElement IncludeGutters = Estimate_Add_SFD_Pads.chkbx_IncludeGutters();
 		if (IncludeGutters.isSelected())
 		{
-			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 40, 3, "Horizontal",Estimate_Add_SFD_Pads.txtbx_IncludeGuttersHorizontal());
-			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 40, 5, "Vertical", Estimate_Add_SFD_Pads.txtbx_IncludeGuttersVertical());
+			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 41, 3, "Horizontal",Estimate_Add_SFD_Pads.txtbx_IncludeGuttersHorizontal());
+			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 41, 5, "Vertical", Estimate_Add_SFD_Pads.txtbx_IncludeGuttersVertical());
 		}
 		
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 41, 1, "Apply Press Restrictions", Estimate_Add_SFD_Pads.chkbx_ApplyPressRestrictions());
-		String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 42, 1);
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 42, 1, "Apply Press Restrictions", Estimate_Add_SFD_Pads.chkbx_ApplyPressRestrictions());
+		String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 43, 1);
 		if (PrintLayout.equals("Portrait"))
 		{
 			Estimate_Add_SFD_Pads.chkbx_PortraitPrintLayout().click();
@@ -180,10 +181,11 @@ public class Estimate_Create_SFD_Pads extends SuperTestNG
 			Estimate_Add_SFD_Pads.chkbx_LandscapePrintLayout().click();
 			Reporter.log("Clicking on Landscape Checkbox",true);
 		}
-		String GuillotineName = Generic.getXlCellValue(xlpath, sheetName, 44, 1);
+		String GuillotineName = Generic.getXlCellValue(xlpath, sheetName, 45, 1);
 		EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFD_Pads.btn_Guillotine(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr[4]/td/div/a[contains(text(),'"+GuillotineName+"')]");
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 45, 2, "Guillotine : First Trim", Estimate_Add_SFD_Pads.chkbx_FirstTrim());
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 45, 4, "Guillotine : Second Trim",Estimate_Add_SFD_Pads.chkbx_SecondTrim());
+		Generic.BlindWait(2);
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 46, 2, "Guillotine : First Trim", Estimate_Add_SFD_Pads.chkbx_FirstTrim());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 46, 4, "Guillotine : Second Trim",Estimate_Add_SFD_Pads.chkbx_SecondTrim());
 		
 		ProjectLibrary.ClickOnButton("Finish", Estimate_Add_SFD_Pads.btn_Finish());
 		Reporter.log("----------------------------------------------------------------------------------",true);
@@ -199,72 +201,72 @@ public class Estimate_Create_SFD_Pads extends SuperTestNG
 		ProjectLibrary.CompareStringText(xlpath, sheetName, 31, 2, "Finished Quantity -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_FinishedQty3());
 		ProjectLibrary.CompareStringText(xlpath, sheetName, 31, 4, "Finished Quantity -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_FinishedQty4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 51, 2, "Paper/Stock 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 51, 3, "Paper/Stock 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 51, 4, "Paper/Stock 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 51, 5, "Paper/Stock 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 2, "Paper/Stock 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 3, "Paper/Stock 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 4, "Paper/Stock 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 5, "Paper/Stock 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_PaperStock4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 2, "Press 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 3, "Press 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 4, "Press 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 52, 5, "Press 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 2, "Press 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 3, "Press 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 4, "Press 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 5, "Press 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Press4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 2, "Guillotine 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 3, "Guillotine 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 4, "Guillotine 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 53, 5, "Guillotine 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 2, "Guillotine 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 3, "Guillotine 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 4, "Guillotine 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 5, "Guillotine 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Guillotine4());
 
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 2, "Cost Price (Ex. Markup) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 3, "Cost Price (Ex. Markup) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 4, "Cost Price (Ex. Markup) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 5, "Cost Price (Ex. Markup) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 2, "Cost Price (Ex. Markup) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 3, "Cost Price (Ex. Markup) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 4, "Cost Price (Ex. Markup) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 5, "Cost Price (Ex. Markup) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Excl_Markup4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 2, "Markup - 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 3, "Markup - 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 4, "Markup - 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 5, "Markup - 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 2, "Markup - 1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 3, "Markup - 2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 4, "Markup - 3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 5, "Markup - 4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_Markup4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 2, "Cost Price (inc Markup) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 3, "Cost Price (inc Markup) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 4, "Cost Price (inc Markup) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 5, "Cost Price (inc Markup) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 2, "Cost Price (inc Markup) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 3, "Cost Price (inc Markup) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 4, "Cost Price (inc Markup) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 5, "Cost Price (inc Markup) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_CostPrice_Incl_Markup4());
 		
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 57, 2, "Profit Margin(%) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage1());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 57, 3, "Profit Margin(%) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage2());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 57, 4, "Profit Margin(%) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage3());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 57, 5, "Profit Margin(%) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage4());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 2, "Profit Margin(%) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 3, "Profit Margin(%) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 4, "Profit Margin(%) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 5, "Profit Margin(%) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPercentage4());
 		
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 2, "Profit Margin($) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice1());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 3, "Profit Margin($) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice2());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 4, "Profit Margin($) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice3());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 58, 5, "Profit Margin($) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice4());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 2, "Profit Margin($) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 3, "Profit Margin($) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 4, "Profit Margin($) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 5, "Profit Margin($) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_ProfitMarginPrice4());
 		
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 2, "Sub Total -1", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal1());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 3, "Sub Total -2", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal2());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 4, "Sub Total -3", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal3());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 59, 5, "Sub Total -4", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal4());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 60, 2, "Sub Total -1", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 60, 3, "Sub Total -2", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 60, 4, "Sub Total -3", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 60, 5, "Sub Total -4", Estimate_Add_SFD_Pads.Estimate_Summary.txtbx_SubTotal4());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 60, 1, "Tax", Estimate_Add_SFD_Pads.Estimate_Summary.drpdn_Tax());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 61, 1, "Tax", Estimate_Add_SFD_Pads.Estimate_Summary.drpdn_Tax());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 2, "Tax Value-1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 3, "Tax Value-2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 4, "Tax Value-3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 5, "Tax Value-4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 2, "Tax Value-1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 3, "Tax Value-2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 4, "Tax Value-3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 5, "Tax Value-4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_TaxValue4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 2, "Selling Price (inc. Tax)-1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 3, "Selling Price (inc. Tax)-2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 4, "Selling Price (inc. Tax)-3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 5, "Selling Price (inc. Tax)-4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 2, "Selling Price (inc. Tax)-1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 3, "Selling Price (inc. Tax)-2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 4, "Selling Price (inc. Tax)-3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 5, "Selling Price (inc. Tax)-4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_SellingPrice4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 2, "Gross Profit ($) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 3, "Gross Profit ($) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 4, "Gross Profit ($) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 5, "Gross Profit ($) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 2, "Gross Profit ($) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 3, "Gross Profit ($) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 4, "Gross Profit ($) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 5, "Gross Profit ($) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPrice4());
 		
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 2, "Gross Profit (%) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage1());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 3, "Gross Profit (%) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage2());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 4, "Gross Profit (%) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage3());
-		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 5, "Gross Profit (%) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 2, "Gross Profit (%) -1", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 3, "Gross Profit (%) -2", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 4, "Gross Profit (%) -3", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 5, "Gross Profit (%) -4", Estimate_Add_SFD_Pads.Estimate_Summary.txt_GrossProfitPercentage4());
 
 //		ProjectLibrary.ClickOnButton("Save", Estimate_Add_SFD_Pads.Estimate_Summary.btn_Save());
 	}

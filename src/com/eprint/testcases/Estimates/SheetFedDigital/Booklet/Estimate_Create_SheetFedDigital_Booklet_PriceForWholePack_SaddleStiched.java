@@ -190,7 +190,7 @@ public class Estimate_Create_SheetFedDigital_Booklet_PriceForWholePack_SaddleSti
 		}
 
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 48, 3, "Round up to use whole sheets", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
-			
+		
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 49, 2, "Guillotine : First Trim", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_FirstTrim());
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 49, 4, "Guillotine : Second Trim", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_SecondTrim());
 		
