@@ -45,3 +45,5 @@ http://seleniumforum.forumotion.net/
 http://seleniumtraining.in/
 http://selenium-tutorial.blogspot.in
 http://jbehave.org/reference/web/stable/page-objects.html
+http://www.jayphilips.com/2010/03/31/15-sections-that-should-be-in-a-testing-methodology/
+http://www.testingexcellence.com/what-types-of-documents-are-needed-for-software-testing/
