@@ -102,6 +102,11 @@ public class Estimate_Add_SFD_Booklet extends SuperTestNG
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcBooklet_Button16"));
 		return element;
 	}
+	public static WebElement chkbx_UpdateItemDescription()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcBooklet_Chk_ItemDescn"));
+		return element;
+	}
 	public static WebElement btn_Finish()
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcBooklet_btnSave"));
