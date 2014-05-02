@@ -52,3 +52,13 @@ Contact Info:
 U: www.infomazetech.com
 E: santhosh.s@infomazeapps.com
 P: +91 821 234 0437 
+
+
+
+manually collecting list of items in dropdown
+1. copy paste code to notepad ++ press ctrl+H paste below code in find what 
+<option[^>]*>([^<]*)</option>
+paste below code in Replace with 
+\1\n
+select regular expression checkbox click OK
+

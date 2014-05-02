@@ -164,7 +164,7 @@ public class Estimate_Add_SFD_Single extends SuperTestNG
 		}
 		public static WebElement btn_GuillotineAdd()
 		{
-			WebElement element = driver.findElement(By.xpath(".//*[@id='div_only_digitals_right']/div[13]/div[1]/div[2]/a/img"));
+			WebElement element = driver.findElement(By.xpath("//div[17]/div/div[2]/a/img"));
 			return element;
 		}
 		public static WebElement chkbx_GuillotineFirstTrim()

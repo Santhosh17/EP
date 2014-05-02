@@ -579,22 +579,22 @@ public class Estimate_Add_SFD_Booklet extends SuperTestNG
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup1()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[2]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[2]/span[contains(@id,'spnCostExMarkup1_')]"));
 				return element;
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup2()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[3]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[3]/span[contains(@id,'spnCostExMarkup2_')]"));
 				return element;
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup3()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[4]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[4]/span[contains(@id,'spnCostExMarkup3_')]"));
 				return element;
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup4()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[5]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td[5]/span[contains(@id,'spnCostExMarkup4_')]"));
 				return element;
 			}
 			public static WebElement txt_Markup1()
@@ -872,42 +872,42 @@ public class Estimate_Add_SFD_Booklet extends SuperTestNG
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup1()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td[2]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr/td[2]/span[contains(@id,'spnCostExMarkup1_')]"));
 				return element;
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup2()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td[3]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr/td[3]/span[contains(@id,'spnCostExMarkup2_')]"));
 				return element;
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup3()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td[4]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr/td[4]/span[contains(@id,'spnCostExMarkup3_')]"));
 				return element;
 			}
 			public static WebElement txt_Cost_Price_Ex_Markup4()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td[5]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr/td[5]/span[contains(@id,'spnCostExMarkup4_')]"));
 				return element;
 			}
 			public static WebElement txt_Markup1()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[2]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[2]/span[contains(@id,'spnMarkupPrice1_')]"));
 				return element;
 			}
 			public static WebElement txt_Markup2()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[3]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[3]/span[contains(@id,'spnMarkupPrice2_')]"));
 				return element;
 			}
 			public static WebElement txt_Markup3()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[4]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[4]/span[contains(@id,'spnMarkupPrice3_')]"));
 				return element;
 			}
 			public static WebElement txt_Markup4()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[5]/span"));
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td[5]/span[contains(@id,'spnMarkupPrice4_')]"));
 				return element;
 			}
 			public static WebElement txt_Cost_Price_Inc_Markup1()

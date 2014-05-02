@@ -10,6 +10,9 @@
       <class name="com.eprint.testcases.Inventory.Paper.Inv_Add_250GSM_A3"/>
       <class name="com.eprint.testcases.Inventory.Paper.Inv_Add_300GSM_A3"/>
       <class name="com.eprint.testcases.Inventory.Paper.Inv_Add_350GSM_A3"/>
+      <class name="com.eprint.testcases.Inventory.Paper.Inv_Add_A1_1000Bundle"/>
+      <class name="com.eprint.testcases.Inventory.Paper.Inv_Add_A4_100Pack"/>
+      <class name="com.eprint.testcases.Inventory.Paper.Inv_Add_A4_10inPack"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
