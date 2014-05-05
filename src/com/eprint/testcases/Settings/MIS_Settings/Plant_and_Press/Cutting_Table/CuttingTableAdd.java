@@ -1,16 +1,25 @@
 package com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Cutting_Table;
+import org.openqa.selenium.NoSuchElementException;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.eprint.libraries.EprintSpecificLinks;
-import com.eprint.libraries.Generic;
 import com.eprint.libraries.ProjectLibrary;
 import com.eprint.libraries.SuperTestNG;
+import com.eprint.pageObjects.Settings.PlantsAndPresses.CuttingTable.CuttingTable_Add;
+import com.eprint.pageObjects.Settings.PlantsAndPresses.CuttingTable.CuttingTable_View;
 public class CuttingTableAdd extends SuperTestNG
 {
   @Test (groups={"Cutting Table"})
   public void testCuttingTableAdd() 
   {
+	  try{
 	  EprintSpecificLinks.login();
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		Reporter.log("Already Logged in Continuing with Testing Process",true);  
+	  }
 	  EprintSpecificLinks.clicksettings();
 	  EprintSpecificLinks.selectEprintMIS();
 	  EprintSpecificLinks.selectPlantsandPresses();
@@ -18,23 +27,23 @@ public class CuttingTableAdd extends SuperTestNG
 	  
 	  ProjectLibrary.ClickOnLinkByLinkText("Add New Record", "Add New Record");
 		
-	  String xlpath="./Excel Files/Settings/EprintMIS/Plants and Presses.xls";
+	  String xlpath="./src/com/eprint/testData/Settings/EprintMIS/PlantsAndPresses/CuttingTable/Cutting Table.xlsx";
 	  String sheetName = "Cutting Table";
-	  Generic.BlindWait(3);
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 4, 2, "Name", "ctl00_ContentPlaceHolder1_guillotine_txtGuillotineName");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 5, 2, "Description", "ctl00_ContentPlaceHolder1_guillotine_txtDescription");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 7, 2, "Minimum Sheet Size for the plant (Height) ", "ctl00_ContentPlaceHolder1_guillotine_txtMinimumSheetHeight");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 8, 2, "Minimum Sheet Size for the plant (Width)", "ctl00_ContentPlaceHolder1_guillotine_txtMinimumSheetWidth");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 9, 2, "Maximum Sheet Size for the plant (Height)", "ctl00_ContentPlaceHolder1_guillotine_txtMaximumSheetHeight");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 10, 2, "Maximum Sheet Size for the plant (Width)", "ctl00_ContentPlaceHolder1_guillotine_txtMaximumSheetWidth");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 11, 2, "Maximum Sheet Weight", "ctl00_ContentPlaceHolder1_guillotine_txtMaximumSheetWeight");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 13, 2, "Set up Charge ($)", "ctl00_ContentPlaceHolder1_guillotine_txtSetupCharge");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 14, 2, "Cost per Cut($)", "ctl00_ContentPlaceHolder1_guillotine_txtCostperCut");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 15, 2, "Minimum Running Charge($)", "ctl00_ContentPlaceHolder1_guillotine_txtMinRunningCharge");
-	  ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 16, 2, "Markup(%)", "ctl00_ContentPlaceHolder1_guillotine_txtMarkUp");
-	  ProjectLibrary.SingleSelectNumDropDownbyVisibleText(xlpath, sheetName, 17, 2, "Plant Calculation", "ctl00_ContentPlaceHolder1_guillotine_ddlItemCut");
-	  ProjectLibrary.ClickOnButtonByID("Save", "ctl00_ContentPlaceHolder1_guillotine_btnGuillotineAdd");
-	  EprintSpecificLinks.SuccessMsgVerification("Guillotine saved successfully", "ctl00_ContentPlaceHolder1_ctl01_lblMessage");
+	  
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 2, 2, "Name", CuttingTable_Add.txtbx_Name());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 3, 2, "Description", CuttingTable_Add.txtbx_Description());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 5, 2, "Minimum Sheet Size for the plant (Height) ", CuttingTable_Add.txtbx_MinSheetSizeHeight());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 6, 2, "Minimum Sheet Size for the plant (Width)", CuttingTable_Add.txtbx_MinSheetSizeWidth());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 7, 2, "Maximum Sheet Size for the plant (Height)", CuttingTable_Add.txtbx_MaxSheetSizeHeight());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 8, 2, "Maximum Sheet Size for the plant (Width)", CuttingTable_Add.txtbx_MaxSheetSizeWidth());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 9, 2, "Maximum Sheet Weight", CuttingTable_Add.txtbx_MaxSheetWeight());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 11, 2, "Set up Charge ($)", CuttingTable_Add.txtbx_SetupChargePrice());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 12, 2, "Cost per Cut($)", CuttingTable_Add.txtbx_CostPerCutPrice());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 13, 2, "Minimum Running Charge($)", CuttingTable_Add.txtbx_MinRunningCharge());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 14, 2, "Markup(%)", CuttingTable_Add.txtbx_MarkupPercentage());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 15, 2, "Plant Calculation", CuttingTable_Add.drpdn_NumOfCutsPerItem());
+	  ProjectLibrary.ClickOnButton("Save", CuttingTable_Add.btn_Save());
+	  EprintSpecificLinks.SuccessMsgVerify("Cutting Table saved successfully", CuttingTable_View.txt_SuccessMsg());
   }
 		// End Of AddCuttingTable()
 }

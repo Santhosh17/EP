@@ -1,6 +1,7 @@
 package com.eprint.testcases.Settings.MIS_Settings.Plant_and_Press.Large_Format;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -17,6 +18,14 @@ public class LargeFormatAdd extends SuperTestNG
 	@Test 
 	public void testLargeFormatAdd() 
 	{	 
+		try
+		{
+			EprintSpecificLinks.login();
+		}
+		catch (NoSuchElementException e)
+		{
+			Reporter.log("Already logged in Continuing with Testing Process",true);
+		}
 		EprintSpecificLinks.clicksettings();
 		EprintSpecificLinks.selectEprintMIS();
 		EprintSpecificLinks.selectPlantsandPresses();
@@ -42,13 +51,20 @@ public class LargeFormatAdd extends SuperTestNG
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 15, 2, "Set up Spoilage (Sq.mtr)", LargeFormatAddPage.txtbx_SetupSpoilage());
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 16, 2, "Running Spoilage (%)", LargeFormatAddPage.txtbx_RunningSpoilagePercentage());
 		
-		EprintSpecificLinks.Radwindow("Default Paper/Stock 1", LargeFormatAddPage.btn_DefaultPaperStock1(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", ".//*[@id='ctl00_ContentPlaceHolder1_ctl00_GridInventory_ctl00_ctl14_lnkInvName1']");
-		EprintSpecificLinks.Radwindow("Default Paper/Stock 2", LargeFormatAddPage.btn_DefaultPaperStock2(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", ".//*[@id='ctl00_ContentPlaceHolder1_ctl00_GridInventory_ctl00_ctl50_lnkInvName1']");
-		EprintSpecificLinks.Radwindow("Default Paper/Stock 3", LargeFormatAddPage.btn_DefaultPaperStock3(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", ".//*[@id='ctl00_ContentPlaceHolder1_ctl00_GridInventory_ctl00_ctl62_lnkInvName1']");
+		String DefaultPaperStock1 = Generic.getXlCellValue(xlpath, sheetName, 17, 2);
+		EprintSpecificLinks.Radwindow("Default Paper/Stock 1", LargeFormatAddPage.btn_DefaultPaperStock1(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/div/a[text()='"+DefaultPaperStock1+"']");
+		String DefaultPaperStock2 = Generic.getXlCellValue(xlpath, sheetName, 18, 2);
+		EprintSpecificLinks.Radwindow("Default Paper/Stock 2", LargeFormatAddPage.btn_DefaultPaperStock2(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/div/a[text()='"+DefaultPaperStock2+"']");
+		String DefaultPaperStock3 = Generic.getXlCellValue(xlpath, sheetName, 19, 2);
+		EprintSpecificLinks.Radwindow("Default Paper/Stock 3", LargeFormatAddPage.btn_DefaultPaperStock3(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/div/a[text()='"+DefaultPaperStock3+"']");
+		String DefaultPaperStock4 = Generic.getXlCellValue(xlpath, sheetName, 20, 2);
+		EprintSpecificLinks.Radwindow("Default Paper/Stock 4", LargeFormatAddPage.btn_DefaultPaperStock4(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/div/a[text()='"+DefaultPaperStock4+"']");
+		String DefaultPaperStock5 = Generic.getXlCellValue(xlpath, sheetName, 21, 2);
+		EprintSpecificLinks.Radwindow("Default Paper/Stock 5", LargeFormatAddPage.btn_DefaultPaperStock5(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/div/a[text()='"+DefaultPaperStock5+"']");
 		
 		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 22, 2, "Default Print Sheet Size", LargeFormatAddPage.drpdn_DefaultPrintSheetSize());
 		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 23, 2, "Default Job Size", LargeFormatAddPage.drpdn_DefaultJobSize());
-		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 24, 2, "Default Guillotine", LargeFormatAddPage.drpdn_DefaultGuillotine());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 24, 2, "Default Cutting Table", LargeFormatAddPage.drpdn_DefaultCuttingTable());
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 25, 2, "Set as Default Press", LargeFormatAddPage.chkbx_SetAsDefaultPress());
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 26, 2, "Unit of Measure", LargeFormatAddPage.txtbx_UnitOfMeasure());
 		
@@ -63,10 +79,17 @@ public class LargeFormatAdd extends SuperTestNG
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 32, 2, "Press Hourly Charge Rate($)", LargeFormatAddPage.txtbx_PressHourlyCharge());
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 34, 2, "Default Ink Coverage Side 1(%)", LargeFormatAddPage.txtbx_DefaultInkCoverageSide1());
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 35, 2, "Default Ink Coverage Side 2(%)", LargeFormatAddPage.txtbx_DefaultInkCoverageSide2());
-
-		EprintSpecificLinks.Radwindow("Ink 1", LargeFormatAddPage.btn_Ink1(),"//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]","//*[@id='ctl00_ContentPlaceHolder1_ctl00_GridInk_ctl00_ctl94_lnkInvName1']");
-		EprintSpecificLinks.Radwindow("Ink 2", LargeFormatAddPage.btn_Ink2(), "//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", ".//*[@id='ctl00_ContentPlaceHolder1_ctl00_GridInk_ctl00_ctl52_lnkInvName1']");
-		EprintSpecificLinks.Radwindow("Ink 3", LargeFormatAddPage.btn_Ink3(), "//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", ".//*[@id='ctl00_ContentPlaceHolder1_ctl00_GridInk_ctl00_ctl50_lnkInvName1']");
+		
+		String Ink1 = Generic.getXlCellValue(xlpath, sheetName, 37, 2);
+		EprintSpecificLinks.Radwindow("Ink 1", LargeFormatAddPage.btn_Ink1(), "//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/a[text()='"+Ink1+"']");
+		String Ink2 = Generic.getXlCellValue(xlpath, sheetName, 38, 2);
+		EprintSpecificLinks.Radwindow("Ink 2", LargeFormatAddPage.btn_Ink2(), "//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/a[text()='"+Ink2+"']");
+		String Ink3 = Generic.getXlCellValue(xlpath, sheetName, 39, 2);
+		EprintSpecificLinks.Radwindow("Ink 3", LargeFormatAddPage.btn_Ink3(), "//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/a[text()='"+Ink3+"']");
+		String Ink4 = Generic.getXlCellValue(xlpath, sheetName, 40, 2);
+		EprintSpecificLinks.Radwindow("Ink 4", LargeFormatAddPage.btn_Ink3(), "//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/a[text()='"+Ink4+"']");
+		String Ink5 = Generic.getXlCellValue(xlpath, sheetName, 41, 2);
+		EprintSpecificLinks.Radwindow("Ink 5", LargeFormatAddPage.btn_Ink3(), "//form/div[1]/table[1]/tbody[1]/tr[2]/td[2]/iframe[1]", "//table/tbody/tr/td/a[text()='"+Ink5+"']");
 		
 		WebElement AddMoreInk = LargeFormatAddPage.lnk_AddMore();
 		AddMoreInk.click();
@@ -81,6 +104,7 @@ public class LargeFormatAdd extends SuperTestNG
 		{
 			Reporter.log("New Ink is NOT Added",true);
 		}
+		
 		WebElement RemoveInk = LargeFormatAddPage.lnk_Remove();
 		RemoveInk.click();
 		Reporter.log("Clicking on Remove button ",true);
@@ -89,5 +113,4 @@ public class LargeFormatAdd extends SuperTestNG
 		EprintSpecificLinks.SuccessMsgVerify("Large Format Saved Successfully", LargeFormatViewPage.txt_SuccessMsg());
 	}
 	// End Of AddLargeFormat()
-	
 }

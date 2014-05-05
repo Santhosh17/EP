@@ -112,7 +112,7 @@ public class LargeFormatAddPage extends SuperTestNG
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_ddlJobSize"));
 		return element;
 	}
-	public static WebElement drpdn_DefaultGuillotine() 
+	public static WebElement drpdn_DefaultCuttingTable() 
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_ddlGuillotine"));
 		return element;

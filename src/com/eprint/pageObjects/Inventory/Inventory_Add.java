@@ -188,6 +188,11 @@ public class Inventory_Add extends SuperTestNG
 					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtColour"));
 					return element;
 				}
+				public static WebElement drpdn_Coated()
+				{
+					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_ddlCoated"));
+					return element;
+				}
 				public static WebElement txtbx_Yield()
 				{
 					WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtYield"));

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.eprint.testcases.Inventory.Inks.Inv_Add_Yellow_Yield"/>
+      <class name="com.eprint.testcases.Inventory.Inks.Inv_Add_Green_Yield"/>
+      <class name="com.eprint.testcases.Inventory.Inks.Inv_Add_Red_Yield"/>
+      <class name="com.eprint.testcases.Inventory.Inks.Inv_Add_Majenta_Yield"/>
+      <class name="com.eprint.testcases.Inventory.Inks.Inv_Add_Cyan_Yield"/>
+      <class name="com.eprint.testcases.Inventory.Inks.Inv_Add_Key_Yield"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
