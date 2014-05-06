@@ -5,6 +5,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.eprint.libraries.EprintSpecificLinks;
+import com.eprint.libraries.Generic;
 import com.eprint.libraries.ProjectLibrary;
 import com.eprint.libraries.SuperTestNG;
 import com.eprint.pageObjects.Inventory.Inventory_Add;
@@ -92,11 +93,13 @@ public class Inventory_Add_Inks_Matrix extends SuperTestNG
 		
 		try
 		{
+			Generic.ImplicitWait(1);
 			ProjectLibrary.ClickOnButton("Save", Inventory_Add.GeneralTab.btn_Save());
 		}
 		catch(NoSuchElementException e)
 		{
 			ProjectLibrary.ClickOnButton("Save", Inventory_Add.StockTab.btn_Save());
+			Generic.ImplicitWait(10);
 		}
 		
 		EprintSpecificLinks.SuccessMsgVerify("Inventory Item saved successfully", Inventory_View.txt_SuccessMsg());

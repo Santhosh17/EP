@@ -42,9 +42,34 @@ public class Estimate_Add_LF_Linear extends SuperTestNG
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 1']]]/div[2]/a/img"));
 		return element;
 	}
+	public static WebElement chkbx_PaperStock1_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack1"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock1_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied1"));
+		return element;
+	}
 	public static WebElement btn_PaperStock2()
 	{
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 2']]]/div[2]/a/img"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock2_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack2"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock2_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied2"));
+		return element;
+	}
+	public static WebElement btn_PaperStock2_Delete(String PaperStock2Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock2Name+"']]]/div[4]/a/img"));
 		return element;
 	}
 	public static WebElement btn_PaperStock3()
@@ -52,14 +77,59 @@ public class Estimate_Add_LF_Linear extends SuperTestNG
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 3']]]/div[2]/a/img"));
 		return element;
 	}
+	public static WebElement chkbx_PaperStock3_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack3"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock3_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied3"));
+		return element;
+	}
+	public static WebElement btn_PaperStock3_Delete(String PaperStock3Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock3Name+"']]]/div[4]/a/img"));
+		return element;
+	}
 	public static WebElement btn_PaperStock4()
 	{
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 4']]]/div[2]/a/img"));
 		return element;
 	}
+	public static WebElement chkbx_PaperStock4_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack4"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock4_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied4"));
+		return element;
+	}
+	public static WebElement btn_PaperStock4_Delete(String PaperStock4Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock4Name+"']]]/div[4]/a/img"));
+		return element;
+	}
 	public static WebElement btn_PaperStock5()
 	{
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 5']]]/div[2]/a/img"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock5_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack5"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock5_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied5"));
+		return element;
+	}
+	public static WebElement btn_PaperStock5_Delete(String PaperStock5Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock5Name+"']]]/div[4]/a/img"));
 		return element;
 	}
 	public static WebElement txtbx_SetupSpoilage()

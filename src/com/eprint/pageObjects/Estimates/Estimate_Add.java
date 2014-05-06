@@ -111,6 +111,11 @@ public class Estimate_Add extends SuperTestNG
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCStage1_ddlProductType"));
 		return element;
 	}
+	public static WebElement drpdn_CalculationType()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCStage1_ddlCalcType"));
+		return element;
+	}
 	public static WebElement txtbx_EstimateTitle()
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCStage1_txtEstimateTitle"));
