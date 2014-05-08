@@ -72,10 +72,266 @@ public class Estimate_Add_SFO_SingleItem extends SuperTestNG
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_ImageButton2"));
 		return element;
 	}
+	public static class Side1Color
+	{
+		public static WebElement txtbx_InkName1()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_1"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage1()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_1"));
+			return element;
+		}
+		public static WebElement txtbx_InkName2()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_2"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage2()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_2"));
+			return element;
+		}
+		public static WebElement txtbx_InkName3()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_3"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage3()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_3"));
+			return element;
+		}
+		public static WebElement txtbx_InkName4()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_4"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage4()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_4"));
+			return element;
+		}
+		public static WebElement txtbx_InkName5()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_5"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage5()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_5"));
+			return element;
+		}
+		public static WebElement txtbx_InkName6()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_6"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage6()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_6"));
+			return element;
+		}
+		public static WebElement txtbx_InkName7()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_7"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage7()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_7"));
+			return element;
+		}
+		public static WebElement txtbx_InkName8()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_8"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage8()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_8"));
+			return element;
+		}
+		public static WebElement txtbx_InkName9()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_9"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage9()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_9"));
+			return element;
+		}
+		public static WebElement txtbx_InkName10()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_10"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage10()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_10"));
+			return element;
+		}
+		public static WebElement txtbx_InkName11()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_11"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage11()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_11"));
+			return element;
+		}
+		public static WebElement txtbx_InkName12()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_12"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage12()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_12"));
+			return element;
+		}
+		public static WebElement btn_Save()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnSave"));
+			return element;
+		}
+	}
 	public static WebElement drpdn_Side1Color()
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_ddlSide1Color"));
 		return element;
+	}
+	public static class Side2Color
+	{
+		public static WebElement txtbx_InkName1()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_1"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage1()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_1"));
+			return element;
+		}
+		public static WebElement txtbx_InkName2()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_2"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage2()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_2"));
+			return element;
+		}
+		public static WebElement txtbx_InkName3()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_3"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage3()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_3"));
+			return element;
+		}
+		public static WebElement txtbx_InkName4()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_4"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage4()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_4"));
+			return element;
+		}
+		public static WebElement txtbx_InkName5()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_5"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage5()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_5"));
+			return element;
+		}
+		public static WebElement txtbx_InkName6()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_6"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage6()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_6"));
+			return element;
+		}
+		public static WebElement txtbx_InkName7()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_7"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage7()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_7"));
+			return element;
+		}
+		public static WebElement txtbx_InkName8()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_8"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage8()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_8"));
+			return element;
+		}
+		public static WebElement txtbx_InkName9()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_9"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage9()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_9"));
+			return element;
+		}
+		public static WebElement txtbx_InkName10()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_10"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage10()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_10"));
+			return element;
+		}
+		public static WebElement txtbx_InkName11()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_11"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage11()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_11"));
+			return element;
+		}
+		public static WebElement txtbx_InkName12()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtInkName_12"));
+			return element;
+		}
+		public static WebElement txtbx_Coverage12()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_txtbx_12"));
+			return element;
+		}
+		public static WebElement btn_Save()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_btnSave"));
+			return element;
+		}
 	}
 	public static WebElement btn_Side2Color()
 	{
