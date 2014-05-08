@@ -42,9 +42,34 @@ public class Estimate_Add_LF_SquareMeter extends SuperTestNG
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 1']]]/div[2]/a/img"));
 		return element;
 	}
+	public static WebElement chkbx_PaperStock1_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack1"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock1_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied1"));
+		return element;
+	}
 	public static WebElement btn_PaperStock2()
 	{
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 2']]]/div[2]/a/img"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock2_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack2"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock2_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied2"));
+		return element;
+	}
+	public static WebElement btn_PaperStock2_Delete(String PaperStock2Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock2Name+"']]]/div[4]/a/img"));
 		return element;
 	}
 	public static WebElement btn_PaperStock3()
@@ -52,14 +77,59 @@ public class Estimate_Add_LF_SquareMeter extends SuperTestNG
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 3']]]/div[2]/a/img"));
 		return element;
 	}
+	public static WebElement chkbx_PaperStock3_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack3"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock3_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied3"));
+		return element;
+	}
+	public static WebElement btn_PaperStock3_Delete(String PaperStock3Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock3Name+"']]]/div[4]/a/img"));
+		return element;
+	}
 	public static WebElement btn_PaperStock4()
 	{
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 4']]]/div[2]/a/img"));
 		return element;
 	}
+	public static WebElement chkbx_PaperStock4_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack4"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock4_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied4"));
+		return element;
+	}
+	public static WebElement btn_PaperStock4_Delete(String PaperStock4Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock4Name+"']]]/div[4]/a/img"));
+		return element;
+	}
 	public static WebElement btn_PaperStock5()
 	{
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Paper/Stock 5']]]/div[2]/a/img"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock5_PriceForWholePack()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PriceForWholePack5"));
+		return element;
+	}
+	public static WebElement chkbx_PaperStock5_PaperStockSupplied()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UcLargeItem_Chk_PaperSupplied5"));
+		return element;
+	}
+	public static WebElement btn_PaperStock5_Delete(String PaperStock5Name)
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='"+PaperStock5Name+"']]]/div[4]/a/img"));
 		return element;
 	}
 	public static WebElement txtbx_SetupSpoilage()
@@ -324,24 +394,104 @@ public class Estimate_Add_LF_SquareMeter extends SuperTestNG
 			WebElement element = driver.findElement(By.id("spnQuantity4"));
 			return element;
 		}
-		public static WebElement txt_PaperStock1()
+		public static WebElement txt_PaperStock1_1()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice1"));
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 1']]]]/td/span[@id='spnPaperPrice1']"));
 			return element;
 		}
-		public static WebElement txt_PaperStock2()
+		public static WebElement txt_PaperStock1_2()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice2"));
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 1']]]]/td/span[@id='spnPaperPrice2']"));
 			return element;
 		}
-		public static WebElement txt_PaperStock3()
+		public static WebElement txt_PaperStock1_3()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice13"));
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 1']]]]/td/span[@id='spnPaperPrice13']"));
 			return element;
 		}
-		public static WebElement txt_PaperStock4()
+		public static WebElement txt_PaperStock1_4()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice14"));
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 1']]]]/td/span[@id='spnPaperPrice14']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock2_1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 2']]]]/td/span[@id='spnPaperPrice1']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock2_2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 2']]]]/td/span[@id='spnPaperPrice2']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock2_3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 2']]]]/td/span[@id='spnPaperPrice13']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock2_4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 2']]]]/td/span[@id='spnPaperPrice14']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock3_1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 3']]]]/td/span[@id='spnPaperPrice1']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock3_2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 3']]]]/td/span[@id='spnPaperPrice2']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock3_3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 3']]]]/td/span[@id='spnPaperPrice13']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock3_4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 3']]]]/td/span[@id='spnPaperPrice14']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock4_1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 4']]]]/td/span[@id='spnPaperPrice1']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock4_2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 4']]]]/td/span[@id='spnPaperPrice2']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock4_3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 4']]]]/td/span[@id='spnPaperPrice13']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock4_4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 4']]]]/td/span[@id='spnPaperPrice14']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock5_1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 5']]]]/td/span[@id='spnPaperPrice1']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock5_2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 5']]]]/td/span[@id='spnPaperPrice2']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock5_3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 5']]]]/td/span[@id='spnPaperPrice13']"));
+			return element;
+		}
+		public static WebElement txt_PaperStock5_4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[div[a[text()='Paper/Stock 5']]]]/td/span[@id='spnPaperPrice14']"));
 			return element;
 		}
 		public static WebElement txt_Ink1()
@@ -384,24 +534,24 @@ public class Estimate_Add_LF_SquareMeter extends SuperTestNG
 			WebElement element = driver.findElement(By.id("spnPressPrice4"));
 			return element;
 		}
-		public static WebElement txt_Plates1()
+		public static WebElement txt_CuttingTable1()
 		{
-			WebElement element = driver.findElement(By.id("spnPlatesPrice1"));
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice1"));
 			return element;
 		}
-		public static WebElement txt_Plates2()
+		public static WebElement txt_CuttingTable2()
 		{
-			WebElement element = driver.findElement(By.id("spnPlatesPrice2"));
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice2"));
 			return element;
 		}
-		public static WebElement txt_Plates3()
+		public static WebElement txt_CuttingTable3()
 		{
-			WebElement element = driver.findElement(By.id("spnPlatesPrice3"));
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice3"));
 			return element;
 		}
-		public static WebElement txt_Plates4()
+		public static WebElement txt_CuttingTable4()
 		{
-			WebElement element = driver.findElement(By.id("spnPlatesPrice4"));
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice4"));
 			return element;
 		}
 		public static WebElement txt_CostPrice_Excl_Markup1()

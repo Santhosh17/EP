@@ -81,7 +81,7 @@ public class Estimate_Create_Inventory extends SuperTestNG
 		Reporter.log("----------------------------------------------------------------------------------",true);
 
 		ProjectLibrary.CompareStringText(xlpath, sheetName, 31, 2, "Item Title", Estimate_Add_Inventory.Estimate_Summary.txt_ItemTitle());
-		
+
 		ProjectLibrary.CompareStringText(xlpath, sheetName, 32, 2, "Quantity", Estimate_Add_Inventory.Estimate_Summary.txt_Qty1());
 		ProjectLibrary.CompareStringText(xlpath, sheetName, 33, 2, "Price for "+InvName+"", Estimate_Add_Inventory.Estimate_Summary.txt_Price1());
 		ProjectLibrary.CompareStringText(xlpath, sheetName, 34, 2, "Cost Price (Ex Markup)", Estimate_Add_Inventory.Estimate_Summary.txt_CostPrice_Excl_Markup1());

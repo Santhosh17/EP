@@ -16,7 +16,6 @@ import com.eprint.libraries.ProjectLibrary;
 import com.eprint.libraries.SuperTestNG;
 import com.eprint.pageObjects.Estimates.Estimate_Add;
 import com.eprint.pageObjects.Estimates.LargeFormat.Estimate_Add_LF_Linear;
-import com.eprint.pageObjects.Estimates.SheetFedDigital.Estimate_Add_SFD_Booklet;
 
 public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 {
@@ -87,16 +86,16 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 				PriceForWholePack.click();
 			}
 		}
-		else if (PaperStockExcelCondition1.equals("Paper / Stock Supplied"))
+		else if (PaperStockExcelCondition1.equals("Paper/Stock Supplied"))
 		{
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock1_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly Selected",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly Selected",true);
 			}
 			else
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied",true);
+				Reporter.log("Clicking on Paper/Stock Supplied",true);
 				PaperStockSupplied.click();
 			}
 		}
@@ -115,12 +114,12 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock1_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied to UnSelect it",true);
+				Reporter.log("Clicking on Paper/Stock Supplied to UnSelect it",true);
 				PaperStockSupplied.click();
 			}
 			else
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly UN-SELECTED",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly UN-SELECTED",true);
 			}
 		}
 		
@@ -140,16 +139,16 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 				PriceForWholePack.click();
 			}
 		}
-		else if (PaperStockExcelCondition2.equals("Paper / Stock Supplied"))
+		else if (PaperStockExcelCondition2.equals("Paper/Stock Supplied"))
 		{
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock2_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly Selected",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly Selected",true);
 			}
 			else
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied",true);
+				Reporter.log("Clicking on Paper/Stock Supplied",true);
 				PaperStockSupplied.click();
 			}
 		}
@@ -168,12 +167,12 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock2_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied to UnSelect it",true);
+				Reporter.log("Clicking on Paper/Stock Supplied to UnSelect it",true);
 				PaperStockSupplied.click();
 			}
 			else
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly UN-SELECTED",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly UN-SELECTED",true);
 			}
 		}
 		
@@ -193,16 +192,16 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 				PriceForWholePack.click();
 			}
 		}
-		else if (PaperStockExcelCondition3.equals("Paper / Stock Supplied"))
+		else if (PaperStockExcelCondition3.equals("Paper/Stock Supplied"))
 		{
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock3_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly Selected",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly Selected",true);
 			}
 			else
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied",true);
+				Reporter.log("Clicking on Paper/Stock Supplied",true);
 				PaperStockSupplied.click();
 			}
 		}
@@ -221,12 +220,12 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock3_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied to UnSelect it",true);
+				Reporter.log("Clicking on Paper/Stock Supplied to UnSelect it",true);
 				PaperStockSupplied.click();
 			}
 			else
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly UN-SELECTED",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly UN-SELECTED",true);
 			}
 		}
 		
@@ -246,16 +245,16 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 				PriceForWholePack.click();
 			}
 		}
-		else if (PaperStockExcelCondition4.equals("Paper / Stock Supplied"))
+		else if (PaperStockExcelCondition4.equals("Paper/Stock Supplied"))
 		{
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock4_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly Selected",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly Selected",true);
 			}
 			else
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied",true);
+				Reporter.log("Clicking on Paper/Stock Supplied",true);
 				PaperStockSupplied.click();
 			}
 		}
@@ -274,12 +273,12 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock4_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied to UnSelect it",true);
+				Reporter.log("Clicking on Paper/Stock Supplied to UnSelect it",true);
 				PaperStockSupplied.click();
 			}
 			else
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly UN-SELECTED",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly UN-SELECTED",true);
 			}
 		}
 		
@@ -299,16 +298,16 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 				PriceForWholePack.click();
 			}
 		}
-		else if (PaperStockExcelCondition5.equals("Paper / Stock Supplied"))
+		else if (PaperStockExcelCondition5.equals("Paper/Stock Supplied"))
 		{
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock5_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly Selected",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly Selected",true);
 			}
 			else
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied",true);
+				Reporter.log("Clicking on Paper/Stock Supplied",true);
 				PaperStockSupplied.click();
 			}
 		}
@@ -327,12 +326,12 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 			WebElement PaperStockSupplied = Estimate_Add_LF_Linear.chkbx_PaperStock5_PaperStockSupplied();
 			if (PaperStockSupplied.isSelected())
 			{
-				Reporter.log("Clicking on Paper / Stock Supplied to UnSelect it",true);
+				Reporter.log("Clicking on Paper/Stock Supplied to UnSelect it",true);
 				PaperStockSupplied.click();
 			}
 			else
 			{
-				Reporter.log("Paper / Stock Supplied is Defaultly UN-SELECTED",true);
+				Reporter.log("Paper/Stock Supplied is Defaultly UN-SELECTED",true);
 			}
 		}
 		
@@ -366,7 +365,6 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 		String FinishedJobSheetSize = Generic.getXlCellValue(xlpath, sheetName, 44, 4);
 		if (FinishedJobSheetSize.equals("YES"))
 		{
-			Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_CustomPrintSheetSize().click();
 			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 44, 6, "Custom Finished Job Size Width", Estimate_Add_LF_Linear.txtbx_CustomFinishedJobWidth());
 			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 44, 8, "Custom Finished Job Size Height", Estimate_Add_LF_Linear.txtbx_CustomFinishedJobHeight());
 		}
@@ -376,7 +374,7 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 		}
 		
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 45, 2, "Include Gutters", Estimate_Add_LF_Linear.chkbx_IncludeGutters());
-		WebElement IncludeGutters = Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_IncludeGutters();
+		WebElement IncludeGutters = Estimate_Add_LF_Linear.chkbx_IncludeGutters();
 		if (IncludeGutters.isSelected())
 		{
 			ProjectLibrary.StringDDTextBox(xlpath, sheetName, 45, 4, "Horizontal", Estimate_Add_LF_Linear.txtbx_IncludeGuttersHorizontal());
@@ -384,7 +382,6 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 		}
 		
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 46, 2, "Apply Press Restrictions", Estimate_Add_LF_Linear.chkbx_ApplyPressRestrictions());
-		
 		String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 47, 2);
 		if (PrintLayout.equals("Portrait"))
 		{
@@ -413,8 +410,112 @@ public class Estimate_Create_LargeFormat_Linear extends SuperTestNG
 		
 		String CuttingTable = Generic.getXlCellValue(xlpath, sheetName, 51, 2);
 		EprintSpecificLinks.Radwindow("Cutting Table", Estimate_Add_LF_Linear.btn_CuttingTable(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+CuttingTable+"')]");
-		
+		Generic.BlindWait(2);
 		ProjectLibrary.ClickOnButton("Finish", Estimate_Add_LF_Linear.btn_Finish());
+		Reporter.log("----------------------------------------------------------------------------------",true);
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+		String EstimateNumber = Estimate_Add_LF_Linear.Estimate_Summary.txt_EstimateNumber().getText();
+		Reporter.log("Estimate Number = "+EstimateNumber,true);
+		Reporter.log("----------------------------------------------------------------------------------",true);
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 30, 2, "Item Title", Estimate_Add_LF_Linear.Estimate_Summary.txt_ItemTitle());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 31, 2, "Finished Qty1", Estimate_Add_LF_Linear.Estimate_Summary.txt_FinishedQty1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 31, 4, "Finished Qty2", Estimate_Add_LF_Linear.Estimate_Summary.txt_FinishedQty2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 32, 2, "Finished Qty3", Estimate_Add_LF_Linear.Estimate_Summary.txt_FinishedQty3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 32, 4, "Finished Qty4", Estimate_Add_LF_Linear.Estimate_Summary.txt_FinishedQty4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 2, "Paper Stock 1-1", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock1_1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 3, "Paper Stock 1-2", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock1_2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 4, "Paper Stock 1-3", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock1_3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 55, 5, "Paper Stock 1-4", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock1_4());
+
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 2, "Paper Stock 2-1", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock2_1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 3, "Paper Stock 2-2", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock2_2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 4, "Paper Stock 2-3", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock2_3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 56, 5, "Paper Stock 2-4", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock2_4());
+
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 2, "Paper Stock 3-1", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock3_1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 3, "Paper Stock 3-2", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock3_2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 4, "Paper Stock 3-3", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock3_3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 5, "Paper Stock 3-4", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock3_4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 58, 2, "Paper Stock 4-1", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock4_1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 58, 3, "Paper Stock 4-2", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock4_2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 58, 4, "Paper Stock 4-3", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock4_3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 58, 5, "Paper Stock 4-4", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock4_4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 59, 2, "Paper Stock 5-1", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock5_1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 59, 3, "Paper Stock 5-2", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock5_2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 59, 4, "Paper Stock 5-3", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock5_3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 59, 5, "Paper Stock 5-4", Estimate_Add_LF_Linear.Estimate_Summary.txt_PaperStock5_4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 2, "Ink1", Estimate_Add_LF_Linear.Estimate_Summary.txt_Ink1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 3, "Ink2", Estimate_Add_LF_Linear.Estimate_Summary.txt_Ink2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 4, "Ink3", Estimate_Add_LF_Linear.Estimate_Summary.txt_Ink3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 60, 5, "Ink4", Estimate_Add_LF_Linear.Estimate_Summary.txt_Ink4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 2, "Press1", Estimate_Add_LF_Linear.Estimate_Summary.txt_Press1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 3, "Press2", Estimate_Add_LF_Linear.Estimate_Summary.txt_Press2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 4, "Press3", Estimate_Add_LF_Linear.Estimate_Summary.txt_Press3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 5, "Press4", Estimate_Add_LF_Linear.Estimate_Summary.txt_Press4());
+
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 2, "Cutting Table1", Estimate_Add_LF_Linear.Estimate_Summary.txt_CuttingTable1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 3, "Cutting Table2", Estimate_Add_LF_Linear.Estimate_Summary.txt_CuttingTable2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 4, "Cutting Table3", Estimate_Add_LF_Linear.Estimate_Summary.txt_CuttingTable3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 62, 5, "Cutting Table4", Estimate_Add_LF_Linear.Estimate_Summary.txt_CuttingTable4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 2, "Cost Price (Ex Markup)1", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Excl_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 3, "Cost Price (Ex Markup)2", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Excl_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 4, "Cost Price (Ex Markup)3", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Excl_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 63, 5, "Cost Price (Ex Markup)4", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Excl_Markup4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 2, "Markup1", Estimate_Add_LF_Linear.Estimate_Summary.txt_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 3, "Markup2", Estimate_Add_LF_Linear.Estimate_Summary.txt_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 4, "Markup3", Estimate_Add_LF_Linear.Estimate_Summary.txt_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 64, 5, "Markup4", Estimate_Add_LF_Linear.Estimate_Summary.txt_Markup4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 65, 2, "Cost Price (Inc Markup)1", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Incl_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 65, 3, "Cost Price (Inc Markup)2", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Incl_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 65, 4, "Cost Price (Inc Markup)3", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Incl_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 65, 5, "Cost Price (Inc Markup)4", Estimate_Add_LF_Linear.Estimate_Summary.txt_CostPrice_Incl_Markup4());
+		
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 66, 2, "Profit Marin % 1", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPercentage1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 66, 3, "Profit Marin % 2", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPercentage2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 66, 4, "Profit Marin % 3", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPercentage3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 66, 5, "Profit Marin % 4", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPercentage4());
+		
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 67, 2, "Profit Marin $ 1", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPrice1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 67, 3, "Profit Marin $ 2", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPrice2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 67, 4, "Profit Marin $ 3", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPrice3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 67, 5, "Profit Marin $ 4", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_ProfitMarginPrice4());
+		
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 68, 2, "Sub Total 1", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_SubTotal1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 68, 3, "Sub Total 2", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_SubTotal2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 68, 4, "Sub Total 3", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_SubTotal3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 68, 5, "Sub Total 4", Estimate_Add_LF_Linear.Estimate_Summary.txtbx_SubTotal4());
+		
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 70, 1, "Tax", Estimate_Add_LF_Linear.Estimate_Summary.drpdn_Tax());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 70, 2, "Tax Value1", Estimate_Add_LF_Linear.Estimate_Summary.txt_TaxValue1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 70, 3, "Tax Value2", Estimate_Add_LF_Linear.Estimate_Summary.txt_TaxValue2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 70, 4, "Tax Value3", Estimate_Add_LF_Linear.Estimate_Summary.txt_TaxValue3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 70, 5, "Tax Value4", Estimate_Add_LF_Linear.Estimate_Summary.txt_TaxValue4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 71, 2, "Selling Price Inc Tax 1", Estimate_Add_LF_Linear.Estimate_Summary.txt_SellingPrice1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 71, 3, "Selling Price Inc Tax 2", Estimate_Add_LF_Linear.Estimate_Summary.txt_SellingPrice2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 71, 4, "Selling Price Inc Tax 3", Estimate_Add_LF_Linear.Estimate_Summary.txt_SellingPrice3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 71, 5, "Selling Price Inc Tax 4", Estimate_Add_LF_Linear.Estimate_Summary.txt_SellingPrice4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 72, 2, "Gross Profit Price1", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPrice1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 72, 3, "Gross Profit Price2", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPrice2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 72, 4, "Gross Profit Price3", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPrice3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 72, 5, "Gross Profit Price4", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPrice4());
+
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 73, 2, "Gross Profit Percentage1", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPercentage1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 73, 3, "Gross Profit Percentage2", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPercentage2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 73, 4, "Gross Profit Percentage3", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPercentage3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 73, 5, "Gross Profit Percentage4", Estimate_Add_LF_Linear.Estimate_Summary.txt_GrossProfitPercentage4());
+
+//		ProjectLibrary.ClickOnButton("Save", Estimate_Add_LF_Linear.Estimate_Summary.btn_Save());
 	}
-	
 }
