@@ -152,21 +152,7 @@ public class EprintSpecificLinks extends SuperTestNG
 		driver.switchTo().defaultContent();
 		Reporter.log("Taking control back to main window",true);
 	}
-	public static void RadwindowBy_Xpath_Xpath_Xpath(String LocationName,String LinkXpathtoOpenRadwin,String FrameXPath,String InsideElementPath)
-	{
-		driver.findElement(By.xpath(LinkXpathtoOpenRadwin)).click();
-		Reporter.log("Clicking on "+LocationName,true);
-		WebElement FramePath = driver.findElement(By.xpath(FrameXPath));
-		Reporter.log("Finding frame in "+LocationName+" Radwindow",true);
-		driver.switchTo().frame(FramePath);
-		Reporter.log("Switching to Frame",true);
-		WebElement InsideElement = driver.findElement(By.xpath(InsideElementPath));
-		Reporter.log("finding an element inside the frame",true);
-		InsideElement.click();
-		Reporter.log("Clicking on inside element",true);
-		driver.switchTo().defaultContent();
-		Reporter.log("Taking control back to main window",true);
-	}
+	
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------//
 	public static void DeleteIndividual(String xlpath,String sheetName,int AddedRowNum,int AddedColNum,int UpdatedRowNum,int UpdatedColNum,String RecordNameXpath,String DeleteButtonXpath)
 	{

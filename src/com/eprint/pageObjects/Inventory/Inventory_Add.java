@@ -404,14 +404,34 @@ public class Inventory_Add extends SuperTestNG
 		}
 		public static class Plates
 		{
-			public static WebElement txtbx_Width()
+			public static WebElement txtbx_Cost()
 			{
-				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtWebWidth"));
+				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtCost"));
 				return element;
 			}
-			public static WebElement txtbx_Length()
+			public static WebElement txtbx_Per()
 			{
-				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtWebLength"));
+				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPer"));
+				return element;
+			}
+			public static WebElement txtbx_PackedIn()
+			{
+				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPackedIn"));
+				return element;
+			}
+			public static WebElement txtbx_PackPrice()
+			{
+				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPackedPrice"));
+				return element;
+			}
+			public static WebElement txtbx_Height()
+			{
+				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPaperHeight"));
+				return element;
+			}
+			public static WebElement txtbx_Width()
+			{
+				WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_inventoryadd_txtPaperWidth"));
 				return element;
 			}
 		}

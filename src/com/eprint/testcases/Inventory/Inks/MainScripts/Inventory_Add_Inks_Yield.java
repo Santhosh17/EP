@@ -33,7 +33,7 @@ public class Inventory_Add_Inks_Yield extends SuperTestNG
 		}
 		catch (NoSuchElementException e)
 		{
-			ProjectLibrary.HoverDropdownControlByXpath("Inventory", "//b/span[text()='Warehouse']", "Add New", "Add New");
+			ProjectLibrary.HoverDropdownControlByXpath("Warehouse", "//b/span[text()='Warehouse']", "Add New", "Add New");
 		}
 		
 //		ProjectLibrary.PageTitleVerification("Print Management Software: Inventory Add");

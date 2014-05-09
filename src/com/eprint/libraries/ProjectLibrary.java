@@ -294,13 +294,7 @@ public class ProjectLibrary extends SuperTestNG
 	public static void ClickOnButtonByID(String LocationName,String webelementID)
 	{
 	WebElement Button = driver.findElement(By.id(webelementID));
-	Generic.highlightElement(Button);
 	Button.click();
-	Reporter.log("Clicked on '"+LocationName+"' Button",true);
-	}
-	public static void ClickOnButton_ByID(String LocationName,WebElement ButtonWebElement)
-	{
-	ButtonWebElement.click();
 	Reporter.log("Clicked on '"+LocationName+"' Button",true);
 	}
 	public static void ClickOnButton(String LocationName,WebElement ButtonWebElement)
@@ -559,15 +553,6 @@ public class ProjectLibrary extends SuperTestNG
 		}
 	}
 	
-	public static void CompareNumTextByID(String xlpath,String sheetName,int rownum,int cellnum,String LocationName,String WebelementID)
-	{
-		WebElement TxtBoxContent = driver.findElement(By.id(WebelementID));
-		String Content = TxtBoxContent.getAttribute("value");
-		
-		String ExcelData = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
-		Assert.assertEquals(Content,ExcelData);
-		Reporter.log(LocationName+" Data Verification -- PASS",true);
-	}
 	public static void CompareCheckBoxVerify(String xlpath,String sheetName,int rownum,int cellnum,String DataValue1,String DataValue2,String LocationName,String WebElementID)
 	{
 		String Checkbox = Generic.getXlCellValue(xlpath, sheetName, rownum, cellnum);
