@@ -127,11 +127,11 @@ public class SheetFedOffsetAdd extends SuperTestNG
 		String Ink2 = Generic.getXlCellValue(xlpath, sheetName, 35, 2);
 		EprintSpecificLinks.Radwindow("Ink2", SheetFedOffsetAddPage.btn_Ink2(), "//html/body/form/div[1]/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+Ink2+"')]");
 		String Ink3 = Generic.getXlCellValue(xlpath, sheetName, 36, 2);
-		EprintSpecificLinks.Radwindow("Ink2", SheetFedOffsetAddPage.btn_Ink3(), "//html/body/form/div[1]/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+Ink3+"')]");
+		EprintSpecificLinks.Radwindow("Ink3", SheetFedOffsetAddPage.btn_Ink3(), "//html/body/form/div[1]/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+Ink3+"')]");
 		String Ink4 = Generic.getXlCellValue(xlpath, sheetName, 37, 2);
-		EprintSpecificLinks.Radwindow("Ink2", SheetFedOffsetAddPage.btn_Ink4(), "//html/body/form/div[1]/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+Ink4+"')]");
+		EprintSpecificLinks.Radwindow("Ink4", SheetFedOffsetAddPage.btn_Ink4(), "//html/body/form/div[1]/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+Ink4+"')]");
 		String Ink5 = Generic.getXlCellValue(xlpath, sheetName, 38, 2);
-		EprintSpecificLinks.Radwindow("Ink2", SheetFedOffsetAddPage.btn_Ink5(), "//html/body/form/div[1]/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+Ink5+"')]");
+		EprintSpecificLinks.Radwindow("Ink5", SheetFedOffsetAddPage.btn_Ink5(), "//html/body/form/div[1]/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+Ink5+"')]");
 		
 		Reporter.log("Ink Setup",true);
 		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 40, 2, "Number of Colour Units", SheetFedOffsetAddPage.drpdn_NumberOfColourUnits());

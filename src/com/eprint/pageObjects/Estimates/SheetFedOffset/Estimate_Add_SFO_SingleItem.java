@@ -353,6 +353,11 @@ public class Estimate_Add_SFO_SingleItem extends SuperTestNG
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_chkTurn"));
 		return element;
 	}
+	public static WebElement chkbx_Perfecting()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_chkPerfecting"));
+		return element;
+	}
 	public static WebElement chkbx_WorkNTumble()
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_chkTumble"));
@@ -366,6 +371,16 @@ public class Estimate_Add_SFO_SingleItem extends SuperTestNG
 	public static WebElement txtbx_NoOfPlates()
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_txtNoOfPlates"));
+		return element;
+	}
+	public static WebElement txtbx_NoOfMakeReady()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_txtNoOfMakeReady"));
+		return element;
+	}
+	public static WebElement drpdn_NoOfWashup()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_ddlWashUp"));
 		return element;
 	}
 	public static WebElement drpdn_PrintSheetSize()
@@ -456,6 +471,16 @@ public class Estimate_Add_SFO_SingleItem extends SuperTestNG
 	public static WebElement btn_Guillotine()
 	{
 		WebElement element = driver.findElement(By.xpath("//div[15]/div/div[2]/a/img"));
+		return element;
+	}
+	public static WebElement chkbx_FirstTrim()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_chkFirstTrim"));
+		return element;
+	}
+	public static WebElement chkbx_SecondTrim()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCLithoSingle_chkSecondTrim"));
 		return element;
 	}
 	public static WebElement btn_Previous()
@@ -592,12 +617,12 @@ public class Estimate_Add_SFO_SingleItem extends SuperTestNG
 		}
 		public static WebElement txt_PaperStock3()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice3"));
+			WebElement element = driver.findElement(By.id("spnPaperPrice13"));
 			return element;
 		}
 		public static WebElement txt_PaperStock4()
 		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice4"));
+			WebElement element = driver.findElement(By.id("spnPaperPrice14"));
 			return element;
 		}
 		public static WebElement txt_Ink1()
@@ -640,6 +665,26 @@ public class Estimate_Add_SFO_SingleItem extends SuperTestNG
 			WebElement element = driver.findElement(By.id("spnPressPrice4"));
 			return element;
 		}
+		public static WebElement txt_Guillotine1()
+		{
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice1"));
+			return element;
+		}
+		public static WebElement txt_Guillotine2()
+		{
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice2"));
+			return element;
+		}
+		public static WebElement txt_Guillotine3()
+		{
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice3"));
+			return element;
+		}
+		public static WebElement txt_Guillotine4()
+		{
+			WebElement element = driver.findElement(By.id("spnGuillotinePrice4"));
+			return element;
+		}
 		public static WebElement txt_Plates1()
 		{
 			WebElement element = driver.findElement(By.id("spnPlatesPrice1"));
@@ -658,6 +703,46 @@ public class Estimate_Add_SFO_SingleItem extends SuperTestNG
 		public static WebElement txt_Plates4()
 		{
 			WebElement element = driver.findElement(By.id("spnPlatesPrice4"));
+			return element;
+		}
+		public static WebElement txt_MakeReady1()
+		{
+			WebElement element = driver.findElement(By.id("spnMakeReadyPrice1"));
+			return element;
+		}
+		public static WebElement txt_MakeReady2()
+		{
+			WebElement element = driver.findElement(By.id("spnMakeReadyPrice2"));
+			return element;
+		}
+		public static WebElement txt_MakeReady3()
+		{
+			WebElement element = driver.findElement(By.id("spnMakeReadyPrice3"));
+			return element;
+		}
+		public static WebElement txt_MakeReady4()
+		{
+			WebElement element = driver.findElement(By.id("spnMakeReadyPrice4"));
+			return element;
+		}
+		public static WebElement txt_Washup1()
+		{
+			WebElement element = driver.findElement(By.id("spnWashUpPrice1"));
+			return element;
+		}
+		public static WebElement txt_Washup2()
+		{
+			WebElement element = driver.findElement(By.id("spnWashUpPrice2"));
+			return element;
+		}
+		public static WebElement txt_Washup3()
+		{
+			WebElement element = driver.findElement(By.id("spnWashUpPrice3"));
+			return element;
+		}
+		public static WebElement txt_Washup4()
+		{
+			WebElement element = driver.findElement(By.id("spnWashUpPrice4"));
 			return element;
 		}
 		public static WebElement txt_CostPrice_Excl_Markup1()

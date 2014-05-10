@@ -5,244 +5,304 @@ import org.openqa.selenium.WebElement;
 
 import com.eprint.libraries.SuperTestNG;
 
-public class Estimate_Add_SFO_Pads extends SuperTestNG
+public class Estimate_Add_SFO_NCR extends SuperTestNG
 {
 	public static WebElement txtbx_ItemTitle()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtItemTitle"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtItemTitle"));
 		return element;
 	}
-	public static WebElement txtbx_PadQty1()
+	public static WebElement txtbx_NCR_PadQty1()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtQuantity"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtQuantity"));
 		return element;
 	}
-	public static WebElement txtbx_PadQty2()
+	public static WebElement txtbx_NCR_PadQty2()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtQuantity_2"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtQuantity_2"));
 		return element;
 	}
-	public static WebElement txtbx_PadQty3()
+	public static WebElement txtbx_NCR_PadQty3()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtQuantity_3"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtQuantity_3"));
 		return element;
 	}
-	public static WebElement txtbx_PadQty4()
+	public static WebElement txtbx_NCR_PadQty4()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtQuantity_4"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtQuantity_4"));
+		return element;
+	}
+	public static WebElement txtbx_NoOfSetsPerPad()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtsetsperpad"));
+		return element;
+	}
+	public static WebElement txtbx_NoOfPartsPerSet()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtpartsperset"));
+		return element;
+	}
+	public static WebElement txtbx_PartReference()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtSectionRef"));
 		return element;
 	}
 	public static WebElement drpdn_AssignedPress()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ddlPress"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlPress"));
 		return element;
 	}
 	public static WebElement btn_PaperStock()
 	{
-		WebElement element = driver.findElement(By.xpath("//div[8]/div/div[2]/a/img"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_imgbtnDefaultPaper"));
 		return element;
 	}
 	public static WebElement chkbx_PriceForWholePack()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ChkPriceForWholePack"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ChkPriceForWholePack"));
 		return element;
 	}
 	public static WebElement chkbx_PaperStockSupplied()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ChkPaperSupplied"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ChkPaperSupplied"));
 		return element;
 	}
 	public static WebElement txtbx_SetUpSpoilage()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtSetupSpoilage"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtSetupSpoilage"));
 		return element;
 	}
 	public static WebElement txtbx_RunningSpoilage()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtRunningSpoilage"));
-		return element;
-	}
-	public static WebElement txtbx_NoOfLeavesPerPad()
-	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtNoOfLeavesPerPad"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtRunningSpoilage"));
 		return element;
 	}
 	public static WebElement drpdn_NoOfSidesPrinted()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ddlNoOfSide"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlNoOfSide"));
 		return element;
 	}
 	public static WebElement btn_Side1Color()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ImageButton2"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ImageButton2"));
 		return element;
 	}
 	public static WebElement drpdn_Side1Color()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ddlSide1Color"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlSide1Color"));
 		return element;
 	}
 	public static WebElement btn_Side2Color()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ImageButton3"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ImageButton3"));
 		return element;
 	}
 	public static WebElement drpdn_Side2Color()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ddlSide2Color"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlSide2Color"));
 		return element;
 	}
 	public static WebElement chkbx_SheetWork()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkSheetWork"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkSheetWork"));
 		return element;
 	}
 	public static WebElement chkbx_WorkNTurn()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkTurn"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkTurn"));
 		return element;
 	}
 	public static WebElement chkbx_WorkNTumble()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkTumble"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkTumble"));
 		return element;
 	}
 	public static WebElement chkbx_Perfecting()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkPerfecting"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkPerfecting"));
 		return element;
 	}
 	public static WebElement btn_Plate()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ImageButton1"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ImageButton1"));
 		return element;
 	}
 	public static WebElement txtbx_NoOfPlates()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtNoOfPlates"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtNoOfPlates"));
 		return element;
 	}
 	public static WebElement txtbx_NoOfMakeReady()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtNoOfMakeReady"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtNoOfMakeReady"));
 		return element;
 	}
 	public static WebElement drpdn_NoOfWashup()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ddlWashUp"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlWashUp"));
 		return element;
 	}
 	public static WebElement drpdn_PrintSheetSize()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ddlPrintSheetSize"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlPrintSheetSize"));
 		return element;
 	}
 	public static WebElement chkbx_CustomPrintSheetSize()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkPrintSheet"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkPrintSheet"));
 		return element;
 	}
 	public static WebElement txtbx_CustomPrintSheetHeight()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtsectionheight"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtsectionheight"));
 		return element;
 	}
 	public static WebElement txtbx_CustomPrintSheetWidth()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtsectionwidth"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtsectionwidth"));
 		return element;
 	}
 	public static WebElement drpdn_FinishedJobSize()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ddlJobItemSize"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlJobItemSize"));
 		return element;
 	}
 	public static WebElement chkbx_CustomFinishedJobSize()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ChkJobFlatCustom"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ChkJobFlatCustom"));
 		return element;
 	}
 	public static WebElement txtbx_CustomFinishedJobHeight()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtitemheight"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtitemheight"));
 		return element;
 	}
 	public static WebElement txtbx_CustomFinishedJobWidth()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtitemwidth"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtitemwidth"));
+		return element;
+	}
+	public static WebElement drpdn_NCRPadFormat()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlBookletFormat"));
 		return element;
 	}
 	public static WebElement chkbx_IncludeGutters()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkGutters"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkGutters"));
 		return element;
 	}
 	public static WebElement txtbx_IncludeGuttersHorizontal()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtGutterHorizontal"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtGutterHorizontal"));
 		return element;
 	}
 	public static WebElement txtbx_IncludeGuttersVertical()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtGutterVertical"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtGutterVertical"));
 		return element;
 	}
 	public static WebElement chkbx_ApplyPressRestrictions()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_ChkPressRestrictions"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ChkPressRestrictions"));
 		return element;
 	}
 	public static WebElement btn_PrintLayout()
 	{
-		WebElement element = driver.findElement(By.xpath("//div[11]/div/div[2]/a/img"));
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[contains(text(),'Print Layout')]]]/div[2]"));
 		return element;
 	}
 	public static WebElement chkbx_PortraitPrintLayout()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkPortrait"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkPortrait"));
 		return element;
 	}
 	public static WebElement txtbx_PortraitPrintLayout()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtportrait"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtportrait"));
 		return element;
 	}
 	public static WebElement chkbx_LandscapePrintLayout()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkLandscape"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkLandscape"));
 		return element;
 	}
 	public static WebElement txtbx_LandscapePrintLayout()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_txtlandscape"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_txtlandscape"));
 		return element;
 	}
 	public static WebElement btn_Guillotine()
 	{
-		WebElement element = driver.findElement(By.xpath("//div[13]/div/div[2]/a/img"));
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[contains(text(),'Guillotine')]]]/div[2]"));
 		return element;
 	}
 	public static WebElement chkbx_FirstTrim()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkFirstTrim"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkFirstTrim"));
 		return element;
 	}
 	public static WebElement chkbx_SecondTrim()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_chkSecondTrim"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_chkSecondTrim"));
 		return element;
 	}
 	public static WebElement btn_Previous()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_btnPrevious"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_btnPrevious"));
 		return element;
 	}
 	public static WebElement btn_Finish()
 	{
-		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCPadItem_btnSave"));
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_btnSave"));
 		return element;
 	}
-	
+	public static WebElement btn_Part1()
+	{
+		WebElement element = driver.findElement(By.id("btn1"));
+		return element;
+	}
+	public static WebElement btn_Part2()
+	{
+		WebElement element = driver.findElement(By.id("btn2"));
+		return element;
+	}
+	public static WebElement btn_Part3()
+	{
+		WebElement element = driver.findElement(By.id("btn3"));
+		return element;
+	}
+	public static WebElement btn_Part4()
+	{
+		WebElement element = driver.findElement(By.id("btn4"));
+		return element;
+	}
+	public static WebElement btn_Part5()
+	{
+		WebElement element = driver.findElement(By.id("btn5"));
+		return element;
+	}
+	public static WebElement btn_Part6()
+	{
+		WebElement element = driver.findElement(By.id("btn6"));
+		return element;
+	}
+	public static WebElement btn_Part7()
+	{
+		WebElement element = driver.findElement(By.id("btn7"));
+		return element;
+	}
+	public static WebElement btn_Part8()
+	{
+		WebElement element = driver.findElement(By.id("btn8"));
+		return element;
+	}
+	public static WebElement btn_Part9()
+	{
+		WebElement element = driver.findElement(By.id("btn9"));
+		return element;
+	}
+//--------------------------------------------------------------------------------------------------------------------------------------//
 	public static class Estimate_Summary
 	{
 		public static WebElement txt_EstimateNumber()
@@ -335,86 +395,236 @@ public class Estimate_Add_SFO_Pads extends SuperTestNG
 			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'Item Title')]]]/td/div/label"));
 			return element;
 		}
-		public static WebElement txt_FinishedQty1()
+		
+		public static class Section_All
 		{
-			WebElement element = driver.findElement(By.id("spnQuantity1"));
-			return element;
+			public static WebElement txt_FinishedQty1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[1]/td[2]/span[@id='spnQuantity1']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[1]/td/span[@id='spnQuantity2']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[1]/td/span[@id='spnQuantity3']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[1]/td/span[@id='spnQuantity4']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[2]/td/span[@id='spnPaperPrice1']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[2]/td/span[@id='spnPaperPrice2']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[2]/td/span[@id='spnPaperPrice13']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[2]/td/span[@id='spnPaperPrice14']"));
+				return element;
+			}
+			public static WebElement txt_Ink1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[3]/td/span[@id='spnInkPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Ink2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[3]/td/span[@id='spnInkPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Ink3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[3]/td/span[@id='spnInkPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Ink4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[3]/td/span[@id='spnInkPrice4']"));
+				return element;
+			}
+			public static WebElement txt_Press1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[4]/td/span[@id='spnPressPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Press2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[4]/td/span[@id='spnPressPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Press3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[4]/td/span[@id='spnPressPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Press4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[4]/td/span[@id='spnPressPrice4']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[5]/td/span[@id='spnGuillotinePrice1']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[5]/td/span[@id='spnGuillotinePrice2']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[5]/td/span[@id='spnGuillotinePrice3']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[5]/td/span[@id='spnGuillotinePrice4']"));
+				return element;
+			}
+			public static WebElement txt_Plates1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[6]/td/span[@id='spnPlatesPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Plates2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[6]/td/span[@id='spnPlatesPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Plates3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[6]/td/span[@id='spnPlatesPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Plates4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[6]/td/span[@id='spnPlatesPrice4']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice1']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice2']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice3']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice4']"));
+				return element;
+			}
+			public static WebElement txt_WashUp1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[8]/td/span[@id='spnWashUpPrice1']"));
+				return element;
+			}
+			public static WebElement txt_WashUp2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[8]/td/span[@id='spnWashUpPrice2']"));
+				return element;
+			}
+			public static WebElement txt_WashUp3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[8]/td/span[@id='spnWashUpPrice3']"));
+				return element;
+			}
+			public static WebElement txt_WashUp4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[2]/tbody/tr[8]/td/span[@id='spnWashUpPrice4']"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup1_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup2_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup3_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup4_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice1_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice2_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice3_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice4_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup1_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup2_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup3_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup4_')]"));
+				return element;
+			}
 		}
-		public static WebElement txt_FinishedQty2()
-		{
-			WebElement element = driver.findElement(By.id("spnQuantity2"));
-			return element;
-		}
-		public static WebElement txt_FinishedQty3()
-		{
-			WebElement element = driver.findElement(By.id("spnQuantity3"));
-			return element;
-		}
-		public static WebElement txt_FinishedQty4()
-		{
-			WebElement element = driver.findElement(By.id("spnQuantity4"));
-			return element;
-		}
-		public static WebElement txt_PaperStock1()
-		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice1"));
-			return element;
-		}
-		public static WebElement txt_PaperStock2()
-		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice2"));
-			return element;
-		}
-		public static WebElement txt_PaperStock3()
-		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice13"));
-			return element;
-		}
-		public static WebElement txt_PaperStock4()
-		{
-			WebElement element = driver.findElement(By.id("spnPaperPrice14"));
-			return element;
-		}
-		public static WebElement txt_Ink1()
-		{
-			WebElement element = driver.findElement(By.id("spnInkPrice1"));
-			return element;
-		}
-		public static WebElement txt_Ink2()
-		{
-			WebElement element = driver.findElement(By.id("spnInkPrice2"));
-			return element;
-		}
-		public static WebElement txt_Ink3()
-		{
-			WebElement element = driver.findElement(By.id("spnInkPrice3"));
-			return element;
-		}
-		public static WebElement txt_Ink4()
-		{
-			WebElement element = driver.findElement(By.id("spnInkPrice4"));
-			return element;
-		}
-		public static WebElement txt_Press1()
-		{
-			WebElement element = driver.findElement(By.id("spnPressPrice1"));
-			return element;
-		}
-		public static WebElement txt_Press2()
-		{
-			WebElement element = driver.findElement(By.id("spnPressPrice2"));
-			return element;
-		}
-		public static WebElement txt_Press3()
-		{
-			WebElement element = driver.findElement(By.id("spnPressPrice3"));
-			return element;
-		}
-		public static WebElement txt_Press4()
-		{
-			WebElement element = driver.findElement(By.id("spnPressPrice4"));
-			return element;
-		}
+		
 		public static WebElement txt_Guillotine1()
 		{
 			WebElement element = driver.findElement(By.id("spnGuillotinePrice1"));
