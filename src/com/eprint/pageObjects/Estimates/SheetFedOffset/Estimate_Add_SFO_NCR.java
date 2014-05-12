@@ -618,13 +618,868 @@ public class Estimate_Add_SFO_NCR extends SuperTestNG
 				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup4_')]"));
 				return element;
 			}
-			public static WebElement txtbx_ProfitMargin$()
+			public static WebElement txtbx_ProfitMargin$1()
 			{
-				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup4_')]"));
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal4_')]"));
+				return element;
+			}
+			public static WebElement drpdn_Tax()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[7]/td/div/div/select[contains(@id,'ddlTax_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[3]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage4_')]"));
 				return element;
 			}
 		}
-		
+		public static class Section_1
+		{
+			public static WebElement txt_FinishedQty1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[1]/td[2]/span[@id='spnQuantity1']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[1]/td/span[@id='spnQuantity2']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[1]/td/span[@id='spnQuantity3']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[1]/td/span[@id='spnQuantity4']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[2]/td/span[@id='spnPaperPrice1']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[2]/td/span[@id='spnPaperPrice2']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[2]/td/span[@id='spnPaperPrice13']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[2]/td/span[@id='spnPaperPrice14']"));
+				return element;
+			}
+			public static WebElement txt_Ink1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[3]/td/span[@id='spnInkPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Ink2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[3]/td/span[@id='spnInkPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Ink3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[3]/td/span[@id='spnInkPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Ink4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[3]/td/span[@id='spnInkPrice4']"));
+				return element;
+			}
+			public static WebElement txt_Press1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[4]/td/span[@id='spnPressPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Press2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[4]/td/span[@id='spnPressPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Press3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[4]/td/span[@id='spnPressPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Press4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[4]/td/span[@id='spnPressPrice4']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[5]/td/span[@id='spnGuillotinePrice1']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[5]/td/span[@id='spnGuillotinePrice2']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[5]/td/span[@id='spnGuillotinePrice3']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[5]/td/span[@id='spnGuillotinePrice4']"));
+				return element;
+			}
+			public static WebElement txt_Plates1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[6]/td/span[@id='spnPlatesPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Plates2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[6]/td/span[@id='spnPlatesPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Plates3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[6]/td/span[@id='spnPlatesPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Plates4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[6]/td/span[@id='spnPlatesPrice4']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice1']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice2']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice3']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice4']"));
+				return element;
+			}
+			public static WebElement txt_WashUp1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[8]/td/span[@id='spnWashUpPrice1']"));
+				return element;
+			}
+			public static WebElement txt_WashUp2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[8]/td/span[@id='spnWashUpPrice2']"));
+				return element;
+			}
+			public static WebElement txt_WashUp3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[8]/td/span[@id='spnWashUpPrice3']"));
+				return element;
+			}
+			public static WebElement txt_WashUp4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[3]/tbody/tr[8]/td/span[@id='spnWashUpPrice4']"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup1_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup2_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup3_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup4_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice1_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice2_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice3_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice4_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup1_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup2_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup3_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal4_')]"));
+				return element;
+			}
+			public static WebElement drpdn_Tax()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[7]/td/div/div/select[contains(@id,'ddlTax_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[1]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage4_')]"));
+				return element;
+			}
+		}
+		public static class Section_2
+		{
+			public static WebElement txt_FinishedQty1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[1]/td[2]/span[@id='spnQuantity1']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[1]/td/span[@id='spnQuantity2']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[1]/td/span[@id='spnQuantity3']"));
+				return element;
+			}
+			public static WebElement txt_FinishedQty4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[1]/td/span[@id='spnQuantity4']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[2]/td/span[@id='spnPaperPrice1']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[2]/td/span[@id='spnPaperPrice2']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[2]/td/span[@id='spnPaperPrice13']"));
+				return element;
+			}
+			public static WebElement txt_PaperStock4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[2]/td/span[@id='spnPaperPrice14']"));
+				return element;
+			}
+			public static WebElement txt_Ink1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[3]/td/span[@id='spnInkPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Ink2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[3]/td/span[@id='spnInkPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Ink3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[3]/td/span[@id='spnInkPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Ink4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[3]/td/span[@id='spnInkPrice4']"));
+				return element;
+			}
+			public static WebElement txt_Press1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[4]/td/span[@id='spnPressPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Press2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[4]/td/span[@id='spnPressPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Press3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[4]/td/span[@id='spnPressPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Press4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[4]/td/span[@id='spnPressPrice4']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[5]/td/span[@id='spnGuillotinePrice1']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[5]/td/span[@id='spnGuillotinePrice2']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[5]/td/span[@id='spnGuillotinePrice3']"));
+				return element;
+			}
+			public static WebElement txt_Guillotine4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[5]/td/span[@id='spnGuillotinePrice4']"));
+				return element;
+			}
+			public static WebElement txt_Plates1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[6]/td/span[@id='spnPlatesPrice1']"));
+				return element;
+			}
+			public static WebElement txt_Plates2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[6]/td/span[@id='spnPlatesPrice2']"));
+				return element;
+			}
+			public static WebElement txt_Plates3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[6]/td/span[@id='spnPlatesPrice3']"));
+				return element;
+			}
+			public static WebElement txt_Plates4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[6]/td/span[@id='spnPlatesPrice4']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice1']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice2']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice3']"));
+				return element;
+			}
+			public static WebElement txt_MakeReady4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[7]/td/span[@id='spnMakeReadyPrice4']"));
+				return element;
+			}
+			public static WebElement txt_WashUp1()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[8]/td/span[@id='spnWashUpPrice1']"));
+				return element;
+			}
+			public static WebElement txt_WashUp2()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[8]/td/span[@id='spnWashUpPrice2']"));
+				return element;
+			}
+			public static WebElement txt_WashUp3()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[8]/td/span[@id='spnWashUpPrice3']"));
+				return element;
+			}
+			public static WebElement txt_WashUp4()
+			{
+				WebElement element = driver.findElement(By.xpath("//td/table[4]/tbody/tr[8]/td/span[@id='spnWashUpPrice4']"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup1_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup2_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup3_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Excl_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[1]/td/span[contains(@id,'spnCostExMarkup4_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice1_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice2_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice3_')]"));
+				return element;
+			}
+			public static WebElement txt_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[2]/td/span[contains(@id,'spnMarkupPrice4_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup1_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup2_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup3_')]"));
+				return element;
+			}
+			public static WebElement txt_CostPrice_Incl_Markup4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[3]/td/span[contains(@id,'spnCostInMarkup4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMarginPercentage4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[4]/td/input[contains(@id,'txtProfitMarginPercentage4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_ProfitMargin$4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[5]/td/input[contains(@id,'txtProfitMarginPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SubTotal4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[6]/td/input[contains(@id,'txtSubTotal4_')]"));
+				return element;
+			}
+			public static WebElement drpdn_Tax()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[7]/td/div/div/select[contains(@id,'ddlTax_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_TaxVal4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[7]/td/span[contains(@id,'spnTaxPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_SellingPrice_incTax4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[8]/td/span[contains(@id,'spnSellingPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfit$4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPrice4_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage1()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage1_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage2()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage2_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage3()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage3_')]"));
+				return element;
+			}
+			public static WebElement txtbx_GrossProfitPercentage4()
+			{
+				WebElement element = driver.findElement(By.xpath("//div[2]/table/tbody/tr[9]/td/div/span[contains(@id,'spnGrossProfitPercentage4_')]"));
+				return element;
+			}
+		}
 		public static WebElement txt_Guillotine1()
 		{
 			WebElement element = driver.findElement(By.id("spnGuillotinePrice1"));

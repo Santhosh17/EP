@@ -1,4 +1,4 @@
-package com.eprint.testcases.Estimates.SheetFedOffset.SingleItem;
+package com.eprint.testcases.Estimates.SheetFedOffset.Pads;
 
 import java.util.concurrent.TimeUnit;
 
