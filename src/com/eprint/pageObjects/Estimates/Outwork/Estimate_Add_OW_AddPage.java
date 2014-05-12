@@ -393,5 +393,870 @@ public class Estimate_Add_OW_AddPage extends SuperTestNG
 		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier1']]]/div[3]/div[2]/div/img"));
 		return element;
 	}
-	need to continue from here
+	//----------------------------------------------------------------------------------------------------------------------//
+	public static WebElement btn_Supplier2_Name_Add()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier2']]]/div[2]/div/img"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_Name()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier2']]]/div[2]/div/select"));
+		return element;
+	}
+	public static WebElement btn_Supplier2_Contact_Add()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier2']]]/div[3]/div/img"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_Contact()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier2']]]/div[3]/div[2]/select"));
+		return element;
+	}
+	public static WebElement btn_Supplier2_Delete()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier2']]]/div[3]/div[2]/div/img"));
+		return element;
+	}
+	//----------------------------------------------------------------------------------------------------------------------//
+	public static WebElement btn_Supplier3_Name_Add()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier3']]]/div[2]/div/img"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_Name()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier3']]]/div[2]/div/select"));
+		return element;
+	}
+	public static WebElement btn_Supplier3_Contact_Add()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier3']]]/div[3]/div/img"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_Contact()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier3']]]/div[3]/div[2]/select"));
+		return element;
+	}
+	public static WebElement btn_Supplier3_Delete()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier3']]]/div[3]/div[2]/div/img"));
+		return element;
+	}
+	//----------------------------------------------------------------------------------------------------------------------//
+	public static WebElement btn_Supplier4_Name_Add()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier4']]]/div[2]/div/img"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_Name()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier4']]]/div[2]/div/select"));
+		return element;
+	}
+	public static WebElement btn_Supplier4_Contact_Add()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier4']]]/div[3]/div/img"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_Contact()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier4']]]/div[3]/div[2]/select"));
+		return element;
+	}
+	public static WebElement btn_Supplier4_Delete()
+	{
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[text()='Supplier4']]]/div[3]/div[2]/div/img"));
+		return element;
+	}
+	public static WebElement btn_Previous()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_divprintbroker_Button1"));
+		return element;
+	}
+	public static WebElement btn_Next()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_divprintbroker_btnSave"));
+		return element;
+	}
+	public static WebElement btn_Print_Email()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_divprintbroker_btn_Outwork_PrintEmail"));
+		return element;
+	}
+	public static WebElement txtbx_SupplierQuote1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[1]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_SupplierQuote2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[1]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_SupplierQuote3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[1]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_SupplierQuote4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[1]/input[1]"));
+		return element;
+	}
+	public static WebElement txt_Supplier1Name()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[2]"));
+		return element;
+	}
+	public static WebElement txt_Supplier2Name()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[2]"));
+		return element;
+	}
+	public static WebElement txt_Supplier3Name()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[2]"));
+		return element;
+	}
+	public static WebElement txt_Supplier4Name()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[2]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Qty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Qty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Qty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Qty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Qty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Qty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Qty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Qty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Qty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Qty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Qty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Qty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Qty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Qty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Qty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Qty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[3]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Cost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Cost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Cost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_Cost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Cost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Cost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Cost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_Cost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Cost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Cost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Cost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_Cost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Cost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Cost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Cost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_Cost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[4]/input[1]"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_DeliveryIncl1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_DeliveryIncl2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_DeliveryIncl3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_DeliveryIncl4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_DeliveryIncl1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_DeliveryIncl2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_DeliveryIncl3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_DeliveryIncl4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_DeliveryIncl1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_DeliveryIncl2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_DeliveryIncl3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_DeliveryIncl4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_DeliveryIncl1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_DeliveryIncl2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_DeliveryIncl3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[5]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_DeliveryIncl4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[5]/select"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryDate1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryDate2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryDate3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryDate4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryDate1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryDate2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryDate3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryDate4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryDate1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryDate2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryDate3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryDate4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryDate1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryDate2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryDate3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryDate4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[6]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryCost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryCost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryCost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_DeliveryCost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryCost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryCost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryCost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_DeliveryCost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryCost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryCost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryCost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_DeliveryCost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryCost1()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryCost2()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryCost3()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[7]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_DeliveryCost4()
+	{
+		WebElement element = driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[7]/input"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_MarkupType1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_MarkupType2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_MarkupType3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier1_MarkupType4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_MarkupType1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_MarkupType2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_MarkupType3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier2_MarkupType4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_MarkupType1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_MarkupType2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_MarkupType3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier3_MarkupType4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_MarkupType1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_MarkupType2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_MarkupType3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[8]/select"));
+		return element;
+	}
+	public static WebElement drpdn_Supplier4_MarkupType4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[8]/select"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_MarkupValue1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_MarkupValue2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_MarkupValue3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_MarkupValue4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_MarkupValue1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_MarkupValue2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_MarkupValue3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_MarkupValue4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_MarkupValue1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_MarkupValue2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_MarkupValue3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_MarkupValue4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_MarkupValue1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_MarkupValue2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_MarkupValue3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_MarkupValue4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[9]/input"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_TotalPrice1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_TotalPrice2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_TotalPrice3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier1_TotalPrice4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_TotalPrice1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_TotalPrice2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_TotalPrice3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier2_TotalPrice4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_TotalPrice1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_TotalPrice2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_TotalPrice3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier3_TotalPrice4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_TotalPrice1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_TotalPrice2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_TotalPrice3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement txtbx_Supplier4_TotalPrice4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[10]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier1_SelectSupplierAndQty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier1_SelectSupplierAndQty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier1_SelectSupplierAndQty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier1_SelectSupplierAndQty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier2_SelectSupplierAndQty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier2_SelectSupplierAndQty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier2_SelectSupplierAndQty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier2_SelectSupplierAndQty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier3_SelectSupplierAndQty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier3_SelectSupplierAndQty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier3_SelectSupplierAndQty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier3_SelectSupplierAndQty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier4_SelectSupplierAndQty1()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier4_SelectSupplierAndQty2()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier4_SelectSupplierAndQty3()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement chkbx_Supplier4_SelectSupplierAndQty4()
+	{
+		WebElement element = driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[11]/input[1]"));
+		return element;
+	}
+	public static WebElement btn_Previous2()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_divprintbroker_Button11"));
+		return element;
+	}
+	public static WebElement btn_Finish()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_divprintbroker_Button12"));
+		return element;
+	}
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	
+	need to continue from here for estimate summary page
 }

@@ -203,7 +203,7 @@ public class Estimate_Create_SheetFedDigital_Booklet extends SuperTestNG
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 50, 3, "Round up to use whole sheets", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
 		
 		String GuillotineName = Generic.getXlCellValue(xlpath, sheetName, 51, 1);
-		EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFD_Single.btn_GuillotineAdd(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr[4]/td/div/a[contains(text(),'"+GuillotineName+"')]");
+		EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFD_Single.btn_GuillotineAdd(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+GuillotineName+"')]");
 		Generic.BlindWait(2);
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 52, 2, "Guillotine : First Trim", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_FirstTrim());
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 52, 4, "Guillotine : Second Trim", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_SecondTrim());
@@ -354,7 +354,7 @@ public class Estimate_Create_SheetFedDigital_Booklet extends SuperTestNG
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 48, 9, "Round up to use whole sheets", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
 		
 		String GuillotineName2 = Generic.getXlCellValue(xlpath, sheetName, 49, 7);
-		EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFD_Single.btn_GuillotineAdd(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr[4]/td/div/a[contains(text(),'"+GuillotineName2+"')]");
+		EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFD_Single.btn_GuillotineAdd(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+GuillotineName2+"')]");
 		Generic.BlindWait(2);
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 50, 8, "Guillotine : First Trim", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_FirstTrim());
 		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 50, 10, "Guillotine : Second Trim", Estimate_Add_SFD_Booklet.SaddleStiched.chkbx_SecondTrim());

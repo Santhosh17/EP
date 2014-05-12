@@ -20,7 +20,8 @@ import com.eprint.pageObjects.Estimates.SheetFedOffset.Estimate_Add_SFO_Pads;
 public class Estimate_Create_SFO_Pads extends SuperTestNG
 {
   @Test
-  public void textEstimate_Create_SFO_Pads() {
+  public void textEstimate_Create_SFO_Pads() 
+  {
 	  try
 		{
 			EprintSpecificLinks.login();
@@ -166,9 +167,6 @@ public class Estimate_Create_SFO_Pads extends SuperTestNG
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 42, 2, "Number of Plates", Estimate_Add_SFO_Pads.txtbx_NoOfPlates());
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 43, 2, "No. of Make ready", Estimate_Add_SFO_Pads.txtbx_NoOfMakeReady());
 		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 44, 2, "No. of Washup", Estimate_Add_SFO_Pads.drpdn_NoOfWashup());
-		
-		
-		
 		
 		String CustomPrintSheetSize = Generic.getXlCellValue(xlpath, sheetName, 45, 4);
 		if (CustomPrintSheetSize.equals("YES"))
