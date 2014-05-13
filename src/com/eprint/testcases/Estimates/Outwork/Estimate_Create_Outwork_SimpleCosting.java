@@ -25,7 +25,7 @@ public class Estimate_Create_Outwork_SimpleCosting extends SuperTestNG
 	{
 		EprintSpecificLinks.login();
 		
-		String xlpath = "./Excel Files/Estimates/Estimates.xls";
+		String xlpath = "./src/com/eprint/testData/Estimates/Outwork Simple Costing.xls";
 		String sheetName = "Estimate-Outwork-Simple";
 		
 		try
@@ -166,12 +166,12 @@ public class Estimate_Create_Outwork_SimpleCosting extends SuperTestNG
 //		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 63, 5, "Delivery Included -3", Estimate_Add_OW_AddPage.drpdn_Supplier1_DeliveryIncl3());
 //		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 64, 5, "Delivery Included -4", Estimate_Add_OW_AddPage.drpdn_Supplier1_DeliveryIncl4());
 			
-		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 61, 6, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 61, 6, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate1());
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 62, 6, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate2());
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 63, 6, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate3());
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 64, 6, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate4());
 		
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 61, 7, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 61, 7, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost1());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 62, 7, "Delivery Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost2());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 63, 7, "Delivery Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost3());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 64, 7, "Delivery Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost4());
@@ -219,9 +219,9 @@ public class Estimate_Create_Outwork_SimpleCosting extends SuperTestNG
 //		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 69, 5, "Delivery Included -4", Estimate_Add_OW_AddPage.drpdn_Supplier2_DeliveryIncl4());
 		
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 65, 5, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
-//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 66, 5, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
-//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 67, 5, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
-//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 68, 5, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 66, 5, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 67, 5, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 68, 5, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate4());
 		
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 65, 6, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryCost1());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 66, 6, "Delivery Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryCost2());
@@ -245,9 +245,9 @@ public class Estimate_Create_Outwork_SimpleCosting extends SuperTestNG
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 68, 10, "Total Price - 4", Estimate_Add_OW_AddPage.txtbx_Supplier2_TotalPrice4());
 		
 //		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 65, 11, "Select Supplier & Quantities -1", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty1());
-		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 66, 11, "Select Supplier & Quantities -2", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty1());
-//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 67, 11, "Select Supplier & Quantities -3", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty1());
-//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 68, 11, "Select Supplier & Quantities -4", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty1());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 66, 11, "Select Supplier & Quantities -2", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty2());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 67, 11, "Select Supplier & Quantities -3", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty3());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 68, 11, "Select Supplier & Quantities -4", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty4());
 		
 		Reporter.log("----------------------------------------------------------",true);
 
@@ -304,7 +304,7 @@ public class Estimate_Create_Outwork_SimpleCosting extends SuperTestNG
 		
 		Reporter.log("----------------------------------------------------------",true);
 		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 73, 0, "Supplier Quote -4", Estimate_Add_OW_AddPage.txtbx_SupplierQuote4());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 57, 1, "Supplier-4 Name", Estimate_Add_OW_AddPage.txt_Supplier4Name());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 1, "Supplier-4 Name", Estimate_Add_OW_AddPage.txt_Supplier4Name());
 		
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.txtbx_Supplier4_Qty1());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.txtbx_Supplier4_Qty2());
@@ -324,12 +324,12 @@ public class Estimate_Create_Outwork_SimpleCosting extends SuperTestNG
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 73, 5, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate1());
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 74, 5, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate2());
 //		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 75, 5, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate3());
-		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 76, 5, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate4());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 76, 5, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate4());
 		
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 73, 6, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost1());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 74, 6, "Delivery Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost2());
 //		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 75, 6, "Delivery Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost3());
-		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 76, 6, "Delivery Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost4());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 76, 6, "Delivery Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost4());
 		
 //		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 73, 8, "Markup Type -1", Estimate_Add_OW_AddPage.drpdn_Supplier4_MarkupType1());
 //		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 74, 8, "Markup Type -2", Estimate_Add_OW_AddPage.drpdn_Supplier4_MarkupType2());
@@ -355,83 +355,83 @@ public class Estimate_Create_Outwork_SimpleCosting extends SuperTestNG
 		ProjectLibrary.ClickOnButton("Finish", Estimate_Add_OW_AddPage.btn_Finish());
 		Reporter.log("----------------------------------------------------------------------------------",true);
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-		String EstimateNumber = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCItemSummaryMain_lblEstJobInvNo")).getText();
+		String EstimateNumber = Estimate_Add_OW_AddPage.EstimateSummary.txt_EstimateNumber().getText();
 		Reporter.log("Estimate Number = "+EstimateNumber,true);
 		Reporter.log("----------------------------------------------------------------------------------",true);
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 29, 2, "Item Title", "//table/tbody/tr[2]/td/table/tbody/tr[3]/td[2]/div/label");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 29, 2, "Item Title", Estimate_Add_OW_AddPage.EstimateSummary.txt_ItemTitle());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 48, 1, "Supplier Name 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/span/b");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 51, 1, "Supplier Name 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[3]/span/b");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 54, 1, "Supplier Name 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[4]/span/b");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 57, 1, "Supplier Name 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[5]/span/b");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 48, 1, "Supplier Name 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 51, 1, "Supplier Name 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 1, "Supplier Name 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 1, "Supplier Name 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 61, 0, "Supp. Quote - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 65, 0, "Supp. Quote - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 69, 0, "Supp. Quote - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 73, 0, "Supp. Quote - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 0, "Supp. Quote - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 65, 0, "Supp. Quote - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 69, 0, "Supp. Quote - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 73, 0, "Supp. Quote - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote4());
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 1, "Quantity - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 2, "Quantity - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 3, "Quantity - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 4, "Quantity - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 3, "Quantity - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 4, "Quantity - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 4, "Price - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 4, "Price - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 4, "Price - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 4, "Price - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 4, "Price - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 4, "Price - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 4, "Price - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 4, "Price - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 4, "Cost Price (ex. Markup) - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 4, "Cost Price (ex. Markup) - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 4, "Cost Price (ex. Markup) - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 4, "Cost Price (ex. Markup) - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 4, "Cost Price (ex. Markup) - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 4, "Cost Price (ex. Markup) - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 4, "Cost Price (ex. Markup) - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 4, "Cost Price (ex. Markup) - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup4());
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 9, "Markup - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 9, "Markup - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 9, "Markup - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 9, "Markup - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 9, "Markup - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 9, "Markup - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 9, "Markup - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 9, "Markup - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup4());
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 10, "Cost Price (inc. Markup) - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 10, "Cost Price (inc. Markup) - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 10, "Cost Price (inc. Markup) - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 10, "Cost Price (inc. Markup) - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 10, "Cost Price (inc. Markup) - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 10, "Cost Price (inc. Markup) - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 10, "Cost Price (inc. Markup) - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 10, "Cost Price (inc. Markup) - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup4());
 
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 79, 12, "Profit Margin % -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[2]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 84, 12, "Profit Margin % -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[3]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 89, 12, "Profit Margin % -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[4]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 94, 12, "Profit Margin % -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[5]/input");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 79, 12, "Profit Margin % -1", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 84, 12, "Profit Margin % -2", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 89, 12, "Profit Margin % -3", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 94, 12, "Profit Margin % -4", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage4());
 		
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 79, 13, "Profit Margin ($) -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[2]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 84, 13, "Profit Margin ($) -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[3]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 89, 13, "Profit Margin ($) -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[4]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 94, 13, "Profit Margin ($) -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[5]/input");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 79, 13, "Profit Margin ($) -1", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 84, 13, "Profit Margin ($) -2", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 89, 13, "Profit Margin ($) -3", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 94, 13, "Profit Margin ($) -4", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice4());
 	
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 79, 14, "Sub Total -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[2]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 84, 14, "Sub Total -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[3]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 89, 14, "Sub Total -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[4]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 94, 14, "Sub Total -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[5]/input");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 79, 14, "Sub Total -1", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 84, 14, "Sub Total -2", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 89, 14, "Sub Total -3", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 94, 14, "Sub Total -4", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal4());
 	
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 79, 15, "Tax", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[1]/div/div/select");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 79, 15, "Tax", Estimate_Add_OW_AddPage.EstimateSummary.drpdn_Tax());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 16, "Tax - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 16, "Tax - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 16, "Tax - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 16, "Tax - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 16, "Tax - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 16, "Tax - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 16, "Tax - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 16, "Tax - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 17, "Selling Price (inc. Tax) - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 17, "Selling Price (inc. Tax) - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 17, "Selling Price (inc. Tax) - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 17, "Selling Price (inc. Tax) - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 17, "Selling Price (inc. Tax) - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 17, "Selling Price (inc. Tax) - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 17, "Selling Price (inc. Tax) - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 17, "Selling Price (inc. Tax) - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 18, "Gross Profit $ -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[2]/div[1]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 18, "Gross Profit $ -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[3]/div[1]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 18, "Gross Profit $ -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[4]/div[1]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 18, "Gross Profit $ -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[5]/div[1]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 18, "Gross Profit $ -1", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 18, "Gross Profit $ -2", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 18, "Gross Profit $ -3", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 18, "Gross Profit $ -4", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 19, "Gross Profit % -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[2]/div[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 19, "Gross Profit % -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[3]/div[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 19, "Gross Profit % -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[4]/div[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 19, "Gross Profit % -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[5]/div[3]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 19, "Gross Profit % -1", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 19, "Gross Profit % -2", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 19, "Gross Profit % -3", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 19, "Gross Profit % -4", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage4());
 		
 //		ProjectLibrary.ClickOnButtonByXpath("Save", "//table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr[2]/td/div/div[1]/div/input");
 	}

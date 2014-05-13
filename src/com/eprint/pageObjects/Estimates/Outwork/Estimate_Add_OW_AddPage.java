@@ -1257,6 +1257,420 @@ public class Estimate_Add_OW_AddPage extends SuperTestNG
 		return element;
 	}
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------//
+	public static class EstimateSummary
+	{
+		public static WebElement txt_EstimateNumber()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCItemSummaryMain_lblEstJobInvNo"));
+			return element;
+		}
+		public static WebElement btn_AddSubItem()
+		{
+			WebElement element = driver.findElement(By.xpath("//div/a/input[@value='Add Sub Item']"));
+			return element;
+		}
+		public static WebElement lnk_SheetFedDigital()
+		{
+			WebElement element = driver.findElement(By.xpath("//form/div/ul/li/a/span[text()='Sheet Fed Digital']"));
+			return element;
+		}
+		public static WebElement lnk_SheetFedDigital_SingleItem()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li[1]/div/ul/li/a/span[contains(text(),'Single Item')]"));
+			return element;
+		}
+		public static WebElement lnk_SheetFedDigital_Pads()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li[1]/div/ul/li/a/span[contains(text(),'Pads')]"));
+			return element;
+		}
+		public static WebElement lnk_SheetFedOffset()
+		{
+			WebElement element = driver.findElement(By.xpath("//form/div/ul/li/a/span[text()='Sheet Fed Offset']"));
+			return element;
+		}
+		public static WebElement lnk_SheetFedOffset_SingleItem()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li[2]/div/ul/li/a/span[contains(text(),'Single Item')]"));
+			return element;
+		}
+		public static WebElement lnk_SheetFedOffset_Pads()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li[2]/div/ul/li/a/span[contains(text(),'Pads')]"));
+			return element;
+		}
+		public static WebElement lnk_LargeFormat()
+		{
+			WebElement element = driver.findElement(By.xpath("//form/div/ul/li/a/span[text()='Large Format']"));
+			return element;
+		}
+		public static WebElement lnk_LargeFormat_Linear()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li[3]/div/ul/li/a/span[contains(text(),'Linear')]"));
+			return element;
+		}
+		public static WebElement lnk_LargeFormat_SquareMeter()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li[3]/div/ul/li/a/span[contains(text(),'Square Meter')]"));
+			return element;
+		}
+		public static WebElement lnk_ProductCatalogue()
+		{
+			WebElement element = driver.findElement(By.xpath("//form/div/ul/li/a/span[text()='Product Catalogue']"));
+			return element;
+		}
+		public static WebElement lnk_Outwork()
+		{
+			WebElement element = driver.findElement(By.xpath("//form/div/ul/li/a/span[text()='Outwork']"));
+			return element;
+		}
+		public static WebElement lnk_OtherCosts()
+		{
+			WebElement element = driver.findElement(By.xpath("//form/div/ul/li/a/span[text()='Other Costs']"));
+			return element;
+		}
+		public static WebElement btn_Action()
+		{
+			WebElement element = driver.findElement(By.xpath("//div/div/a/input[@value='Action']"));
+			return element;
+		}
+		public static WebElement lnk_ReRun_Item()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li/a/span[text()='Re-Run Item']"));
+			return element;
+		}
+		public static WebElement lnk_Copy_Item()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li/a/span[text()='Copy Item']"));
+			return element;
+		}
+		public static WebElement lnk_Delete_Item()
+		{
+			WebElement element = driver.findElement(By.xpath("/html/body/div/form/div/ul/li/a/span[text()='Delete Item']"));
+			return element;
+		}
+		public static WebElement txt_ItemTitle()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'Item Title')]]]/td/div/label"));
+			return element;
+		}
+		
+		private static String SupplierName="Supplier Name";
+		public static WebElement txt_SupplierName1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SupplierName+"')]]]/td[2]/span/b"));
+			return element;
+		}
+		public static WebElement txt_SupplierName2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SupplierName+"')]]]/td[3]/span/b"));
+			return element;
+		}
+		public static WebElement txt_SupplierName3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SupplierName+"')]]]/td[4]/span/b"));
+			return element;
+		}
+		public static WebElement txt_SupplierName4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SupplierName+"')]]]/td[5]/span/b"));
+			return element;
+		}
+		
+		private static String SuppQuote="Supp. Quote#";
+		public static WebElement txt_SupplierQuote1() // NO_UCD (unused code)
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SuppQuote+"')]]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_SupplierQuote2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SuppQuote+"')]]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_SupplierQuote3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SuppQuote+"')]]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_SupplierQuote4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+SuppQuote+"')]]]/td[5]/span"));
+			return element;
+		}
+		
+		private static String Qty = "Quantity";
+		public static WebElement txt_SupplierQty1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+Qty+"')]]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_SupplierQty2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+Qty+"')]]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_SupplierQty3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+Qty+"')]]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_SupplierQty4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[contains(text(),'"+Qty+"')]]]/td[5]/span"));
+			return element;
+		}
+		
+		private static String Price="Price";
+		public static WebElement txt_Price1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Price+"']]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_Price2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Price+"']]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_Price3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Price+"']]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_Price4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Price+"']]]/td[5]/span"));
+			return element;
+		}
+		
+		private static String CostPriceExcMarkup = "Cost Price (ex. Markup)";
+		public static WebElement txt_CostPriceExcMarkup1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceExcMarkup+"']]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_CostPriceExcMarkup2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceExcMarkup+"']]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_CostPriceExcMarkup3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceExcMarkup+"']]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_CostPriceExcMarkup4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceExcMarkup+"']]]/td[5]/span"));
+			return element;
+		}
 	
-	need to continue from here for estimate summary page
+		private static String Markup = "Markup";
+		public static WebElement txt_Markup1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Markup+"']]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_Markup2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Markup+"']]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_Markup3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Markup+"']]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_Markup4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+Markup+"']]]/td[5]/span"));
+			return element;
+		}
+		
+		private static String CostPriceIncMarkup = "Cost Price (inc. Markup)";
+		public static WebElement txt_CostPriceIncMarkup1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceIncMarkup+"']]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_CostPriceIncMarkup2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceIncMarkup+"']]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_CostPriceIncMarkup3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceIncMarkup+"']]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_CostPriceIncMarkup4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+CostPriceIncMarkup+"']]]/td[5]/span"));
+			return element;
+		}
+		
+		private static String ProfitMarginPercentage  = "Profit Margin (%) ";
+		public static WebElement txtbx_ProfitMarginPercentage1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPercentage+"']]]/td[2]/input"));
+			return element;
+		}
+		public static WebElement txtbx_ProfitMarginPercentage2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPercentage+"']]]/td[3]/input"));
+			return element;
+		}
+		public static WebElement txtbx_ProfitMarginPercentage3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPercentage+"']]]/td[4]/input"));
+			return element;
+		}
+		public static WebElement txtbx_ProfitMarginPercentage4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPercentage+"']]]/td[5]/input"));
+			return element;
+		}
+	
+		private static String ProfitMarginPrice  = "Profit Margin ($)";
+		public static WebElement txtbx_ProfitMarginPrice1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPrice+"']]]/td[2]/input"));
+			return element;
+		}
+		public static WebElement txtbx_ProfitMarginPrice2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPrice+"']]]/td[3]/input"));
+			return element;
+		}
+		public static WebElement txtbx_ProfitMarginPrice3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPrice+"']]]/td[4]/input"));
+			return element;
+		}
+		public static WebElement txtbx_ProfitMarginPrice4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+ProfitMarginPrice+"']]]/td[5]/input"));
+			return element;
+		}
+		
+		private static String SubTotal  = "Sub Total";
+		public static WebElement txtbx_SubTotal1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[b[text()='"+SubTotal+"']]]]/td[2]/input"));
+			return element;
+		}
+		public static WebElement txtbx_SubTotal2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[b[text()='"+SubTotal+"']]]]/td[3]/input"));
+			return element;
+		}
+		public static WebElement txtbx_SubTotal3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[b[text()='"+SubTotal+"']]]]/td[4]/input"));
+			return element;
+		}
+		public static WebElement txtbx_SubTotal4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[b[text()='"+SubTotal+"']]]]/td[5]/input"));
+			return element;
+		}
+		
+		
+		public static WebElement drpdn_Tax()
+		{
+			WebElement element = driver.findElement(By.xpath("//td[1][div[contains(text(),'Tax')]]/div/div/select"));
+			return element;
+		}
+		public static WebElement txt_TaxValue1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[@id='trTax'][td[1][div[div[select]]]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_TaxValue2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[@id='trTax'][td[1][div[div[select]]]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_TaxValue3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[@id='trTax'][td[1][div[div[select]]]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_TaxValue4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[@id='trTax'][td[1][div[div[select]]]]/td[5]/span"));
+			return element;
+		}
+		
+		private static String SellingPriceIncTax = "Selling Price (inc. Tax)";
+		public static WebElement txt_SellingPriceIncTax1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+SellingPriceIncTax+"']]]/td[2]/span"));
+			return element;
+		}
+		public static WebElement txt_SellingPriceIncTax2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+SellingPriceIncTax+"']]]/td[3]/span"));
+			return element;
+		}
+		public static WebElement txt_SellingPriceIncTax3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+SellingPriceIncTax+"']]]/td[4]/span"));
+			return element;
+		}
+		public static WebElement txt_SellingPriceIncTax4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+SellingPriceIncTax+"']]]/td[5]/span"));
+			return element;
+		}
+		
+		private static String GrossProfit = "Gross Profit";
+		public static WebElement txt_GrossProfitPrice1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[2]/div[1]/span"));
+			return element;
+		}
+		public static WebElement txt_GrossProfitPrice2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[3]/div[1]/span"));
+			return element;
+		}
+		public static WebElement txt_GrossProfitPrice3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[4]/div[1]/span"));
+			return element;
+		}
+		public static WebElement txt_GrossProfitPrice4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[5]/div[1]/span"));
+			return element;
+		}
+		
+		public static WebElement txt_GrossProfitPercentage1()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[2]/div[3]/span"));
+			return element;
+		}
+		public static WebElement txt_GrossProfitPercentage2()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[3]/div[3]/span"));
+			return element;
+		}
+		public static WebElement txt_GrossProfitPercentage3()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[4]/div[3]/span"));
+			return element;
+		}
+		public static WebElement txt_GrossProfitPercentage4()
+		{
+			WebElement element = driver.findElement(By.xpath("//tr[td[1][div[text()='"+GrossProfit+"']]]/td[5]/div[3]/span"));
+			return element;
+		}
+		
+		
+		
+		
+		
+	}
+//	need to continue from here for estimate summary page
 }

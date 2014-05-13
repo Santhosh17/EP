@@ -2,6 +2,7 @@
 
 package com.eprint.testcases.Estimates.Outwork;
 import org.testng.annotations.Test;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,10 +10,13 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Reporter;
+
 import com.eprint.libraries.EprintSpecificLinks;
 import com.eprint.libraries.Generic;
 import com.eprint.libraries.ProjectLibrary;
 import com.eprint.libraries.SuperTestNG;
+import com.eprint.pageObjects.Estimates.Estimate_Add;
+import com.eprint.pageObjects.Estimates.Outwork.Estimate_Add_OW_AddPage;
 
 public class Estimate_Create_Outwork_UnitBasedCosting extends SuperTestNG
 {
@@ -21,7 +25,7 @@ public class Estimate_Create_Outwork_UnitBasedCosting extends SuperTestNG
 	{
 		EprintSpecificLinks.login();
 		
-		String xlpath = "./Excel Files/Estimates/Estimates.xls";
+		String xlpath = "./src/com/eprint/testData/Estimates/Outwork Unit Based Costing.xls";
 		String sheetName = "Estimate-Outwork-UnitBased";
 		
 		try
@@ -42,397 +46,392 @@ public class Estimate_Create_Outwork_UnitBasedCosting extends SuperTestNG
 		actions.moveToElement(Autocomplete).perform();
 		actions.click().perform();
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 13, 1, "Estimate Type", "ctl00_ContentPlaceHolder1_UCStage1_ddlEstimateType");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 14, 1, "Estimate title", "ctl00_ContentPlaceHolder1_UCStage1_txtEstimateTitle");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 15, 1, " Customer Order Number", "ctl00_ContentPlaceHolder1_UCStage1_txtOrderNumber");
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 16, 1, "Status", "ctl00_ContentPlaceHolder1_UCStage1_ddlStatus");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 13, 1, "Estimate Type", Estimate_Add.drpdn_EstimateType());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 14, 1, "Estimate title", Estimate_Add.txtbx_EstimateTitle());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 15, 1, " Customer Order Number", Estimate_Add.txtbx_CustomerOrderNumber());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 16, 1, "Status", Estimate_Add.drpdn_Status());
 		
-		ProjectLibrary.ClickOnButtonByID("Next", "ctl00_ContentPlaceHolder1_UCStage1_btnNext");
-				
+		ProjectLibrary.ClickOnButton("Next", Estimate_Add.btn_Next());
+		
 	//------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 	
-		ProjectLibrary.CompareStringTextBoxByID(xlpath, sheetName, 14, 1, "Estimate Title", "ctl00_ContentPlaceHolder1_divprintbroker_txtjobtitle");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 14, 1, "Estimate Title", Estimate_Add_OW_AddPage.txtbx_EstimateTitle());
 		
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 27, 1, "Quantity - 1", "ctl00_ContentPlaceHolder1_divprintbroker_txtMultiQty1");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 27, 2, "Quantity - 1", "ctl00_ContentPlaceHolder1_divprintbroker_txtMultiQty2");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 27, 3, "Quantity - 1", "ctl00_ContentPlaceHolder1_divprintbroker_txtMultiQty3");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 27, 4, "Quantity - 1", "ctl00_ContentPlaceHolder1_divprintbroker_txtMultiQty4");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.txtbx_Quantity1());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.txtbx_Quantity2());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 27, 3, "Quantity - 3", Estimate_Add_OW_AddPage.txtbx_Quantity3());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 27, 4, "Quantity - 4", Estimate_Add_OW_AddPage.txtbx_Quantity4());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 29, 0, "Item Title checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutItemTitle");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 29, 1, "Item Title", "ctl00_ContentPlaceHolder1_divprintbroker_txtTitle");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 29, 2, "Item Title Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtTitleDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 29, 3, "Item title Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Title");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 29, 0, "Item Title checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemTitle());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 29, 1, "Item Title", Estimate_Add_OW_AddPage.txtbx_ItemTitle());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 29, 2, "Item Title Description", Estimate_Add_OW_AddPage.txtbx_ItemTitle_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 29, 3, "Item title Save", Estimate_Add_OW_AddPage.chkbx_ItemTitle_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 30, 0, "Item Description checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutDescription");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 30, 1, "Item Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtOrigination");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 30, 2, "Item Description Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtOriginationDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 30, 3, "Item Description Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Design");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 30, 0, "Item Description checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemDescription());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 1, "Item Description", Estimate_Add_OW_AddPage.txtbx_ItemDescription());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 2, "Item Description Description", Estimate_Add_OW_AddPage.txtbx_ItemDescription_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 30, 3, "Item Description Save", Estimate_Add_OW_AddPage.chkbx_ItemDescription_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 31, 0, "Item Artwork checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutArtwork");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 31, 1, "Item Artwork", "ctl00_ContentPlaceHolder1_divprintbroker_txtArtwork");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 31, 2, "Item Artwork Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtArtworkDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 31, 3, "Item Artwork Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Artwork");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 31, 0, "Item Artwork checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemArtwork());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 1, "Item Artwork", Estimate_Add_OW_AddPage.txtbx_ItemArtwork());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 2, "Item Artwork Description", Estimate_Add_OW_AddPage.txtbx_ItemArtwork_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 31, 3, "Item Artwork Save", Estimate_Add_OW_AddPage.chkbx_ItemArtwork_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 32, 0, "Item Colour ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutColour");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 32, 1, "Item Colour", "ctl00_ContentPlaceHolder1_divprintbroker_txtColor");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 32, 2, "Item Colour Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtColorDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 32, 3, "Item Colour Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Color");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 32, 0, "Item Colour ", Estimate_Add_OW_AddPage.chkbx_ItemColour());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 32, 1, "Item Colour", Estimate_Add_OW_AddPage.txtbx_ItemColour());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 32, 2, "Item Colour Description", Estimate_Add_OW_AddPage.txtbx_ItemColour_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 32, 3, "Item Colour Save", Estimate_Add_OW_AddPage.chkbx_ItemColour_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 33, 0, "Item Size checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutSize");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 33, 1, "Item Size", "ctl00_ContentPlaceHolder1_divprintbroker_txtSize");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 33, 2, "Item Size Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtSizeDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 33, 3, "Item Size Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Size");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 33, 0, "Item Size checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemSize());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 33, 1, "Item Size", Estimate_Add_OW_AddPage.txtbx_ItemSize());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 33, 2, "Item Size Description", Estimate_Add_OW_AddPage.txtbx_ItemSize_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 33, 3, "Item Size Save", Estimate_Add_OW_AddPage.chkbx_ItemSize_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 34, 0, "Item Material checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutMaterial");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 34, 1, "Item Material", "ctl00_ContentPlaceHolder1_divprintbroker_txtMaterial");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 34, 2, "Item Material Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtMaterialDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 34, 3, "Item Material Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Material");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 34, 0, "Item Material checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemMaterial());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 34, 1, "Item Material", Estimate_Add_OW_AddPage.txtbx_ItemMaterial());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 34, 2, "Item Material Description", Estimate_Add_OW_AddPage.txtbx_ItemMaterial_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 34, 3, "Item Material Save", Estimate_Add_OW_AddPage.chkbx_ItemMaterial_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 35, 0, "Item Delivery checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutDelivery");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 35, 1, "Item Delivery", "ctl00_ContentPlaceHolder1_divprintbroker_txtDelivery");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 35, 2, "Item Delivery Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtDeliveryDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 35, 3, "Item Delivery Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Delivery");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 35, 0, "Item Delivery checkbox ",Estimate_Add_OW_AddPage.chkbx_ItemDelivery());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 35, 1, "Item Delivery", Estimate_Add_OW_AddPage.txtbx_ItemDelivery());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 35, 2, "Item Delivery Description", Estimate_Add_OW_AddPage.txtbx_ItemDelivery_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 35, 3, "Item Delivery Save", Estimate_Add_OW_AddPage.chkbx_ItemDelivery_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 36, 0, "Item Finishing checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutFinishing");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 36, 1, "Item Finishing", "ctl00_ContentPlaceHolder1_divprintbroker_txtFinishing");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 36, 2, "Item Finishing Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtFinishingDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 36, 3, "Item Finishing Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Finishing");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 36, 0, "Item Finishing checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemFinishing());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 36, 1, "Item Finishing", Estimate_Add_OW_AddPage.txtbx_ItemFinishing());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 36, 2, "Item Finishing Description", Estimate_Add_OW_AddPage.txtbx_ItemFinishing_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 36, 3, "Item Finishing Save", Estimate_Add_OW_AddPage.chkbx_ItemFinishing_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 37, 0, "Item Proofs checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutProofs");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 37, 1, "Item Proofs", "ctl00_ContentPlaceHolder1_divprintbroker_txtProofs");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 37, 2, "Item Proofs Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtProofsDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 37, 3, "Item Proofs Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Proofs");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 37, 0, "Item Proofs checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemProofs());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 37, 1, "Item Proofs", Estimate_Add_OW_AddPage.txtbx_ItemProofs());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 37, 2, "Item Proofs Description", Estimate_Add_OW_AddPage.txtbx_ItemProofs_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 37, 3, "Item Proofs Save", Estimate_Add_OW_AddPage.chkbx_ItemProofs_SaveToPhrase());
 
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 38, 0, "Item Packing checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutPacking");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 38, 1, "Item Packing", "ctl00_ContentPlaceHolder1_divprintbroker_txtPacking");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 38, 2, "Item Packing Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtPackingDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 38, 3, "Item Packing Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Packing");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 38, 0, "Item Packing checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemPacking());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 38, 1, "Item Packing", Estimate_Add_OW_AddPage.txtbx_ItemPacking());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 38, 2, "Item Packing Description", Estimate_Add_OW_AddPage.txtbx_ItemPacking_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 38, 3, "Item Packing Save", Estimate_Add_OW_AddPage.chkbx_ItemPacking_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 39, 0, "Item Notes checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutNotes");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 39, 1, "Item Notes", "ctl00_ContentPlaceHolder1_divprintbroker_txtNotes");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 39, 2, "Item Notes Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtNotesDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 39, 3, "Item Notes Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Notes");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 39, 0, "Item Notes checkbox ", Estimate_Add_OW_AddPage.chkbx_ItemNotes());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 39, 1, "Item Notes", Estimate_Add_OW_AddPage.txtbx_ItemNotes());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 39, 2, "Item Notes Description", Estimate_Add_OW_AddPage.txtbx_ItemNotes_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 39, 3, "Item Notes Save", Estimate_Add_OW_AddPage.chkbx_ItemNotes_SaveToPhrase());
 		
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 40, 0, "Terms/Instructions checkbox ", "ctl00_ContentPlaceHolder1_divprintbroker_chkOutInstructions");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 40, 1, "Terms/Instructions", "ctl00_ContentPlaceHolder1_divprintbroker_txtTerms");
-		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 40, 2, "Terms/Instructions Description", "ctl00_ContentPlaceHolder1_divprintbroker_txtTermsDescription");
-		ProjectLibrary.ChkBoxSelection(xlpath, sheetName, 40, 3, "Terms/Instructions Save", "ctl00_ContentPlaceHolder1_divprintbroker_chk_broker_Phrase_Terms");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 40, 0, "Terms/Instructions checkbox ", Estimate_Add_OW_AddPage.chkbx_TermsInstructions());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 40, 1, "Terms/Instructions", Estimate_Add_OW_AddPage.txtbx_TermsInstructions());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 40, 2, "Terms/Instructions Description", Estimate_Add_OW_AddPage.txtbx_TermsInstructions_Description());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 40, 3, "Terms/Instructions Save", Estimate_Add_OW_AddPage.chkbx_TermsInstructions_SaveToPhrase());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 41, 1, " Costing Type", "ctl00_ContentPlaceHolder1_divprintbroker_ddlCostingType");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 41, 1, " Costing Type", Estimate_Add_OW_AddPage.drpdn_CostingType());
 		
-//		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 42, 1, "RFQ Return Date", "ctl00_ContentPlaceHolder1_divprintbroker_txtRFQReturnDate");
-//		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 42, 2, "RFQ Return Time", "ctl00_ContentPlaceHolder1_divprintbroker_RadTimePicker1_dateInput_text");
-//		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 43, 1, "Job Completion Date", "ctl00_ContentPlaceHolder1_divprintbroker_txtJobCompletionDate");
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 42, 1, "RFQ Return Date", Estimate_Add_OW_AddPage.txtbx_RFQReturnDate());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 42, 2, "RFQ Return Time", Estimate_Add_OW_AddPage.txtbx_RFQReturnTime());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 43, 1, "Job Completion Date", Estimate_Add_OW_AddPage.txtbx_JobCompletionDate());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 48, 1, "Supplier1 - Name", "ddlSupplier_1");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 49, 1, "Supplier1 - Contact", "ddlSupplierContact_1");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 1, "Supplier1 - Name", Estimate_Add_OW_AddPage.drpdn_Supplier1_Name());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 49, 1, "Supplier1 - Contact", Estimate_Add_OW_AddPage.drpdn_Supplier1_Contact());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 51, 1, "Supplier2 - Name", "ddlSupplier_2");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 52, 1, "Supplier2 - Contact", "ddlSupplierContact_2");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 51, 1, "Supplier2 - Name", Estimate_Add_OW_AddPage.drpdn_Supplier2_Name());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 52, 1, "Supplier2 - Contact", Estimate_Add_OW_AddPage.drpdn_Supplier2_Contact());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 54, 1, "Supplier3 - Name", "ddlSupplier_3");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 55, 1, "Supplier3 - Contact", "ddlSupplierContact_3");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 54, 1, "Supplier3 - Name", Estimate_Add_OW_AddPage.drpdn_Supplier3_Name());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 55, 1, "Supplier3 - Contact", Estimate_Add_OW_AddPage.drpdn_Supplier3_Contact());
 		
 		ProjectLibrary.ClickOnLinkByID("Add More", "link_more");
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 57, 1, "Supplier4 - Name", "ddlSupplier_4");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 58, 1, "Supplier4 - Contact", "ddlSupplierContact_4");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 57, 1, "Supplier4 - Name", Estimate_Add_OW_AddPage.drpdn_Supplier4_Name());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 58, 1, "Supplier4 - Contact", Estimate_Add_OW_AddPage.drpdn_Supplier4_Contact());
 		
-
-		ProjectLibrary.ClickOnButtonByID("Next", "ctl00_ContentPlaceHolder1_divprintbroker_btnSave");
+		ProjectLibrary.ClickOnButton("Next", Estimate_Add_OW_AddPage.btn_Next());
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------//
 		Reporter.log("----------------------------------------------------------",true);
 
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 61, 0, "Supplier Quote -1", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[1]/input[1]");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 61, 0, "Supplier Quote -1", Estimate_Add_OW_AddPage.txtbx_SupplierQuote1());
 	
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 48, 1, "Supplier-1 Name", "//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[2]");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 48, 1, "Supplier-1 Name", Estimate_Add_OW_AddPage.txt_Supplier1Name());
 		
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 1, "Quantity - 1", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 2, "Quantity - 2", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 3, "Quantity - 3", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 4, "Quantity - 4", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[3]/input[1]");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.txtbx_Supplier1_Qty1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.txtbx_Supplier1_Qty2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 3, "Quantity - 3", Estimate_Add_OW_AddPage.txtbx_Supplier1_Qty3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 4, "Quantity - 4", Estimate_Add_OW_AddPage.txtbx_Supplier1_Qty4());
 		
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 61, 3, "Unit Cost - 1", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 62, 3, "Unit Cost - 2", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 63, 3, "Unit Cost - 3", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 64, 3, "Unit Cost - 4", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[4]/input[1]");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 61, 3, "Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier1_Cost1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 62, 3, "Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier1_Cost2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 63, 3, "Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier1_Cost3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 64, 3, "Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier1_Cost4());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 61, 5, "Delivery Included -1", "//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 62, 5, "Delivery Included -2", "//*[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 63, 5, "Delivery Included -3", "//*[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 64, 5, "Delivery Included -4", "//*[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[5]/select");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 61, 5, "Delivery Included -1", Estimate_Add_OW_AddPage.drpdn_Supplier1_DeliveryIncl1());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 62, 5, "Delivery Included -2", Estimate_Add_OW_AddPage.drpdn_Supplier1_DeliveryIncl2());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 63, 5, "Delivery Included -3", Estimate_Add_OW_AddPage.drpdn_Supplier1_DeliveryIncl3());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 64, 5, "Delivery Included -4", Estimate_Add_OW_AddPage.drpdn_Supplier1_DeliveryIncl4());
+			
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 61, 6, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 62, 6, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 63, 6, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 64, 6, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryDate4());
 		
-//		driver.findElement(By.xpath("//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[6]/input")).click();
-//		driver.findElement(By.id(""))
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 61, 7, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 62, 7, "Delivery Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 63, 7, "Delivery Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 64, 7, "Delivery Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier1_DeliveryCost4());
 		
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 61, 8, "Markup Type -1", Estimate_Add_OW_AddPage.drpdn_Supplier1_MarkupType1());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 62, 8, "Markup Type -2", Estimate_Add_OW_AddPage.drpdn_Supplier1_MarkupType2());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 63, 8, "Markup Type -3", Estimate_Add_OW_AddPage.drpdn_Supplier1_MarkupType3());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 64, 8, "Markup Type -4", Estimate_Add_OW_AddPage.drpdn_Supplier1_MarkupType4());
 		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 61, 6, "Delivery Date -1", "//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 62, 6, "Delivery Date -2", "//*[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 63, 6, "Delivery Date -3", "//*[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 64, 6, "Delivery Date -4", "//*[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[6]/input");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 61, 9, "Markup Value -1", Estimate_Add_OW_AddPage.txtbx_Supplier1_MarkupValue1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 62, 9, "Markup Value -2", Estimate_Add_OW_AddPage.txtbx_Supplier1_MarkupValue2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 63, 9, "Markup Value -3", Estimate_Add_OW_AddPage.txtbx_Supplier1_MarkupValue3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 64, 9, "Markup Value -4", Estimate_Add_OW_AddPage.txtbx_Supplier1_MarkupValue4());
 		
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 61, 7, "Delivery Cost - 1", "//*[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 62, 7, "Delivery Cost - 2", "//*[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 63, 7, "Delivery Cost - 3", "//*[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 64, 7, "Delivery Cost - 4", "//*[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[7]/input");
+		Estimate_Add_OW_AddPage.txtbx_Supplier1_TotalPrice1().click();
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 61, 10, "Total Price - 1", Estimate_Add_OW_AddPage.txtbx_Supplier1_TotalPrice1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 62, 10, "Total Price - 2", Estimate_Add_OW_AddPage.txtbx_Supplier1_TotalPrice1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 63, 10, "Total Price - 3", Estimate_Add_OW_AddPage.txtbx_Supplier1_TotalPrice1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 64, 10, "Total Price - 4", Estimate_Add_OW_AddPage.txtbx_Supplier1_TotalPrice1());
 		
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 61, 8, "Markup Type -1", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 62, 8, "Markup Type -2", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 63, 8, "Markup Type -3", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 64, 8, "Markup Type -4", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[8]/select");
-		
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 61, 9, "Markup Value -1", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 62, 9, "Markup Value -2", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 63, 9, "Markup Value -3", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 64, 9, "Markup Value -4", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[9]/input");
-		
-		driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[10]/input[1]")).click();
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 61, 10, "Total Price - 1", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 62, 10, "Total Price - 2", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 63, 10, "Total Price - 3", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 64, 10, "Total Price - 4", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[10]/input[1]");
-		
-		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 61, 11, "Select Supplier & Quantities -1", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[2]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 62, 11, "Select Supplier & Quantities -2", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[5]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 63, 11, "Select Supplier & Quantities -3", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[8]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 64, 11, "Select Supplier & Quantities -4", "//td/div[@id='divPriceComparision_ddlSupplier_1']/div[11]/div[11]/input[1]");
-		
-		Reporter.log("----------------------------------------------------------",true);
-		
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 65, 0, "Supplier Quote -2", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[1]/input[1]");
-		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 51, 1, "Supplier-2 Name", "//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[2]");
-		
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 1, "Quantity - 1", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[3]/input[1]");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 2, "Quantity - 2", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 3, "Quantity - 3", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 4, "Quantity - 4", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[3]/input[1]");
-		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 65, 3, "Unit Cost - 1", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[4]/input[1]");
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 66, 3, "Unit Cost - 2", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 67, 3, "Unit Cost - 3", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 68, 3, "Unit Cost - 4", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[4]/input[1]");
-		
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 66, 5, "Delivery Included -1", "//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[5]/select");
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 67, 5, "Delivery Included -2", "//*[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 68, 5, "Delivery Included -3", "//*[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 69, 5, "Delivery Included -4", "//*[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[5]/select");
-		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 65, 5, "Delivery Date -1", "//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 66, 5, "Delivery Date -2", "//*[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 67, 5, "Delivery Date -3", "//*[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 68, 5, "Delivery Date -4", "//*[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[6]/input");
-		
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 65, 6, "Delivery Cost - 1", "//*[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 66, 6, "Delivery Cost - 2", "//*[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 67, 6, "Delivery Cost - 3", "//*[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 68, 6, "Delivery Cost - 4", "//*[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[7]/input");
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 61, 11, "Select Supplier & Quantities -1", Estimate_Add_OW_AddPage.chkbx_Supplier1_SelectSupplierAndQty1());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 62, 11, "Select Supplier & Quantities -2", Estimate_Add_OW_AddPage.chkbx_Supplier1_SelectSupplierAndQty2());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 63, 11, "Select Supplier & Quantities -3", Estimate_Add_OW_AddPage.chkbx_Supplier1_SelectSupplierAndQty3());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 64, 11, "Select Supplier & Quantities -4", Estimate_Add_OW_AddPage.chkbx_Supplier1_SelectSupplierAndQty4());
 //		
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 65, 8, "Markup Type -1", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[8]/select");
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 66, 8, "Markup Type -2", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 67, 8, "Markup Type -3", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 68, 8, "Markup Type -4", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[8]/select");
+		Reporter.log("----------------------------------------------------------",true);
 		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 65, 9, "Markup Value -1", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[9]/input");
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 66, 9, "Markup Value -2", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 67, 9, "Markup Value -3", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 68, 9, "Markup Value -4", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[9]/input");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 65, 0, "Supplier Quote -2", Estimate_Add_OW_AddPage.txtbx_SupplierQuote2());
 		
-		driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[10]/input[1]")).click();
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 65, 10, "Total Price - 1", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[10]/input[1]");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 66, 10, "Total Price - 2", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 67, 10, "Total Price - 3", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 68, 10, "Total Price - 4", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[10]/input[1]");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 51, 1, "Supplier-2 Name", Estimate_Add_OW_AddPage.txt_Supplier2Name());
 		
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 65, 11, "Select Supplier & Quantities -1", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[2]/div[11]/input[1]");
-		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 66, 11, "Select Supplier & Quantities -2", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[5]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 67, 11, "Select Supplier & Quantities -3", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[8]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 68, 11, "Select Supplier & Quantities -4", "//td/div[@id='divPriceComparision_ddlSupplier_2']/div[11]/div[11]/input[1]");
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.txtbx_Supplier2_Qty1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.txtbx_Supplier2_Qty2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 3, "Quantity - 3", Estimate_Add_OW_AddPage.txtbx_Supplier2_Qty3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 4, "Quantity - 4", Estimate_Add_OW_AddPage.txtbx_Supplier2_Qty4());
+		
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 65, 3, "Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier2_Cost1());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 66, 3, "Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier2_Cost2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 67, 3, "Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier2_Cost3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 68, 3, "Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier2_Cost4());
+//		
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 66, 5, "Delivery Included -1", Estimate_Add_OW_AddPage.drpdn_Supplier2_DeliveryIncl1());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 67, 5, "Delivery Included -2", Estimate_Add_OW_AddPage.drpdn_Supplier2_DeliveryIncl2());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 68, 5, "Delivery Included -3", Estimate_Add_OW_AddPage.drpdn_Supplier2_DeliveryIncl3());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 69, 5, "Delivery Included -4", Estimate_Add_OW_AddPage.drpdn_Supplier2_DeliveryIncl4());
+		
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 65, 5, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 66, 5, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 67, 5, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 68, 5, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryDate1());
+		
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 65, 6, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryCost1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 66, 6, "Delivery Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryCost2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 67, 6, "Delivery Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryCost3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 68, 6, "Delivery Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier2_DeliveryCost4());
+		
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 65, 8, "Markup Type -1", Estimate_Add_OW_AddPage.drpdn_Supplier2_MarkupType1());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 66, 8, "Markup Type -2", Estimate_Add_OW_AddPage.drpdn_Supplier2_MarkupType2());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 67, 8, "Markup Type -3", Estimate_Add_OW_AddPage.drpdn_Supplier2_MarkupType3());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 68, 8, "Markup Type -4", Estimate_Add_OW_AddPage.drpdn_Supplier2_MarkupType4());
+		
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 65, 9, "Markup Value -1", Estimate_Add_OW_AddPage.txtbx_Supplier2_MarkupValue1());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 66, 9, "Markup Value -2", Estimate_Add_OW_AddPage.txtbx_Supplier2_MarkupValue2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 67, 9, "Markup Value -3", Estimate_Add_OW_AddPage.txtbx_Supplier2_MarkupValue3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 68, 9, "Markup Value -4", Estimate_Add_OW_AddPage.txtbx_Supplier2_MarkupValue4());
+		
+		Estimate_Add_OW_AddPage.txtbx_Supplier2_TotalPrice2().click();
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 65, 10, "Total Price - 1", Estimate_Add_OW_AddPage.txtbx_Supplier2_TotalPrice1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 66, 10, "Total Price - 2", Estimate_Add_OW_AddPage.txtbx_Supplier2_TotalPrice2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 67, 10, "Total Price - 3", Estimate_Add_OW_AddPage.txtbx_Supplier2_TotalPrice3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 68, 10, "Total Price - 4", Estimate_Add_OW_AddPage.txtbx_Supplier2_TotalPrice4());
+		
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 65, 11, "Select Supplier & Quantities -1", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty1());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 66, 11, "Select Supplier & Quantities -2", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty2());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 67, 11, "Select Supplier & Quantities -3", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty3());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 68, 11, "Select Supplier & Quantities -4", Estimate_Add_OW_AddPage.chkbx_Supplier2_SelectSupplierAndQty4());
 		
 		Reporter.log("----------------------------------------------------------",true);
 
 		
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 69, 0, "Supplier Quote -3", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[1]/input[1]");
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 69, 0, "Supplier Quote -3", Estimate_Add_OW_AddPage.txtbx_SupplierQuote3());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 54, 1, "Supplier-3 Name", "//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[2]");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 1, "Supplier-3 Name", Estimate_Add_OW_AddPage.txt_Supplier3Name());
 		
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 1, "Quantity - 1", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 2, "Quantity - 2", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[3]/input[1]");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 3, "Quantity - 3", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 4, "Quantity - 4", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[3]/input[1]");
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.txtbx_Supplier3_Qty1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.txtbx_Supplier3_Qty2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 3, "Quantity - 3", Estimate_Add_OW_AddPage.txtbx_Supplier3_Qty3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 4, "Quantity - 4", Estimate_Add_OW_AddPage.txtbx_Supplier3_Qty4());
 		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 69, 3, "Unit Cost - 1", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 70, 3, "Unit Cost - 2", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[4]/input[1]");
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 71, 3, "Unit Cost - 3", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 72, 3, "Unit Cost - 4", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[4]/input[1]");
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 69, 3, "Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier3_Cost1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 70, 3, "Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier3_Cost2());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 71, 3, "Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier3_Cost3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 72, 3, "Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier3_Cost4());
 		
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 69, 5, "Delivery Included -1", "//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 70, 5, "Delivery Included -2", "//*[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[5]/select");
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 71, 5, "Delivery Included -3", "//*[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 72, 5, "Delivery Included -4", "//*[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[5]/select");
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 69, 5, "Delivery Included -1", Estimate_Add_OW_AddPage.drpdn_Supplier3_DeliveryIncl1());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 70, 5, "Delivery Included -2", Estimate_Add_OW_AddPage.drpdn_Supplier3_DeliveryIncl2());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 71, 5, "Delivery Included -3", Estimate_Add_OW_AddPage.drpdn_Supplier3_DeliveryIncl3());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 72, 5, "Delivery Included -4", Estimate_Add_OW_AddPage.drpdn_Supplier3_DeliveryIncl4());
 		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 69, 5, "Delivery Date -1", "//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 70, 5, "Delivery Date -2", "//*[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 71, 5, "Delivery Date -3", "//*[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 72, 5, "Delivery Date -4", "//*[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[6]/input");
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 69, 5, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 70, 5, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryDate2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 71, 5, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryDate3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 72, 5, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryDate4());
 		
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 69, 6, "Delivery Cost - 1", "//*[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 70, 6, "Delivery Cost - 2", "//*[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 71, 6, "Delivery Cost - 3", "//*[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 72, 6, "Delivery Cost - 4", "//*[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[7]/input");
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 69, 6, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryCost1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 70, 6, "Delivery Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryCost2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 71, 6, "Delivery Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryCost3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 72, 6, "Delivery Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier3_DeliveryCost4());
 		
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 69, 8, "Markup Type -1", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 70, 8, "Markup Type -2", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[8]/select");
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 71, 8, "Markup Type -3", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 72, 8, "Markup Type -4", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[8]/select");
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 69, 8, "Markup Type -1", Estimate_Add_OW_AddPage.drpdn_Supplier3_MarkupType1());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 70, 8, "Markup Type -2", Estimate_Add_OW_AddPage.drpdn_Supplier3_MarkupType2());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 71, 8, "Markup Type -3", Estimate_Add_OW_AddPage.drpdn_Supplier3_MarkupType3());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 72, 8, "Markup Type -4", Estimate_Add_OW_AddPage.drpdn_Supplier3_MarkupType4());
 		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 69, 9, "Markup Value -1", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 70, 9, "Markup Value -2", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[9]/input");
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 71, 9, "Markup Value -3", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 72, 9, "Markup Value -4", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[9]/input");
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 69, 9, "Markup Value -1", Estimate_Add_OW_AddPage.txtbx_Supplier3_MarkupValue1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 70, 9, "Markup Value -2", Estimate_Add_OW_AddPage.txtbx_Supplier3_MarkupValue2());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 71, 9, "Markup Value -3", Estimate_Add_OW_AddPage.txtbx_Supplier3_MarkupValue3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 72, 9, "Markup Value -4", Estimate_Add_OW_AddPage.txtbx_Supplier3_MarkupValue4());
 		
-		driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[10]/input[1]")).click();
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 69, 10, "Total Price - 1", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 70, 10, "Total Price - 2", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[10]/input[1]");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 71, 10, "Total Price - 3", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 72, 10, "Total Price - 4", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[10]/input[1]");
+		Estimate_Add_OW_AddPage.txtbx_Supplier3_TotalPrice3().click();
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 69, 10, "Total Price - 1", Estimate_Add_OW_AddPage.txtbx_Supplier3_TotalPrice1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 70, 10, "Total Price - 2", Estimate_Add_OW_AddPage.txtbx_Supplier3_TotalPrice2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 71, 10, "Total Price - 3", Estimate_Add_OW_AddPage.txtbx_Supplier3_TotalPrice3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 72, 10, "Total Price - 4", Estimate_Add_OW_AddPage.txtbx_Supplier3_TotalPrice4());
 		
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 69, 11, "Select Supplier & Quantities -1", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[2]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 70, 11, "Select Supplier & Quantities -2", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[5]/div[11]/input[1]");
-		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 71, 11, "Select Supplier & Quantities -3", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[8]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 72, 11, "Select Supplier & Quantities -4", "//td/div[@id='divPriceComparision_ddlSupplier_3']/div[11]/div[11]/input[1]");
-		
-		Reporter.log("----------------------------------------------------------",true);
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 73, 0, "Supplier Quote -4", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[1]/input[1]");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 57, 1, "Supplier-4 Name", "//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[2]");
-		
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 1, "Quantity - 1", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 2, "Quantity - 2", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[3]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 3, "Quantity - 3", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[3]/input[1]");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 27, 4, "Quantity - 4", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[3]/input[1]");
-		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 73, 3, "Unit Cost - 1", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 74, 3, "Unit Cost - 2", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[4]/input[1]");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 75, 3, "Unit Cost - 3", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[4]/input[1]");
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 76, 3, "Unit Cost - 4", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[4]/input[1]");
-		
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 73, 5, "Delivery Included -1", "//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 74, 5, "Delivery Included -2", "//*[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[5]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 75, 5, "Delivery Included -3", "//*[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[5]/select");
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 76, 5, "Delivery Included -4", "//*[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[5]/select");
-		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 73, 5, "Delivery Date -1", "//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 74, 5, "Delivery Date -2", "//*[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 75, 5, "Delivery Date -3", "//*[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[6]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 76, 5, "Delivery Date -4", "//*[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[6]/input");
-		
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 73, 6, "Delivery Cost - 1", "//*[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 74, 6, "Delivery Cost - 2", "//*[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 75, 6, "Delivery Cost - 3", "//*[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[7]/input");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 76, 6, "Delivery Cost - 4", "//*[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[7]/input");
-		
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 73, 8, "Markup Type -1", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 74, 8, "Markup Type -2", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[8]/select");
-//		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 75, 8, "Markup Type -3", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[8]/select");
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 76, 8, "Markup Type -4", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[8]/select");
-		
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 73, 9, "Markup Value -1", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 74, 9, "Markup Value -2", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[9]/input");
-//		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 75, 9, "Markup Value -3", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[9]/input");
-		ProjectLibrary.StringDDTextBoxXpath(xlpath, sheetName, 76, 9, "Markup Value -4", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[9]/input");
-		
-		driver.findElement(By.xpath("//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[10]/input[1]")).click();
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 73, 10, "Total Price - 1", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 74, 10, "Total Price - 2", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[10]/input[1]");
-//		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 75, 10, "Total Price - 3", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[10]/input[1]");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 76, 10, "Total Price - 4", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[10]/input[1]");
-		
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 73, 11, "Select Supplier & Quantities -1", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[2]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 74, 11, "Select Supplier & Quantities -2", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[5]/div[11]/input[1]");
-//		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 75, 11, "Select Supplier & Quantities -3", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[8]/div[11]/input[1]");
-		ProjectLibrary.ChkBoxSelectionbyXpath(xlpath, sheetName, 76, 11, "Select Supplier & Quantities -4", "//td/div[@id='divPriceComparision_ddlSupplier_4']/div[11]/div[11]/input[1]");
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 69, 11, "Select Supplier & Quantities -1", Estimate_Add_OW_AddPage.chkbx_Supplier3_SelectSupplierAndQty1());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 70, 11, "Select Supplier & Quantities -2", Estimate_Add_OW_AddPage.chkbx_Supplier3_SelectSupplierAndQty2());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 71, 11, "Select Supplier & Quantities -3", Estimate_Add_OW_AddPage.chkbx_Supplier3_SelectSupplierAndQty3());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 72, 11, "Select Supplier & Quantities -4", Estimate_Add_OW_AddPage.chkbx_Supplier3_SelectSupplierAndQty4());
 		
 		Reporter.log("----------------------------------------------------------",true);
-		ProjectLibrary.ClickOnButtonByID("FINISH", "ctl00_ContentPlaceHolder1_divprintbroker_Button12");
-	//------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-		String EstimateNumber = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCItemSummaryMain_lblEstJobInvNo")).getText();
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 73, 0, "Supplier Quote -4", Estimate_Add_OW_AddPage.txtbx_SupplierQuote4());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 1, "Supplier-4 Name", Estimate_Add_OW_AddPage.txt_Supplier4Name());
+		
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.txtbx_Supplier4_Qty1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.txtbx_Supplier4_Qty2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 3, "Quantity - 3", Estimate_Add_OW_AddPage.txtbx_Supplier4_Qty3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 27, 4, "Quantity - 4", Estimate_Add_OW_AddPage.txtbx_Supplier4_Qty4());
+		
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 73, 3, "Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier4_Cost1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 74, 3, "Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier4_Cost2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 75, 3, "Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier4_Cost3());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 76, 3, "Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier4_Cost4());
+		
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 73, 5, "Delivery Included -1", Estimate_Add_OW_AddPage.drpdn_Supplier4_DeliveryIncl1());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 74, 5, "Delivery Included -2", Estimate_Add_OW_AddPage.drpdn_Supplier4_DeliveryIncl2());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 75, 5, "Delivery Included -3", Estimate_Add_OW_AddPage.drpdn_Supplier4_DeliveryIncl3());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 76, 5, "Delivery Included -4", Estimate_Add_OW_AddPage.drpdn_Supplier4_DeliveryIncl4());
+		
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 73, 5, "Delivery Date -1", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 74, 5, "Delivery Date -2", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 75, 5, "Delivery Date -3", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate3());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 76, 5, "Delivery Date -4", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryDate4());
+		
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 73, 6, "Delivery Cost - 1", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 74, 6, "Delivery Cost - 2", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 75, 6, "Delivery Cost - 3", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost3());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 76, 6, "Delivery Cost - 4", Estimate_Add_OW_AddPage.txtbx_Supplier4_DeliveryCost4());
+		
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 73, 8, "Markup Type -1", Estimate_Add_OW_AddPage.drpdn_Supplier4_MarkupType1());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 74, 8, "Markup Type -2", Estimate_Add_OW_AddPage.drpdn_Supplier4_MarkupType2());
+//		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 75, 8, "Markup Type -3", Estimate_Add_OW_AddPage.drpdn_Supplier4_MarkupType3());
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 76, 8, "Markup Type -4", Estimate_Add_OW_AddPage.drpdn_Supplier4_MarkupType4());
+		
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 73, 9, "Markup Value -1", Estimate_Add_OW_AddPage.txtbx_Supplier4_MarkupValue1());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 74, 9, "Markup Value -2", Estimate_Add_OW_AddPage.txtbx_Supplier4_MarkupValue2());
+//		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 75, 9, "Markup Value -3", Estimate_Add_OW_AddPage.txtbx_Supplier4_MarkupValue3());
+		ProjectLibrary.StringDDTextBox(xlpath, sheetName, 76, 9, "Markup Value -4", Estimate_Add_OW_AddPage.txtbx_Supplier4_MarkupValue4());
+		
+		Estimate_Add_OW_AddPage.txtbx_Supplier4_TotalPrice4().click();
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 73, 10, "Total Price - 1", Estimate_Add_OW_AddPage.txtbx_Supplier4_TotalPrice1());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 74, 10, "Total Price - 2", Estimate_Add_OW_AddPage.txtbx_Supplier4_TotalPrice2());
+//		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 75, 10, "Total Price - 3", Estimate_Add_OW_AddPage.txtbx_Supplier4_TotalPrice3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 76, 10, "Total Price - 4", Estimate_Add_OW_AddPage.txtbx_Supplier4_TotalPrice4());
+		
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 73, 11, "Select Supplier & Quantities -1", Estimate_Add_OW_AddPage.chkbx_Supplier4_SelectSupplierAndQty1());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 74, 11, "Select Supplier & Quantities -2", Estimate_Add_OW_AddPage.chkbx_Supplier4_SelectSupplierAndQty2());
+//		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 75, 11, "Select Supplier & Quantities -3", Estimate_Add_OW_AddPage.chkbx_Supplier4_SelectSupplierAndQty3());
+		ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 76, 11, "Select Supplier & Quantities -4", Estimate_Add_OW_AddPage.chkbx_Supplier4_SelectSupplierAndQty4());
+		
+		ProjectLibrary.ClickOnButton("Finish", Estimate_Add_OW_AddPage.btn_Finish());
+		Reporter.log("----------------------------------------------------------------------------------",true);
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+		String EstimateNumber = Estimate_Add_OW_AddPage.EstimateSummary.txt_EstimateNumber().getText();
 		Reporter.log("Estimate Number = "+EstimateNumber,true);
-		Reporter.log("----------------------------------------------------------",true);
+		Reporter.log("----------------------------------------------------------------------------------",true);
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 29, 2, "Item Title", "//table/tbody/tr[2]/td/table/tbody/tr[3]/td[2]/div/label");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 29, 2, "Item Title", Estimate_Add_OW_AddPage.EstimateSummary.txt_ItemTitle());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 48, 1, "Supplier Name 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]/span/b");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 51, 1, "Supplier Name 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[3]/span/b");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 54, 1, "Supplier Name 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[4]/span/b");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 57, 1, "Supplier Name 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr/td[5]/span/b");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 48, 1, "Supplier Name 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 51, 1, "Supplier Name 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 54, 1, "Supplier Name 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 57, 1, "Supplier Name 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierName4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 61, 0, "Supp. Quote - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 65, 0, "Supp. Quote - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 69, 0, "Supp. Quote - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 73, 0, "Supp. Quote - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[2]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 61, 0, "Supp. Quote - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 65, 0, "Supp. Quote - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 69, 0, "Supp. Quote - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 73, 0, "Supp. Quote - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQuote4());
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 1, "Quantity - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 2, "Quantity - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 3, "Quantity - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 27, 4, "Quantity - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[3]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 1, "Quantity - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 2, "Quantity - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 3, "Quantity - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 27, 4, "Quantity - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SupplierQty4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 4, "Price - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 4, "Price - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 4, "Price - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 4, "Price - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr/td/div/table/tbody/tr[2]/td/table[2]/tbody/tr[4]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 4, "Price - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 4, "Price - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 4, "Price - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 4, "Price - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_Price4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 4, "Cost Price (ex. Markup) - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 4, "Cost Price (ex. Markup) - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 4, "Cost Price (ex. Markup) - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 4, "Cost Price (ex. Markup) - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[1]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 4, "Cost Price (ex. Markup) - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 4, "Cost Price (ex. Markup) - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 4, "Cost Price (ex. Markup) - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 4, "Cost Price (ex. Markup) - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceExcMarkup4());
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 9, "Markup - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 9, "Markup - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 9, "Markup - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 9, "Markup - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[2]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 9, "Markup - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 9, "Markup - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 9, "Markup - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 9, "Markup - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_Markup4());
 
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 10, "Cost Price (inc. Markup) - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 10, "Cost Price (inc. Markup) - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 10, "Cost Price (inc. Markup) - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 10, "Cost Price (inc. Markup) - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[3]/td[5]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 10, "Cost Price (inc. Markup) - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 10, "Cost Price (inc. Markup) - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 10, "Cost Price (inc. Markup) - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 10, "Cost Price (inc. Markup) - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_CostPriceIncMarkup4());
 
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 79, 12, "Profit Margin % -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[2]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 84, 12, "Profit Margin % -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[3]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 89, 12, "Profit Margin % -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[4]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 94, 12, "Profit Margin % -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[4]/td[5]/input");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 79, 12, "Profit Margin % -1", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 84, 12, "Profit Margin % -2", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 89, 12, "Profit Margin % -3", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 94, 12, "Profit Margin % -4", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPercentage4());
 		
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 79, 13, "Profit Margin ($) -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[2]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 84, 13, "Profit Margin ($) -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[3]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 89, 13, "Profit Margin ($) -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[4]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 94, 13, "Profit Margin ($) -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[5]/td[5]/input");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 79, 13, "Profit Margin ($) -1", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 84, 13, "Profit Margin ($) -2", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 89, 13, "Profit Margin ($) -3", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 94, 13, "Profit Margin ($) -4", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_ProfitMarginPrice4());
 	
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 79, 14, "Sub Total -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[2]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 84, 14, "Sub Total -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[3]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 89, 14, "Sub Total -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[4]/input");
-		ProjectLibrary.CompareStringTextBoxByXpath(xlpath, sheetName, 94, 14, "Sub Total -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[6]/td[5]/input");
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 79, 14, "Sub Total -1", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal1());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 84, 14, "Sub Total -2", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal2());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 89, 14, "Sub Total -3", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal3());
+		ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 94, 14, "Sub Total -4", Estimate_Add_OW_AddPage.EstimateSummary.txtbx_SubTotal4());
 	
-		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyXpath(xlpath, sheetName, 79, 15, "Tax", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[1]/div/div/select");
+		ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 79, 15, "Tax", Estimate_Add_OW_AddPage.EstimateSummary.drpdn_Tax());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 16, "Tax - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 16, "Tax - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 16, "Tax - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 16, "Tax - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[7]/td[5]/span");
-
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 17, "Selling Price (inc. Tax) - 1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[2]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 17, "Selling Price (inc. Tax) - 2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 17, "Selling Price (inc. Tax) - 3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[4]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 17, "Selling Price (inc. Tax) - 4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[8]/td[5]/span");
-
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 18, "Gross Profit $ -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[2]/div[1]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 18, "Gross Profit $ -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[3]/div[1]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 18, "Gross Profit $ -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[4]/div[1]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 18, "Gross Profit $ -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[5]/div[1]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 16, "Tax - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 16, "Tax - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 16, "Tax - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 16, "Tax - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_TaxValue4());
 		
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 79, 19, "Gross Profit % -1", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[2]/div[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 84, 19, "Gross Profit % -2", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[3]/div[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 89, 19, "Gross Profit % -3", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[4]/div[3]/span");
-		ProjectLibrary.CompareStringTextByXpath(xlpath, sheetName, 94, 19, "Gross Profit % -4", "//table/tbody/tr/td/div/div/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/table/tbody/tr[9]/td[5]/div[3]/span");
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 17, "Selling Price (inc. Tax) - 1", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 17, "Selling Price (inc. Tax) - 2", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 17, "Selling Price (inc. Tax) - 3", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 17, "Selling Price (inc. Tax) - 4", Estimate_Add_OW_AddPage.EstimateSummary.txt_SellingPriceIncTax4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 18, "Gross Profit $ -1", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 18, "Gross Profit $ -2", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 18, "Gross Profit $ -3", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 18, "Gross Profit $ -4", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPrice4());
+		
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 79, 19, "Gross Profit % -1", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage1());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 84, 19, "Gross Profit % -2", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage2());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 89, 19, "Gross Profit % -3", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage3());
+		ProjectLibrary.CompareStringText(xlpath, sheetName, 94, 19, "Gross Profit % -4", Estimate_Add_OW_AddPage.EstimateSummary.txt_GrossProfitPercentage4());
 		
 //		ProjectLibrary.ClickOnButtonByXpath("Save", "//table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr[2]/td/div/div[1]/div/input");
 	}
