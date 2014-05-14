@@ -23,25 +23,14 @@ public class Product_catalogue_Estimate_Create extends SuperTestNG
 	public static void testProduct_catalogue_Estimate_Create() throws InvalidFormatException, IOException
 	{
 
-		String xlpath1="./Excel Files/Login Scripts Data.xls";
-		String sheetName1 = "Test Login";
-		ProjectLibrary.GoToURL_DD(xlpath1, sheetName1,8, 1);
-		try
-		{
-			driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
-			WebElement popup = driver.findElement(By.linkText("Close"));
-			popup.isDisplayed();
-			driver.findElement(By.linkText("Close")).click();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		try {
+			EprintSpecificLinks.login();
 		}
-		catch (NoSuchElementException e) 
+		catch (NoSuchElementException e)
 		{
-			Reporter.log("No Such Element (POPUP) Present .... Continuing with Login Process",true); 
+			Reporter.log("Already Logged in Continuing with testing process ",true );
 		}
-		ProjectLibrary.StringDDTextBoxID(xlpath1, sheetName1, 8,2, "Login Email", "email");
-		ProjectLibrary.StringDDTextBoxID(xlpath1, sheetName1, 8, 3, "Password", "password");
-		ProjectLibrary.ClickOnButtonByID("Login", "btnlogin");
-		//===============================================================================================================//		
+		
 		String xlpath = "./Excel Files/Estimates/Estimates.xls";
 		String sheetName = "Estimate Add - Product Catalogue";
 		try
