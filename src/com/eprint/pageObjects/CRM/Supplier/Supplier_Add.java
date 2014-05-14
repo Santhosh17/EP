@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import com.eprint.libraries.SuperTestNG;
 
 public class Supplier_Add extends SuperTestNG
-{
+{ 
 	public static WebElement txtbx_CompanyName()
 	{
 		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_ClientAddID_txt_companyname"));
