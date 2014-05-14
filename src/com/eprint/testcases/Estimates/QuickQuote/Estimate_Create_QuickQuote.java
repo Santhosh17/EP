@@ -34,7 +34,7 @@ public class Estimate_Create_QuickQuote extends SuperTestNG
 		}
 		
 		
-		String xlpath = "./src/com/eprint/testData/Estimates/QuickQuote.xlsx";
+		String xlpath = "./src/com/eprint/testData/Estimates/QuickQuote.xls";
 		String sheetName = "Estimate Add - Quick Quote";
 		
 		try

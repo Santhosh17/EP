@@ -42,7 +42,7 @@ public class Estimate_Update_QuickQuote extends SuperTestNG
 			ProjectLibrary.HoverDropdownControlByXpath("Quotes", "//b/span[text()='Quotes']", "View All","View All");
 		}
 		
-		String xlpath = "./src/com/eprint/testData/Estimates/QuickQuote.xlsx";
+		String xlpath = "./src/com/eprint/testData/Estimates/QuickQuote.xls";
 		String sheetName = "Estimate Add - Quick Quote";
 		
 		String EstimateTitle = Generic.getXlCellValue(xlpath, sheetName, 15, 1);
