@@ -302,6 +302,21 @@ public class Estimate_Add_SFO_NCR extends SuperTestNG
 		WebElement element = driver.findElement(By.id("btn9"));
 		return element;
 	}
+	public static WebElement rb_UnCommon()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_rdouncommon"));
+		return element;
+	}
+	public static WebElement rb_Common()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_rdocommon"));
+		return element;
+	}
+	public static WebElement drpdn_From()
+	{
+		WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCNCRItem_ddlcommonfrom"));
+		return element;
+	}
 //--------------------------------------------------------------------------------------------------------------------------------------//
 	public static class Estimate_Summary
 	{
@@ -1780,5 +1795,6 @@ public class Estimate_Add_SFO_NCR extends SuperTestNG
 			WebElement element = driver.findElement(By.xpath("//table/tbody/tr[2]/td/div/div[1]/div/input[@value='Save']"));
 			return element;
 		}
+		
 	}
 }
