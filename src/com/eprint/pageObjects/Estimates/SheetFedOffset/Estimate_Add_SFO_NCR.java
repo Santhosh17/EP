@@ -234,7 +234,7 @@ public class Estimate_Add_SFO_NCR extends SuperTestNG
 	}
 	public static WebElement btn_Guillotine()
 	{
-		WebElement element = driver.findElement(By.xpath("//div[div[1][span[contains(text(),'Guillotine')]]]/div[2]"));
+		WebElement element = driver.findElement(By.xpath("//div[div[1][span[contains(text(),'Guillotine')]]]/div[2]/a/img"));
 		return element;
 	}
 	public static WebElement chkbx_FirstTrim()
