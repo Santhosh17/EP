@@ -430,7 +430,12 @@ public class Estimate_Add_SFO_Booklet extends SuperTestNG
 	}
 	public static class EstimateSummary
 	{
-		public static WebElement EstimateTitle()
+		public static WebElement txt_EstimateNumber()
+		{
+			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCItemSummaryMain_lblEstJobInvNo"));
+			return element;
+		}
+		public static WebElement txt_EstimateTitle()
 		{
 			WebElement element = driver.findElement(By.id("ctl00_ContentPlaceHolder1_UCItemSummaryMain_lblEstJobInvNo"));
 			return element;
