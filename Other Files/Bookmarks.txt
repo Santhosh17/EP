@@ -53,3 +53,7 @@ http://www.techopedia.com/2/29662/software/software-testing/why-do-we-need-user-
 http://css-tricks.com/app-from-scratch-1-design/
 http://bpo.knowledgehills.com/
 http://beginnersbook.com
+http://www.carnegiequality.com/testing/test-script-template/
+http://softwaretestingfundamentals.com/test-plan/
+http://www.testingexcellence.com/category/agile-testing-2/
+http://agiledevtest.blogspot.co.uk/2013/10/how-to-improve-agility-of-agile-team.html#more
