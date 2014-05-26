@@ -29,8 +29,8 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 		  Reporter.log("Already Logged in Continuing with Testing Process",true);
 	  }
 	  
-	  String xlpath = "./src/com/eprint/testData/Estimates/SheetFedOffset-NCR.xls";
-	  String sheetName = "Sheet Fed Offset NCR";
+	  String xlpath = "./src/com/eprint/testData/Estimates/SheetFedOffset-Booklet.xls";
+	  String sheetName = "Sheet Fed Offset Booklet";
 	  
 	  try
 		{
@@ -73,14 +73,14 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 2, "Booklet Qty3", Estimate_Add_SFO_Booklet.txtbx_BookletQty3());
 	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 4, "Booklet Qty4", Estimate_Add_SFO_Booklet.txtbx_BookletQty4());
 	  
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 4, "Section Reference", Estimate_Add_SFO_Booklet.txtbx_SectionReference());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 32, 2, "Section Reference", Estimate_Add_SFO_Booklet.txtbx_SectionReference());
 
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 31, 4, "Assigned Press", Estimate_Add_SFO_Booklet.txtbx_SectionReference());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 33, 2, "Assigned Press", Estimate_Add_SFO_Booklet.drpdn_AssignedPress());
 	  
-	  String paperstock = Generic.getXlCellValue(xlpath, sheetName, 36, 2);
+	  String paperstock = Generic.getXlCellValue(xlpath, sheetName, 34, 2);
 	  EprintSpecificLinks.Radwindow("Paper/Stock", Estimate_Add_SFO_Booklet.btn_PaperStock(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/div/a[2][contains(text(),'"+paperstock+"')]");
 		
-	  String PaperStockExcelCondition1 = Generic.getXlCellValue(xlpath, sheetName, 36, 3);
+	  String PaperStockExcelCondition1 = Generic.getXlCellValue(xlpath, sheetName, 34, 3);
 	  if (PaperStockExcelCondition1.equals("Price For Whole Pack"))
 	  {
 		  WebElement PriceForWholePack = Estimate_Add_SFO_Booklet.chkbx_PriceForWholePack();
@@ -130,22 +130,22 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 			  Reporter.log("Paper/Stock Supplied is Defaultly UN-SELECTED",true);
 		  }
 	  }
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 37, 2, "Setup Spoilage", Estimate_Add_SFO_Booklet.txtbx_SetupSpoilage());
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 38, 2, "Running Spoilage", Estimate_Add_SFO_Booklet.txtbx_RunningSpoilage());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 35, 2, "Setup Spoilage", Estimate_Add_SFO_Booklet.txtbx_SetupSpoilage());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 36, 2, "Running Spoilage", Estimate_Add_SFO_Booklet.txtbx_RunningSpoilage());
 	  
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 39, 2, "No. of sides printed", Estimate_Add_SFO_Booklet.drpdn_NoOfSidesPrinted());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 37, 2, "No. of sides printed", Estimate_Add_SFO_Booklet.drpdn_NoOfSidesPrinted());
 	  Select Select = new Select(Estimate_Add_SFO_Booklet.drpdn_NoOfSidesPrinted());
 	  WebElement SelectedOption = Select.getFirstSelectedOption();
 	  String SO = SelectedOption.getText();
 	  if (SO.equals("Single"))
 	  {
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 40, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 38, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
 	  }
 	  else if (SO.equals("Double"))
 	  {
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 40, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 41, 2, "Side 2 Color", Estimate_Add_SFO_Booklet.drpdn_Side2Color());
-		  String WorkCondition = Generic.getXlCellValue(xlpath, sheetName, 42, 2);
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 38, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 39, 2, "Side 2 Color", Estimate_Add_SFO_Booklet.drpdn_Side2Color());
+		  String WorkCondition = Generic.getXlCellValue(xlpath, sheetName, 40, 2);
 		  if (WorkCondition.equals("Sheet Work"))
 		  {
 			  Estimate_Add_SFO_Booklet.chkbx_SheetWork().click();
@@ -167,19 +167,20 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 			  Reporter.log("Clicking on "+WorkCondition,true);
 		  }
 	  }
-	  String plate = Generic.getXlCellValue(xlpath, sheetName, 43, 2);
+	  String plate = Generic.getXlCellValue(xlpath, sheetName, 41, 2);
 	  EprintSpecificLinks.Radwindow("Plate", Estimate_Add_SFO_Booklet.btn_Plate(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+plate+"')]");
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 44, 2, "No. of Plates", Estimate_Add_SFO_Booklet.txtbx_NoOfPlates());
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 45, 2, "No. of Make Ready", Estimate_Add_SFO_Booklet.txtbx_NoOfMakeReady());
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 46, 2, "No. of Washup", Estimate_Add_SFO_Booklet.drpdn_NoOfWashup());
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, rownum, cellnum, "Booklet Type", Estimate_Add_SFO_Booklet.drpdn_BookletType());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 42, 2, "No. of Plates", Estimate_Add_SFO_Booklet.txtbx_NoOfPlates());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 43, 2, "No. of Make Ready", Estimate_Add_SFO_Booklet.txtbx_NoOfMakeReady());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 44, 2, "No. of Washup", Estimate_Add_SFO_Booklet.drpdn_NoOfWashup());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 45, 2, "Booklet Type", Estimate_Add_SFO_Booklet.drpdn_BookletType());
+	 
 	  Select Select1 = new Select(Estimate_Add_SFO_Booklet.drpdn_BookletType());
 	  WebElement SelectedOption1 = Select1.getFirstSelectedOption();
 	  String SO1 = SelectedOption1.getText();
 	  
 	  if (SO1.equals("Saddle Stiched"))
 	  {
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "No of pages in this section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_NoOfPagesInSection());
+		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 46, 2, "No of pages in this section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_NoOfPagesInSection());
 		  String CustomPrintSheetSize = Generic.getXlCellValue(xlpath, sheetName, 47, 4);
 		  if (CustomPrintSheetSize.equals("YES"))
 		  {
@@ -198,20 +199,21 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 		  }
 		  else if (CustomFinishedJobSize.equals("NO"))
 		  {
-			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Print Sheet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletSize());
+			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Finished Booklet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletSize());
 		  }
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, rownum, cellnum, "Finished Booklet Format", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletFormat());
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "Flat Booklet item size Height",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeHeight());
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "Flat Booklet item size Width",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeWidth());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 50, 2, "Include Gutters", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters());
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 49, 2, "Finished Booklet Format", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletFormat());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 50, 2, "Flat Booklet item size Height",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeHeight());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 50, 4, "Flat Booklet item size Width",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeWidth());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Include Gutters", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters());
 		  WebElement IncludeGutters = Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters();
 		  if (IncludeGutters.isSelected())
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 4, "Horizontal",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersHorizontal());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 6, "Vertical", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersVertical());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 4, "Horizontal",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersHorizontal());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 6, "Vertical", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersVertical());
 		  }
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_ApplyPressRestricitons());
-		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 54, 2);
+		  
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 52, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_ApplyPressRestricitons());
+		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 53, 2);
 		  if (PrintLayout.equals("Portrait"))
 		  {
 			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutPortrait().click();
@@ -222,90 +224,93 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutLandscape().click();
 			  Reporter.log("Clicking on Landscape Checkbox",true);
 		  }
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Portrait Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutPortrait());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 3, "Landscape Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutLandscape());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_BookletPagesPerPrintSheet());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintSheetsPerSection());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, rownum, cellnum, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
+		  
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 53, 3, "Portrait Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutPortrait());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Landscape Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutLandscape());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 2, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_BookletPagesPerPrintSheet());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 56, 4, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 56, 2, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintSheetsPerSection());
 		
-		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 52, 2);
+		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 57, 2);
 		  EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFO_Booklet.SaddleStiched.btn_Guillotine(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+Guillotine+"')]");
 		  Generic.BlindWait(2);
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 2, "First Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_FirstTrim());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 4, "Second Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_SecondTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 2, "First Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_FirstTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 4, "Second Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_SecondTrim());
 	  }
 	  else if (SO1.equals("Perfect Bound"))
 	  {
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "No of pages in this section", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_NoOfPagesInSection());
+		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 46, 2, "No of pages in this section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_NoOfPagesInSection());
 		  String CustomPrintSheetSize = Generic.getXlCellValue(xlpath, sheetName, 47, 4);
 		  if (CustomPrintSheetSize.equals("YES"))
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 6, "Custom Print Sheet Height", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_CustomPrintSheetSizeHeight());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 8, "Custom Print Sheet Width", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_CustomPrintSheetSizeWidth());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 6, "Custom Print Sheet Height", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_CustomPrintSheetSizeHeight());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 8, "Custom Print Sheet Width", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_CustomPrintSheetSizeWidth());
 		  }
 		  else if (CustomPrintSheetSize.equals("NO"))
 		  {
-			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 47, 2, "Print Sheet Size", Estimate_Add_SFO_Booklet.PerfectBound.drpdn_PrintSheetSize());
+			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 47, 2, "Print Sheet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_PrintSheetSize());
 		  }
 		  String CustomFinishedJobSize = Generic.getXlCellValue(xlpath, sheetName, 48, 4);
 		  if (CustomFinishedJobSize.equals("YES"))
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 6, "Custom Finished Booklet Height", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_FinishedBookletSizeHeight());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 8, "Custom Finished Booklet Width", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_FinishedBookletSizeWidth());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 6, "Custom Finished Booklet Height", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FinishedBookletSizeHeight());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 8, "Custom Finished Booklet Width", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FinishedBookletSizeWidth());
 		  }
 		  else if (CustomFinishedJobSize.equals("NO"))
 		  {
-			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Finished Booklet Size", Estimate_Add_SFO_Booklet.PerfectBound.drpdn_FinishedBookletSize());
+			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Finished Booklet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletSize());
 		  }
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 50, 2, "Include Gutters", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_IncludeGutters());
-		  WebElement IncludeGutters = Estimate_Add_SFO_Booklet.PerfectBound.chkbx_IncludeGutters();
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Include Gutters", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters());
+		  WebElement IncludeGutters = Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters();
 		  if (IncludeGutters.isSelected())
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 4, "Horizontal",Estimate_Add_SFO_Booklet.PerfectBound.txtbx_IncludeGuttersHorizontal());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 6, "Vertical", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_IncludeGuttersVertical());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 4, "Horizontal",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersHorizontal());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 6, "Vertical", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersVertical());
 		  }
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_ApplyPressRestricitons());
-		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 54, 2);
+		  
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 52, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_ApplyPressRestricitons());
+		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 53, 2);
 		  if (PrintLayout.equals("Portrait"))
 		  {
-			  Estimate_Add_SFO_Booklet.PerfectBound.chkbx_PrintLayoutPortrait().click();
+			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutPortrait().click();
 			  Reporter.log("Clicking on Portrait Checkbox",true);
 		  }
 		  else if (PrintLayout.equals("Landscape"))
 		  {
-			  Estimate_Add_SFO_Booklet.PerfectBound.chkbx_PrintLayoutLandscape().click();
+			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutLandscape().click();
 			  Reporter.log("Clicking on Landscape Checkbox",true);
 		  }
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Portrait Value", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_PrintLayoutPortrait());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 3, "Landscape Value", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_PrintLayoutLandscape());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_BookletPagesPerPrintSheet());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_PrintSheetsPerSection());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, rownum, cellnum, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_RoundUpToUseWholeSheets());
+		  
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 53, 3, "Portrait Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutPortrait());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Landscape Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutLandscape());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 2, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_BookletPagesPerPrintSheet());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 56, 4, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 56, 2, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintSheetsPerSection());
 		
-		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 52, 2);
-		  EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFO_Booklet.PerfectBound.btn_Guillotine(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+Guillotine+"')]");
+		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 57, 2);
+		  EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFO_Booklet.SaddleStiched.btn_Guillotine(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+Guillotine+"')]");
 		  Generic.BlindWait(2);
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 2, "First Trim", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_FirstTrim());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 4, "Second Trim", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_SecondTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 2, "First Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_FirstTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 4, "Second Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_SecondTrim());
 	  }
 	  ProjectLibrary.ClickOnButton("New Section", Estimate_Add_SFO_Booklet.btn_NewSection());
 	  ProjectLibrary.ClickOnButton("1", Estimate_Add_SFO_Booklet.btn_1());
 	  ProjectLibrary.ClickOnButton("2", Estimate_Add_SFO_Booklet.btn_2());
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------//
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 2, "Booklet Qty1", Estimate_Add_SFO_Booklet.txtbx_BookletQty1());
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 30, 4, "Booklet Qty2", Estimate_Add_SFO_Booklet.txtbx_BookletQty2());
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 2, "Booklet Qty3", Estimate_Add_SFO_Booklet.txtbx_BookletQty3());
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 4, "Booklet Qty4", Estimate_Add_SFO_Booklet.txtbx_BookletQty4());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 64, 2, "Booklet Qty1", Estimate_Add_SFO_Booklet.txtbx_BookletQty1());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 64, 4, "Booklet Qty2", Estimate_Add_SFO_Booklet.txtbx_BookletQty2());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 65, 2, "Booklet Qty3", Estimate_Add_SFO_Booklet.txtbx_BookletQty3());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 65, 4, "Booklet Qty4", Estimate_Add_SFO_Booklet.txtbx_BookletQty4());
 	  
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 31, 4, "Section Reference", Estimate_Add_SFO_Booklet.txtbx_SectionReference());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 66, 2, "Section Reference", Estimate_Add_SFO_Booklet.txtbx_SectionReference());
 
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 31, 4, "Assigned Press", Estimate_Add_SFO_Booklet.txtbx_SectionReference());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 67, 2, "Assigned Press", Estimate_Add_SFO_Booklet.drpdn_AssignedPress());
 	  
-	  String paperstock2 = Generic.getXlCellValue(xlpath, sheetName, 36, 2);
+	  String paperstock2 = Generic.getXlCellValue(xlpath, sheetName, 68, 2);
 	  EprintSpecificLinks.Radwindow("Paper/Stock", Estimate_Add_SFO_Booklet.btn_PaperStock(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/div/a[2][contains(text(),'"+paperstock2+"')]");
 		
-	  String PaperStockExcelCondition2 = Generic.getXlCellValue(xlpath, sheetName, 36, 3);
-	  if (PaperStockExcelCondition2.equals("Price For Whole Pack"))
+	  String PaperStockExcelCondition21 = Generic.getXlCellValue(xlpath, sheetName, 68, 3);
+	  if (PaperStockExcelCondition21.equals("Price For Whole Pack"))
 	  {
 		  WebElement PriceForWholePack = Estimate_Add_SFO_Booklet.chkbx_PriceForWholePack();
 		  if (PriceForWholePack.isSelected())
@@ -318,7 +323,7 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 				PriceForWholePack.click();
 		  }
 	  }
-	  else if (PaperStockExcelCondition2.equals("Paper/Stock Supplied"))
+	  else if (PaperStockExcelCondition21.equals("Paper/Stock Supplied"))
 	  {
 		  WebElement PaperStockSupplied = Estimate_Add_SFO_Booklet.chkbx_PaperStockSupplied();
 		  if (PaperStockSupplied.isSelected())
@@ -331,7 +336,7 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 			  PaperStockSupplied.click();
 		  }
 	  }
-	  else if (PaperStockExcelCondition2.equals("None"))
+	  else if (PaperStockExcelCondition21.equals("None"))
 	  {
 		  WebElement PriceForWholePack = Estimate_Add_SFO_Booklet.chkbx_PriceForWholePack();
 		  if (PriceForWholePack.isSelected())
@@ -354,22 +359,22 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 			  Reporter.log("Paper/Stock Supplied is Defaultly UN-SELECTED",true);
 		  }
 	  }
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 37, 2, "Setup Spoilage", Estimate_Add_SFO_Booklet.txtbx_SetupSpoilage());
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 38, 2, "Running Spoilage", Estimate_Add_SFO_Booklet.txtbx_RunningSpoilage());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 69, 2, "Setup Spoilage", Estimate_Add_SFO_Booklet.txtbx_SetupSpoilage());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 70, 2, "Running Spoilage", Estimate_Add_SFO_Booklet.txtbx_RunningSpoilage());
 	  
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 39, 2, "No. of sides printed", Estimate_Add_SFO_Booklet.drpdn_NoOfSidesPrinted());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 71, 2, "No. of sides printed", Estimate_Add_SFO_Booklet.drpdn_NoOfSidesPrinted());
 	  Select Select2 = new Select(Estimate_Add_SFO_Booklet.drpdn_NoOfSidesPrinted());
 	  WebElement SelectedOption2 = Select2.getFirstSelectedOption();
 	  String SO2 = SelectedOption2.getText();
 	  if (SO2.equals("Single"))
 	  {
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 40, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 72, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
 	  }
 	  else if (SO2.equals("Double"))
 	  {
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 40, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 41, 2, "Side 2 Color", Estimate_Add_SFO_Booklet.drpdn_Side2Color());
-		  String WorkCondition = Generic.getXlCellValue(xlpath, sheetName, 42, 2);
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 72, 2, "Side 1 Color", Estimate_Add_SFO_Booklet.drpdn_Side1Color());
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 73, 2, "Side 2 Color", Estimate_Add_SFO_Booklet.drpdn_Side2Color());
+		  String WorkCondition = Generic.getXlCellValue(xlpath, sheetName, 74, 2);
 		  if (WorkCondition.equals("Sheet Work"))
 		  {
 			  Estimate_Add_SFO_Booklet.chkbx_SheetWork().click();
@@ -391,19 +396,20 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 			  Reporter.log("Clicking on "+WorkCondition,true);
 		  }
 	  }
-	  String plate2 = Generic.getXlCellValue(xlpath, sheetName, 43, 2);
-	  EprintSpecificLinks.Radwindow("Plate", Estimate_Add_SFO_Booklet.btn_Plate(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+plate2+"')]");
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 44, 2, "No. of Plates", Estimate_Add_SFO_Booklet.txtbx_NoOfPlates());
-	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 45, 2, "No. of Make Ready", Estimate_Add_SFO_Booklet.txtbx_NoOfMakeReady());
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 46, 2, "No. of Washup", Estimate_Add_SFO_Booklet.drpdn_NoOfWashup());
-	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, rownum, cellnum, "Booklet Type", Estimate_Add_SFO_Booklet.drpdn_BookletType());
-	  Select Select21 = new Select(Estimate_Add_SFO_Booklet.drpdn_BookletType());
-	  WebElement SelectedOption21 = Select21.getFirstSelectedOption();
-	  String SO21 = SelectedOption2.getText();
+	  String plate1 = Generic.getXlCellValue(xlpath, sheetName, 42, 2);
+	  EprintSpecificLinks.Radwindow("Plate", Estimate_Add_SFO_Booklet.btn_Plate(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td/a[2][contains(text(),'"+plate1+"')]");
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 42, 2, "No. of Plates", Estimate_Add_SFO_Booklet.txtbx_NoOfPlates());
+	  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 43, 2, "No. of Make Ready", Estimate_Add_SFO_Booklet.txtbx_NoOfMakeReady());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 44, 2, "No. of Washup", Estimate_Add_SFO_Booklet.drpdn_NoOfWashup());
+	  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 45, 2, "Booklet Type", Estimate_Add_SFO_Booklet.drpdn_BookletType());
+	 
+	  Select Select1 = new Select(Estimate_Add_SFO_Booklet.drpdn_BookletType());
+	  WebElement SelectedOption1 = Select1.getFirstSelectedOption();
+	  String SO1 = SelectedOption1.getText();
 	  
-	  if (SO21.equals("Saddle Stiched"))
+	  if (SO1.equals("Saddle Stiched"))
 	  {
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "No of pages in this section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_NoOfPagesInSection());
+		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 46, 2, "No of pages in this section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_NoOfPagesInSection());
 		  String CustomPrintSheetSize = Generic.getXlCellValue(xlpath, sheetName, 47, 4);
 		  if (CustomPrintSheetSize.equals("YES"))
 		  {
@@ -422,20 +428,21 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 		  }
 		  else if (CustomFinishedJobSize.equals("NO"))
 		  {
-			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Print Sheet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletSize());
+			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Finished Booklet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletSize());
 		  }
-		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, rownum, cellnum, "Finished Booklet Format", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletFormat());
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "Flat Booklet item size Height",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeHeight());
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "Flat Booklet item size Width",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeWidth());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 50, 2, "Include Gutters", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters());
+		  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 49, 2, "Finished Booklet Format", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletFormat());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 50, 2, "Flat Booklet item size Height",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeHeight());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 50, 4, "Flat Booklet item size Width",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FlatBookletItemSizeWidth());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Include Gutters", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters());
 		  WebElement IncludeGutters = Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters();
 		  if (IncludeGutters.isSelected())
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 4, "Horizontal",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersHorizontal());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 6, "Vertical", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersVertical());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 4, "Horizontal",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersHorizontal());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 6, "Vertical", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersVertical());
 		  }
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_ApplyPressRestricitons());
-		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 54, 2);
+		  
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 52, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_ApplyPressRestricitons());
+		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 53, 2);
 		  if (PrintLayout.equals("Portrait"))
 		  {
 			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutPortrait().click();
@@ -446,71 +453,74 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutLandscape().click();
 			  Reporter.log("Clicking on Landscape Checkbox",true);
 		  }
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Portrait Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutPortrait());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 3, "Landscape Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutLandscape());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_BookletPagesPerPrintSheet());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintSheetsPerSection());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, rownum, cellnum, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
+		  
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 53, 3, "Portrait Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutPortrait());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Landscape Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutLandscape());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 2, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_BookletPagesPerPrintSheet());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 56, 4, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 56, 2, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintSheetsPerSection());
 		
-		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 52, 2);
+		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 57, 2);
 		  EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFO_Booklet.SaddleStiched.btn_Guillotine(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+Guillotine+"')]");
 		  Generic.BlindWait(2);
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 2, "First Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_FirstTrim());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 4, "Second Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_SecondTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 2, "First Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_FirstTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 4, "Second Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_SecondTrim());
 	  }
-	  else if (SO21.equals("Perfect Bound"))
+	  else if (SO1.equals("Perfect Bound"))
 	  {
-		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, rownum, cellnum, "No of pages in this section", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_NoOfPagesInSection());
+		  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 46, 2, "No of pages in this section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_NoOfPagesInSection());
 		  String CustomPrintSheetSize = Generic.getXlCellValue(xlpath, sheetName, 47, 4);
 		  if (CustomPrintSheetSize.equals("YES"))
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 6, "Custom Print Sheet Height", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_CustomPrintSheetSizeHeight());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 8, "Custom Print Sheet Width", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_CustomPrintSheetSizeWidth());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 6, "Custom Print Sheet Height", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_CustomPrintSheetSizeHeight());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 47, 8, "Custom Print Sheet Width", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_CustomPrintSheetSizeWidth());
 		  }
 		  else if (CustomPrintSheetSize.equals("NO"))
 		  {
-			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 47, 2, "Print Sheet Size", Estimate_Add_SFO_Booklet.PerfectBound.drpdn_PrintSheetSize());
+			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 47, 2, "Print Sheet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_PrintSheetSize());
 		  }
 		  String CustomFinishedJobSize = Generic.getXlCellValue(xlpath, sheetName, 48, 4);
 		  if (CustomFinishedJobSize.equals("YES"))
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 6, "Custom Finished Booklet Height", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_FinishedBookletSizeHeight());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 8, "Custom Finished Booklet Width", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_FinishedBookletSizeWidth());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 6, "Custom Finished Booklet Height", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FinishedBookletSizeHeight());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 48, 8, "Custom Finished Booklet Width", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_FinishedBookletSizeWidth());
 		  }
 		  else if (CustomFinishedJobSize.equals("NO"))
 		  {
-			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Finished Booklet Size", Estimate_Add_SFO_Booklet.PerfectBound.drpdn_FinishedBookletSize());
+			  ProjectLibrary.SingleSelectDropDownbyVisibleText(xlpath, sheetName, 48, 2, "Finished Booklet Size", Estimate_Add_SFO_Booklet.SaddleStiched.drpdn_FinishedBookletSize());
 		  }
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 50, 2, "Include Gutters", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_IncludeGutters());
-		  WebElement IncludeGutters = Estimate_Add_SFO_Booklet.PerfectBound.chkbx_IncludeGutters();
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Include Gutters", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters());
+		  WebElement IncludeGutters = Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_IncludeGutters();
 		  if (IncludeGutters.isSelected())
 		  {
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 4, "Horizontal",Estimate_Add_SFO_Booklet.PerfectBound.txtbx_IncludeGuttersHorizontal());
-			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 50, 6, "Vertical", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_IncludeGuttersVertical());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 4, "Horizontal",Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersHorizontal());
+			  ProjectLibrary.StringDDTextBox(xlpath, sheetName, 51, 6, "Vertical", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_IncludeGuttersVertical());
 		  }
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 51, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_ApplyPressRestricitons());
-		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 54, 2);
+		  
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 52, 2, "Apply Press Restrictions", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_ApplyPressRestricitons());
+		  String PrintLayout = Generic.getXlCellValue(xlpath, sheetName, 53, 2);
 		  if (PrintLayout.equals("Portrait"))
 		  {
-			  Estimate_Add_SFO_Booklet.PerfectBound.chkbx_PrintLayoutPortrait().click();
+			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutPortrait().click();
 			  Reporter.log("Clicking on Portrait Checkbox",true);
 		  }
 		  else if (PrintLayout.equals("Landscape"))
 		  {
-			  Estimate_Add_SFO_Booklet.PerfectBound.chkbx_PrintLayoutLandscape().click();
+			  Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_PrintLayoutLandscape().click();
 			  Reporter.log("Clicking on Landscape Checkbox",true);
 		  }
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Portrait Value", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_PrintLayoutPortrait());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 3, "Landscape Value", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_PrintLayoutLandscape());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_BookletPagesPerPrintSheet());
-		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, rownum, cellnum, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.PerfectBound.txtbx_PrintSheetsPerSection());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, rownum, cellnum, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_RoundUpToUseWholeSheets());
+		  
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 53, 3, "Portrait Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutPortrait());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 54, 3, "Landscape Value", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintLayoutLandscape());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 55, 2, "Booklet Pages per print sheet", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_BookletPagesPerPrintSheet());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 56, 4, "Round up to use whole Sheets", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_RoundUpToUseWholeSheets());
+		  ProjectLibrary.CompareStringTextBox(xlpath, sheetName, 56, 2, "Print Sheets Per Section", Estimate_Add_SFO_Booklet.SaddleStiched.txtbx_PrintSheetsPerSection());
 		
-		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 52, 2);
-		  EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFO_Booklet.PerfectBound.btn_Guillotine(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+Guillotine+"')]");
+		  String Guillotine = Generic.getXlCellValue(xlpath, sheetName, 57, 2);
+		  EprintSpecificLinks.Radwindow("Guillotine", Estimate_Add_SFO_Booklet.SaddleStiched.btn_Guillotine(), "/html/body/div/form/div/table/tbody/tr[2]/td[2]/iframe", "//table/tbody/tr/td[1]/div/a[contains(text(),'"+Guillotine+"')]");
 		  Generic.BlindWait(2);
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 2, "First Trim", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_FirstTrim());
-		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 53, 4, "Second Trim", Estimate_Add_SFO_Booklet.PerfectBound.chkbx_SecondTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 2, "First Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_FirstTrim());
+		  ProjectLibrary.CheckBoxSelection(xlpath, sheetName, 58, 4, "Second Trim", Estimate_Add_SFO_Booklet.SaddleStiched.chkbx_SecondTrim());
 	  }
 	  ProjectLibrary.ClickOnButton("Finish", Estimate_Add_SFO_Booklet.btn_Finish());
 //=====================================================================================================================================================================================================================================================//
@@ -800,6 +810,7 @@ public class Estimate_Create_SFO_Booklet extends SuperTestNG
 		ProjectLibrary.CompareStringText(xlpath, sheetName, 109, 21, "Gross Profit % 4", Estimate_Add_SFO_Booklet.EstimateSummary.Section_2.txt_GrossProfitPercentage4());
 		
 //		ProjectLibrary.ClickOnButton("Save", Estimate_Add_SFO_Booklet.EstimateSummary.btn_Save());
+	  Generic.BlindWait(200);
 
   }
 }
