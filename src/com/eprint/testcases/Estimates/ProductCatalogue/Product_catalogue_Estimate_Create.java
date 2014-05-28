@@ -22,15 +22,14 @@ public class Product_catalogue_Estimate_Create extends SuperTestNG
 	@Test
 	public static void testProduct_catalogue_Estimate_Create() throws InvalidFormatException, IOException
 	{
-
-		try {
+		try
+		{
 			EprintSpecificLinks.login();
 		}
 		catch (NoSuchElementException e)
 		{
 			Reporter.log("Already Logged in Continuing with testing process ",true );
 		}
-		
 		String xlpath = "./Excel Files/Estimates/Estimates.xls";
 		String sheetName = "Estimate Add - Product Catalogue";
 		try
