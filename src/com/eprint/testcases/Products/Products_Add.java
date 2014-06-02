@@ -4,6 +4,7 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.eprint.libraries.EprintSpecificLinks;
@@ -20,11 +21,19 @@ public class Products_Add extends SuperTestNG
 		String sheetName = "Product";
 		try
 		{
+			EprintSpecificLinks.login();
+		}
+		catch(org.openqa.selenium.NoSuchElementException e)
+		{
+			Reporter.log("Already Logged in Continuing with testing",true);
+		}
+		try
+		{
 			driver.findElement(By.xpath("//span[text()='PRODUCTS']")).isDisplayed();
 			ProjectLibrary.HoverDropdownControlByXpath("Products", "//span[text()='PRODUCTS']", "Add New Product","Add New Product");
 
 		}
-		catch (NoSuchElementException e)
+		catch (org.openqa.selenium.NoSuchElementException e)
 		{
 			ProjectLibrary.HoverDropdownControlByXpath("Products", "//span[text()='Products']", "Add New Product","Add New Product");
 
@@ -206,6 +215,6 @@ public class Products_Add extends SuperTestNG
 		
 		ProjectLibrary.ClickOnButtonByID("Save", "ctl00_ContentPlaceHolder1_btnArtworkSave");
 		
-		EprintSpecificLinks.SuccessMsgVerification("Price Catalogue(s) Saved successfully", "ctl00_ContentPlaceHolder1_ctl02_lblMessage");
+		EprintSpecificLinks.SuccessMsgVerification("Product Catalogue(s) Saved successfully", "ctl00_ContentPlaceHolder1_ctl02_lblMessage");
 	}
 }

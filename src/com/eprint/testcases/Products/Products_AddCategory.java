@@ -1,8 +1,10 @@
 package com.eprint.testcases.Products;
 
-import java.util.NoSuchElementException;
+
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.eprint.libraries.EprintSpecificLinks;
@@ -15,6 +17,14 @@ public class Products_AddCategory extends SuperTestNG
 	@Test
 	public static void testProducts_AddCategory()
 	{
+		try
+		{
+			EprintSpecificLinks.login();
+		}
+		catch (NoSuchElementException e)
+		{
+			Reporter.log("Already Logged In Continuing with testing Process",true);
+		}
 		String xlpath="./Excel Files/Products/Products.xls";
 		String sheetName = "Category";
 		try
@@ -26,7 +36,6 @@ public class Products_AddCategory extends SuperTestNG
 		catch(NoSuchElementException e)
 		{
 			ProjectLibrary.HoverDropdownControlByXpath("Products", "//span[text()='Products']", "View/Add Category","View/Add Category");
-
 		}
 		ProjectLibrary.StringDDTextBoxID(xlpath, sheetName, 1, 1, "Name", "ctl00_ContentPlaceHolder1_txtCategoryName");
 		ProjectLibrary.SingleSelectDropDownbyVisibleTextbyID(xlpath, sheetName, 2, 1, "Parent Category Name", "ctl00_ContentPlaceHolder1_ddlCategoryList");
